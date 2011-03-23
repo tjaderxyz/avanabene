@@ -1,4 +1,4 @@
-#! /usr/bin/env python3
+#! /usr/bin/env python
 # coding: utf-8
 
 import sys, pygame, random, datetime
@@ -33,7 +33,7 @@ for i in range(0, size[0], pastorect[2]):
 		else:
 			fundo.blit(pasto, (i, j))
 
-tempo = datetime.datetime.now()
+tempo = pygame.time.Clock()
 
 while True:
 	for event in pygame.event.get():
@@ -78,26 +78,18 @@ while True:
 		else:
 			print event
 
-	ananiasrect = ananiasrect.move(ananiasspeed)
-	benevidesrect = benevidesrect.move(benevidesspeed)
+	ananiasrect = ananiasrect.move([4 * i for i in ananiasspeed])
+	benevidesrect = benevidesrect.move([4 * i for i in benevidesspeed])
 
 	if (ananiasrect.colliderect(benevidesrect)):
 		corletra = 255
 	screen.blit(fundo, (0, 0))
-	screen.blit(pygame.font.Font(None, 36).render(unicode('TRÃO', 'utf8'), True, (corletra, corletra, corletra)), (50, 50, 50, 50))
+	screen.blit(pygame.font.SysFont('Linux Libertine O', 36).render(unicode('Testefi', 'utf8'), True, (corletra, corletra, corletra)), (50, 50, 50, 50))
 	if corletra > 0:
 		corletra -= 1
 	screen.blit(ananias, ananiasrect)
 	screen.blit(benevides, benevidesrect)
 	pygame.display.flip()
-	tempo2 = datetime.datetime.now()
-	delta = tempo2 - tempo
-	tempo = tempo2
-	qps = 1.0/((delta.microseconds + (delta.seconds + delta.days * 24 * 3600.0) * 10.0**6) / 10.0**6)
-	a = 0.1
-	try:
-		qps2 = a * qps + (1 - a) * qps2
-	except NameError:
-		qps2 = qps
-	print qps2, 'QPS'
+	tempo.tick(60)
+	print tempo.get_fps(), 'QPS'
 
