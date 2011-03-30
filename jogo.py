@@ -40,6 +40,9 @@ txt = pygame.transform.scale(txt, [4 * i for i in txt.get_rect()][2:])
 pygame.mixer.music.load(os.path.join('music', 'lojinha song.mp3'))
 pygame.mixer.music.play(-1)
 
+casa = pygame.image.load(os.path.join('images', 'o_casa.png'))
+casa = pygame.transform.scale(casa, [4 * i for i in casa.get_rect()][2:]).convert_alpha()
+
 tempo = pygame.time.Clock()
 
 while True:
@@ -88,6 +91,8 @@ while True:
 
 	screen.blit(fundo, (0, 0))
 	screen.blit(txt, [4 * i for i in (size[0] / 8 - txt.get_rect()[2] / 8, size[1] / 8 - txt.get_rect()[3] / 8)])
+	if tela[0] == 0 and tela[1] == 0:
+		screen.blit(casa, (400, 300))
 	ananias.render(screen)
 	benevides.render(screen)
 	pygame.display.flip()
