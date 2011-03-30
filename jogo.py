@@ -1,11 +1,13 @@
 #! /usr/bin/env python
 # coding: utf-8
 
-import os, sys, pygame, random, datetime
+import os, sys, pygame, random, datetime, actor
 pygame.init()
 
 size = width, height = 640, 480
 black = 0, 0, 0
+
+fonte = pygame.font.Font('unifont-5.1.20080820.pcf', 16)
 
 screen = pygame.display.set_mode(size)
 pygame.display.set_caption('Aventuras de Ananias e Benevides') 
@@ -28,12 +30,10 @@ def gerafundo():
 
 fundo = gerafundo()
 
-import actor
 ananias = actor.Actor('ananias', (pygame.K_LEFT, pygame.K_RIGHT, pygame.K_UP, pygame.K_DOWN))
 benevides = actor.Actor('benevides', (pygame.K_a, pygame.K_d, pygame.K_w, pygame.K_s))
 
 tela = [0, 0]
-fonte = pygame.font.Font('unifont-5.1.20080820.pcf', 16)
 
 txt = fonte.render(repr(tela), False, (255, 255, 255))
 txt = pygame.transform.scale(txt, [4 * i for i in txt.get_rect()][2:])
