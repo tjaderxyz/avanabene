@@ -33,7 +33,8 @@ ananias = actor.Actor('ananias', (pygame.K_LEFT, pygame.K_RIGHT, pygame.K_UP, py
 benevides = actor.Actor('benevides', (pygame.K_a, pygame.K_d, pygame.K_w, pygame.K_s))
 
 tela = [0, 0]
-txt = pygame.font.Font('unifont-5.1.20080820.pcf', 16).render(repr(tela), False, (255, 255, 255))
+fonte = pygame.font.Font('unifont-5.1.20080820.pcf', 16)
+txt = fonte.render(repr(tela), False, (255, 255, 255))
 txt = pygame.transform.scale(txt, [4 * i for i in txt.get_rect()][2:])
 
 pygame.mixer.music.load(os.path.join('music', 'lojinha song.mp3'))
@@ -59,7 +60,7 @@ while True:
 			outro.pos[0] = actor.pos[0] - actor.sprites[0].get_rect()[2]
 			outro.pos[1] = actor.pos[1]
 			tela[0] -= 1
-		elif actor.pos[0] >= size[0]:
+		elif actor.pos[0] > size[0]:
 			actor.pos[0] -= size[0]
 			outro.pos[0] = actor.pos[0] + actor.sprites[0].get_rect()[2]
 			outro.pos[1] = actor.pos[1]
@@ -69,7 +70,7 @@ while True:
 			outro.pos[0] = actor.pos[0]
 			outro.pos[1] = actor.pos[1] - actor.sprites[0].get_rect()[3]
 			tela[1] -= 1
-		elif actor.pos[1] >= size[1]:
+		elif actor.pos[1] > size[1]:
 			actor.pos[1] -= size[1]
 			outro.pos[0] = actor.pos[0]
 			outro.pos[1] = actor.pos[1] + actor.sprites[0].get_rect()[3]
@@ -78,7 +79,7 @@ while True:
 			return
 		global fundo, txt
 		fundo = gerafundo()
-		txt = pygame.font.Font('unifont-5.1.20080820.pcf', 16).render(repr(tela), False, (255, 255, 255))
+		txt = fonte.render(repr(tela), False, (255, 255, 255))
 		txt = pygame.transform.scale(txt, [4 * i for i in txt.get_rect()][2:])
 		print tela
 
