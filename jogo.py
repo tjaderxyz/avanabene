@@ -34,6 +34,7 @@ benevides = actor.Actor('benevides', (pygame.K_a, pygame.K_d, pygame.K_w, pygame
 
 tela = [0, 0]
 fonte = pygame.font.Font('unifont-5.1.20080820.pcf', 16)
+
 txt = fonte.render(repr(tela), False, (255, 255, 255))
 txt = pygame.transform.scale(txt, [4 * i for i in txt.get_rect()][2:])
 
@@ -42,6 +43,15 @@ pygame.mixer.music.play(-1)
 
 casa = pygame.image.load(os.path.join('images', 'o_casa.png'))
 casa = pygame.transform.scale(casa, [4 * i for i in casa.get_rect()][2:]).convert_alpha()
+
+titulo = fonte.render('Aventuras de Ananias e Benevides', False, (255, 255, 255))
+titulo = pygame.transform.scale(titulo, [2 * i for i in titulo.get_rect()][2:])
+splash = pygame.Surface(size)
+splash.blit(titulo, [4 * i for i in (size[0] / 8 - titulo.get_rect()[2] / 8, size[1] / 8 - titulo.get_rect()[3] / 8)])
+splash.set_alpha(255)
+screen.blit(splash, (0, 0))
+pygame.display.flip()
+pygame.time.wait(2000)
 
 tempo = pygame.time.Clock()
 
@@ -95,6 +105,9 @@ while True:
 		screen.blit(casa, (400, 300))
 	ananias.render(screen)
 	benevides.render(screen)
+	if splash.get_alpha() >= 0:
+		screen.blit(splash, (0, 0))
+		splash.set_alpha(max(0, splash.get_alpha() - 255./10))
 	pygame.display.flip()
 
 	tempo.tick(60)
