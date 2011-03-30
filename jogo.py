@@ -25,8 +25,8 @@ for i in range(0, size[0], pastorect[2]):
 			fundo.blit(pasto, (i, j))
 
 import actor
-ananias = actor.Actor('s_ananias_cima.png', (pygame.K_LEFT, pygame.K_RIGHT, pygame.K_UP, pygame.K_DOWN))
-benevides = actor.Actor('s_benevides_cima.png', (pygame.K_a, pygame.K_d, pygame.K_w, pygame.K_s))
+ananias = actor.Actor('ananias', (pygame.K_LEFT, pygame.K_RIGHT, pygame.K_UP, pygame.K_DOWN))
+benevides = actor.Actor('benevides', (pygame.K_a, pygame.K_d, pygame.K_w, pygame.K_s))
 
 tempo = pygame.time.Clock()
 
