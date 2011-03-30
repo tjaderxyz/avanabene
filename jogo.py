@@ -33,7 +33,7 @@ ananias = actor.Actor('ananias', (pygame.K_LEFT, pygame.K_RIGHT, pygame.K_UP, py
 benevides = actor.Actor('benevides', (pygame.K_a, pygame.K_d, pygame.K_w, pygame.K_s))
 
 tela = [0, 0]
-txt = pygame.font.SysFont('unifont', 16).render(repr(tela), False, (255, 255, 255))
+txt = pygame.font.Font('unifont-5.1.20080820.pcf', 16).render(repr(tela), False, (255, 255, 255))
 txt = pygame.transform.scale(txt, [4 * i for i in txt.get_rect()][2:])
 
 pygame.mixer.music.load(os.path.join('music', 'lojinha song.mp3'))
@@ -78,7 +78,7 @@ while True:
 			return
 		global fundo, txt
 		fundo = gerafundo()
-		txt = pygame.font.SysFont('unifont', 16).render(repr(tela), False, (255, 255, 255))
+		txt = pygame.font.Font('unifont-5.1.20080820.pcf', 16).render(repr(tela), False, (255, 255, 255))
 		txt = pygame.transform.scale(txt, [4 * i for i in txt.get_rect()][2:])
 		print tela
 
