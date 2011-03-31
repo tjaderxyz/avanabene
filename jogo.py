@@ -43,6 +43,8 @@ pygame.mixer.music.play(-1)
 
 casa = pygame.image.load(os.path.join('images', 'o_casa.png'))
 casa = pygame.transform.scale(casa, [4 * i for i in casa.get_rect()][2:]).convert_alpha()
+casa2 = pygame.image.load(os.path.join('images', 'o_casa2.png'))
+casa2 = pygame.transform.scale(casa2, [4 * i for i in casa2.get_rect()][2:]).convert_alpha()
 
 titulo = fonte.render('Aventuras de Ananias e Benevides', False, (255, 255, 255))
 titulo = pygame.transform.scale(titulo, [2 * i for i in titulo.get_rect()][2:])
@@ -103,6 +105,10 @@ while True:
 	screen.blit(txt, [4 * i for i in (size[0] / 8 - txt.get_rect()[2] / 8, size[1] / 8 - txt.get_rect()[3] / 8)])
 	if tela[0] == 0 and tela[1] == 0:
 		screen.blit(casa, (400, 300))
+	if tela[0] == -1 and tela[1] == 0:
+		screen.blit(casa, (100, 90))
+		screen.blit(casa2, (200, 280))
+		
 	ananias.render(screen)
 	benevides.render(screen)
 	if splash.get_alpha() >= 0:
