@@ -38,7 +38,7 @@ tela = [0, 0]
 txt = fonte.render(repr(tela), False, (255, 255, 255))
 txt = pygame.transform.scale(txt, [4 * i for i in txt.get_rect()][2:])
 
-pygame.mixer.music.load(os.path.join('music', 'lojinha song.mp3'))
+pygame.mixer.music.load(os.path.join('music', 'scary ghost rap demo 4.mp3'))
 pygame.mixer.music.play(-1)
 
 casa = pygame.image.load(os.path.join('images', 'o_casa.png'))
