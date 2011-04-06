@@ -42,7 +42,7 @@ while True:
 		if event.key == pygame.K_r:
 			fundo = gerafundo("images/t_gramaflor.png")
 		if event.key == pygame.K_t:
-			fundo = gerafundo("images/t_grama.png")
+			fundo = gerafundo("images/t_gramasuave.png")
 		if event.key == pygame.K_y:
 			fundo = gerafundo("images/t_gramaflor.png")
 		if event.key == pygame.K_u:
