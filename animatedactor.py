@@ -2,7 +2,7 @@
 
 import os, pygame
 
-class ActorAnimado:
+class AnimatedActor:
 	def __init__(self, id, controls, frames):
 		self.sprites = []
 		for direcao, nframes in zip(('esq', 'dir', 'cima', 'baixo'), frames):
