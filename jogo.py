@@ -112,7 +112,7 @@ while True:
 	if tela[0] == -1 and tela[1] == 0:
 		screen.blit(casa, (100, 90))
 		screen.blit(casa2, (200, 280))
-		
+
 	ananias.render(screen)
 	benevides.render(screen)
 	if splash.get_alpha() >= 0:
