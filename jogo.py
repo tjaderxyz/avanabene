@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 # coding: utf-8
 
-import os, pygame, random, animatedactor
+import os, sys, pygame, random, animatedactor
 pygame.init()
 
 size = width, height = 640, 480
