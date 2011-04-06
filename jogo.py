@@ -12,6 +12,16 @@ fonte = pygame.font.Font('unifont-5.1.20080820.pcf', 16)
 screen = pygame.display.set_mode(size)
 pygame.display.set_caption('Aventuras de Ananias e Benevides') 
 
+ananias = animatedactor.AnimatedActor('ananias', (pygame.K_LEFT, pygame.K_RIGHT, pygame.K_UP, pygame.K_DOWN), (2, 2, 4, 4))
+benevides = animatedactor.AnimatedActor('benevides', (pygame.K_a, pygame.K_d, pygame.K_w, pygame.K_s), (2, 2, 4, 4))
+
+try:
+	pygame.mixer.music.load(os.path.join('music', 'ultra funkadelic mixdown.mp3'))
+	pygame.mixer.music.play(-1)
+except:
+	#não esquenta
+	pass
+
 def gerafundo():
 	pasto = pygame.image.load("images/t_grama.png")
 	pasto = pygame.transform.scale(pasto, [4 * i for i in pasto.get_rect()][2:]).convert_alpha()
@@ -30,20 +40,10 @@ def gerafundo():
 
 fundo = gerafundo()
 
-ananias = animatedactor.AnimatedActor('ananias', (pygame.K_LEFT, pygame.K_RIGHT, pygame.K_UP, pygame.K_DOWN), (2, 2, 4, 4))
-benevides = animatedactor.AnimatedActor('benevides', (pygame.K_a, pygame.K_d, pygame.K_w, pygame.K_s), (2, 2, 4, 4))
-
 tela = [0, 0]
 
 txt = fonte.render(repr(tela), False, (255, 255, 255))
 txt = pygame.transform.scale(txt, [4 * i for i in txt.get_rect()][2:])
-
-try:
-	pygame.mixer.music.load(os.path.join('music', 'ultra funkadelic mixdown.mp3'))
-	pygame.mixer.music.play(-1)
-except:
-	#não esquenta
-	pass
 
 casa = pygame.image.load(os.path.join('images', 'o_casa.png'))
 casa = pygame.transform.scale(casa, [4 * i for i in casa.get_rect()][2:]).convert_alpha()
