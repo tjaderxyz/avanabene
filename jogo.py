@@ -80,24 +80,40 @@ while True:
 	def mudatela(actor, outro):
 		if actor.pos[0] + actor.get_rect()[2] <= 0:
 			actor.pos[0] += size[0]
-			outro.pos[0] = actor.pos[0] - actor.get_rect()[2]
-			outro.pos[1] = actor.pos[1]
+			outro.pos[0] = actor.pos[0]
+			if outro.pos[1] > actor.pos[1]:
+				outro.pos[1] = actor.pos[1] + int(actor.get_rect()[3]/8)*4
+			else:
+				outro.pos[1] = actor.pos[1] - int(actor.get_rect()[3]/8)*4
 			tela[0] -= 1
+			outro.set_direction(0)
 		elif actor.pos[0] > size[0]:
 			actor.pos[0] -= size[0]
-			outro.pos[0] = actor.pos[0] + actor.get_rect()[2]
-			outro.pos[1] = actor.pos[1]
+			outro.pos[0] = actor.pos[0]
+			if outro.pos[1] > actor.pos[1]:
+				outro.pos[1] = actor.pos[1] + int(actor.get_rect()[3]/8)
+			else:
+				outro.pos[1] = actor.pos[1] - int(actor.get_rect()[3]/8)*4
 			tela[0] += 1
+			outro.set_direction(1)
 		elif actor.pos[1] + actor.get_rect()[3] <= 0:
 			actor.pos[1] += size[1]
-			outro.pos[0] = actor.pos[0]
-			outro.pos[1] = actor.pos[1] - actor.get_rect()[3]
+			if outro.pos[0] > actor.pos[0]:
+				outro.pos[0] = actor.pos[0] + int(actor.get_rect()[3]/8)*4
+			else:
+				outro.pos[0] = actor.pos[0] - int(actor.get_rect()[3]/8)*4
+			outro.pos[1] = actor.pos[1]
 			tela[1] -= 1
+			outro.set_direction(2)
 		elif actor.pos[1] > size[1]:
 			actor.pos[1] -= size[1]
-			outro.pos[0] = actor.pos[0]
-			outro.pos[1] = actor.pos[1] + actor.get_rect()[3]
+			if outro.pos[0] > actor.pos[0]:
+				outro.pos[0] = actor.pos[0] + int(actor.get_rect()[3]/8)*4
+			else:
+				outro.pos[0] = actor.pos[0] - int(actor.get_rect()[3]/8)*4
+			outro.pos[1] = actor.pos[1]
 			tela[1] += 1
+			outro.set_direction(3)
 		else:
 			return
 		global fundo
