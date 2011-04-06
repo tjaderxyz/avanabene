@@ -100,18 +100,16 @@ while True:
 		fundo = gerafundo()
 		txt = fonte.render(repr(tela), False, (255, 255, 255))
 		txt = pygame.transform.scale(txt, [4 * i for i in txt.get_rect()][2:])
+		fundo.blit(txt, [4 * i for i in (size[0] / 8 - txt.get_rect()[2] / 8, size[1] / 8 - txt.get_rect()[3] / 8)])
+		if tela[0] == -1 and tela[1] == 0:
+			fundo.blit(casa, (100, 90))
+			fundo.blit(casa2, (200, 280))
 		print tela
 
 	mudatela(ananias, benevides)
 	mudatela(benevides, ananias)
 
 	screen.blit(fundo, (0, 0))
-	screen.blit(txt, [4 * i for i in (size[0] / 8 - txt.get_rect()[2] / 8, size[1] / 8 - txt.get_rect()[3] / 8)])
-	if tela[0] == 0 and tela[1] == 0:
-		screen.blit(casa, (400, 300))
-	if tela[0] == -1 and tela[1] == 0:
-		screen.blit(casa, (100, 90))
-		screen.blit(casa2, (200, 280))
 
 	ananias.render(screen)
 	benevides.render(screen)
