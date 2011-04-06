@@ -15,6 +15,11 @@ pygame.display.set_caption('Aventuras de Ananias e Benevides')
 ananias = animatedactor.AnimatedActor('ananias', (pygame.K_LEFT, pygame.K_RIGHT, pygame.K_UP, pygame.K_DOWN), (2, 2, 4, 4))
 benevides = animatedactor.AnimatedActor('benevides', (pygame.K_a, pygame.K_d, pygame.K_w, pygame.K_s), (2, 2, 4, 4))
 
+casa = pygame.image.load(os.path.join('images', 'o_casa.png'))
+casa = pygame.transform.scale(casa, [4 * i for i in casa.get_rect()][2:]).convert_alpha()
+casa2 = pygame.image.load(os.path.join('images', 'o_casa2.png'))
+casa2 = pygame.transform.scale(casa2, [4 * i for i in casa2.get_rect()][2:]).convert_alpha()
+
 try:
 	pygame.mixer.music.load(os.path.join('music', 'ultra funkadelic mixdown.mp3'))
 	pygame.mixer.music.play(-1)
@@ -48,11 +53,6 @@ def gerafundo(tela):
 tela = [0, 0]
 
 fundo = gerafundo(tela)
-
-casa = pygame.image.load(os.path.join('images', 'o_casa.png'))
-casa = pygame.transform.scale(casa, [4 * i for i in casa.get_rect()][2:]).convert_alpha()
-casa2 = pygame.image.load(os.path.join('images', 'o_casa2.png'))
-casa2 = pygame.transform.scale(casa2, [4 * i for i in casa2.get_rect()][2:]).convert_alpha()
 
 titulo = fonte.render('Aventuras de Ananias e Benevides', False, (255, 255, 255))
 titulo = pygame.transform.scale(titulo, [2 * i for i in titulo.get_rect()][2:])
