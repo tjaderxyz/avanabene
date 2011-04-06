@@ -111,7 +111,7 @@ while True:
 
 	ananias.render(screen)
 	benevides.render(screen)
-	if splash.get_alpha() >= 0:
+	if splash.get_alpha() > 0:
 		screen.blit(splash, (0, 0))
 		splash.set_alpha(max(0, splash.get_alpha() - 255./10))
 	pygame.display.flip()
