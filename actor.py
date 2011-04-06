@@ -13,8 +13,8 @@ class Actor:
 		self.eventqueue = []
 		self.direction = 0
 
-	def rect(self):
-		return self.pos + [i for i in self.sprite.get_rect()]
+	def get_rect(self):
+		return self.sprites[0].get_rect()
 
 	def render(self, screen):
 		if self.speed[0] < 0 and self.speed[1] == 0:

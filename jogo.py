@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 # coding: utf-8
 
-import os, sys, pygame, random, datetime, actor
+import os, sys, pygame, random, datetime, animatedactor
 pygame.init()
 
 size = width, height = 640, 480
@@ -30,16 +30,20 @@ def gerafundo():
 
 fundo = gerafundo()
 
-ananias = actor.Actor('ananias', (pygame.K_LEFT, pygame.K_RIGHT, pygame.K_UP, pygame.K_DOWN))
-benevides = actor.Actor('benevides', (pygame.K_a, pygame.K_d, pygame.K_w, pygame.K_s))
+ananias = animatedactor.AnimatedActor('ananias', (pygame.K_LEFT, pygame.K_RIGHT, pygame.K_UP, pygame.K_DOWN), (2, 2, 4, 4))
+benevides = animatedactor.AnimatedActor('benevides', (pygame.K_a, pygame.K_d, pygame.K_w, pygame.K_s), (2, 2, 4, 4))
 
 tela = [0, 0]
 
 txt = fonte.render(repr(tela), False, (255, 255, 255))
 txt = pygame.transform.scale(txt, [4 * i for i in txt.get_rect()][2:])
 
-pygame.mixer.music.load(os.path.join('music', 'ultra funkadelic mixdown.mp3'))
-pygame.mixer.music.play(-1)
+try:
+	pygame.mixer.music.load(os.path.join('music', 'ultra funkadelic mixdown.mp3'))
+	pygame.mixer.music.play(-1)
+except:
+	#não esquenta
+	pass
 
 casa = pygame.image.load(os.path.join('images', 'o_casa.png'))
 casa = pygame.transform.scale(casa, [4 * i for i in casa.get_rect()][2:]).convert_alpha()
@@ -70,25 +74,25 @@ while True:
 	benevides.update()
 
 	def mudatela(actor, outro):
-		if actor.pos[0] + actor.sprites[0].get_rect()[2] <= 0:
+		if actor.pos[0] + actor.get_rect()[2] <= 0:
 			actor.pos[0] += size[0]
-			outro.pos[0] = actor.pos[0] - actor.sprites[0].get_rect()[2]
+			outro.pos[0] = actor.pos[0] - actor.get_rect()[2]
 			outro.pos[1] = actor.pos[1]
 			tela[0] -= 1
 		elif actor.pos[0] > size[0]:
 			actor.pos[0] -= size[0]
-			outro.pos[0] = actor.pos[0] + actor.sprites[0].get_rect()[2]
+			outro.pos[0] = actor.pos[0] + actor.get_rect()[2]
 			outro.pos[1] = actor.pos[1]
 			tela[0] += 1
-		elif actor.pos[1] + actor.sprites[0].get_rect()[3] <= 0:
+		elif actor.pos[1] + actor.get_rect()[3] <= 0:
 			actor.pos[1] += size[1]
 			outro.pos[0] = actor.pos[0]
-			outro.pos[1] = actor.pos[1] - actor.sprites[0].get_rect()[3]
+			outro.pos[1] = actor.pos[1] - actor.get_rect()[3]
 			tela[1] -= 1
 		elif actor.pos[1] > size[1]:
 			actor.pos[1] -= size[1]
 			outro.pos[0] = actor.pos[0]
-			outro.pos[1] = actor.pos[1] + actor.sprites[0].get_rect()[3]
+			outro.pos[1] = actor.pos[1] + actor.get_rect()[3]
 			tela[1] += 1
 		else:
 			return
