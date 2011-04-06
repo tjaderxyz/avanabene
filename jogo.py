@@ -22,7 +22,7 @@ except:
 	#não esquenta
 	pass
 
-def gerafundo():
+def gerafundo(tela):
 	pasto = pygame.image.load("images/t_grama.png")
 	pasto = pygame.transform.scale(pasto, [4 * i for i in pasto.get_rect()][2:]).convert_alpha()
 	pastorect = pasto.get_rect()
@@ -36,14 +36,18 @@ def gerafundo():
 				fundo.blit(fro, (i, j))
 			else:
 				fundo.blit(pasto, (i, j))
-	return fundo
 
-fundo = gerafundo()
+	txt = fonte.render(repr(tela), False, (255, 255, 255))
+	txt = pygame.transform.scale(txt, [4 * i for i in txt.get_rect()][2:])
+	fundo.blit(txt, [4 * i for i in (size[0] / 8 - txt.get_rect()[2] / 8, size[1] / 8 - txt.get_rect()[3] / 8)])
+	if tela[0] == -1 and tela[1] == 0:
+		fundo.blit(casa, (100, 90))
+		fundo.blit(casa2, (200, 280))
+	return fundo
 
 tela = [0, 0]
 
-txt = fonte.render(repr(tela), False, (255, 255, 255))
-txt = pygame.transform.scale(txt, [4 * i for i in txt.get_rect()][2:])
+fundo = gerafundo(tela)
 
 casa = pygame.image.load(os.path.join('images', 'o_casa.png'))
 casa = pygame.transform.scale(casa, [4 * i for i in casa.get_rect()][2:]).convert_alpha()
@@ -96,14 +100,8 @@ while True:
 			tela[1] += 1
 		else:
 			return
-		global fundo, txt
-		fundo = gerafundo()
-		txt = fonte.render(repr(tela), False, (255, 255, 255))
-		txt = pygame.transform.scale(txt, [4 * i for i in txt.get_rect()][2:])
-		fundo.blit(txt, [4 * i for i in (size[0] / 8 - txt.get_rect()[2] / 8, size[1] / 8 - txt.get_rect()[3] / 8)])
-		if tela[0] == -1 and tela[1] == 0:
-			fundo.blit(casa, (100, 90))
-			fundo.blit(casa2, (200, 280))
+		global fundo
+		fundo = gerafundo(tela)
 		print tela
 
 	mudatela(ananias, benevides)
