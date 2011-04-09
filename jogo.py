@@ -21,7 +21,7 @@ casa2 = pygame.image.load(os.path.join('images', 'o_casa2.png'))
 casa2 = pygame.transform.scale(casa2, [4 * i for i in casa2.get_rect()][2:]).convert_alpha()
 
 try:
-	pygame.mixer.music.load(os.path.join('music', 'ultra funkadelic mixdown.mp3'))
+	pygame.mixer.music.load(os.path.join('music', 'lojinha song.mp3'))
 	pygame.mixer.music.play(-1)
 except:
 	#não esquenta
