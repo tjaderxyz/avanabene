@@ -45,8 +45,8 @@ def gerafundo(tela):
 				fundo.blit(pasto, (i, j))
 
 	txt = fonte.render(repr(tela), False, (255, 255, 255))
-	txt = pygame.transform.scale(txt, [4 * i for i in txt.get_rect()][2:])
-	fundo.blit(txt, [4 * i for i in (size[0] / 8 - txt.get_rect()[2] / 8, size[1] / 8 - txt.get_rect()[3] / 8)])
+#	txt = pygame.transform.scale(txt, [4 * i for i in txt.get_rect()][2:])
+	fundo.blit(txt, (size[0] - txt.get_rect()[2] - 10, size[1] - txt.get_rect()[3] - 10))
 	if tela[0] == -1 and tela[1] == 0:
 		fundo.blit(casa, (100, 90))
 		fundo.blit(casa2, (200, 280))
