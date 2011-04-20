@@ -23,6 +23,8 @@ casa2 = pygame.image.load(os.path.join('images', 'o_casa2.png'))
 casa2 = pygame.transform.scale(casa2, [4 * i for i in casa2.get_rect()][2:]).convert_alpha()
 duende = pygame.image.load(os.path.join('images', 's_duende_baixo0.png'))
 duende = pygame.transform.scale(duende, [4 * i for i in duende.get_rect()][2:]).convert_alpha()
+pirata = pygame.image.load(os.path.join('images', 's_pirata_baixo0.png'))
+pirata = pygame.transform.scale(pirata, [4 * i for i in pirata.get_rect()][2:]).convert_alpha()
 
 try:
 	pygame.mixer.music.load(os.path.join('music', 'lojinha song.mp3'))
@@ -54,6 +56,7 @@ def gerafundo(tela):
 		fundo.blit(casa2, (200, 280))
 	if tela[0] == 0 and tela[1] == 0:
         	fundo.blit(duende, (200, 200))
+        	fundo.blit(pirata, (50, 350))
 	return fundo
 
 tela = [0, 0]
