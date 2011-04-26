@@ -19,7 +19,7 @@ benevides.pos = (328, 188)
 
 casa = pygame.image.load(os.path.join('images', 'o_casa.png'))
 casa = pygame.transform.scale(casa, [4 * i for i in casa.get_rect()][2:]).convert_alpha()
-casa2 = pygame.image.load(os.path.join('images', 'o_casa2.png'))
+casa2 = pygame.image.load(os.path.join('images', 'o_arvoreseca.png'))
 casa2 = pygame.transform.scale(casa2, [4 * i for i in casa2.get_rect()][2:]).convert_alpha()
 duende = pygame.image.load(os.path.join('images', 's_duende_baixo0.png'))
 duende = pygame.transform.scale(duende, [4 * i for i in duende.get_rect()][2:]).convert_alpha()
