@@ -25,7 +25,7 @@ duende = pygame.image.load(os.path.join('images', 's_duende_baixo0.png'))
 duende = pygame.transform.scale(duende, [4 * i for i in duende.get_rect()][2:]).convert_alpha()
 pirata = pygame.image.load(os.path.join('images', 's_pirata_baixo0.png'))
 pirata = pygame.transform.scale(pirata, [4 * i for i in pirata.get_rect()][2:]).convert_alpha()
-casebre = pygame.image.load(os.path.join('images', 'o_casebre.png'))
+casebre = pygame.image.load(os.path.join('images', 'o_casebre2.png'))
 casebre = pygame.transform.scale(casebre, [4 * i for i in casebre.get_rect()][2:]).convert_alpha()
 
 try:
