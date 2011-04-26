@@ -57,9 +57,9 @@ def gerafundo(tela):
 		fundo.blit(casa, (100, 90))
 		fundo.blit(casa2, (200, 280))
 	if tela[0] == 0 and tela[1] == 0:
-        	fundo.blit(duende, (200, 200))
-        	fundo.blit(pirata, (50, 350))
-        	fundo.blit(casebre, (400, 100))
+		fundo.blit(duende, (200, 200))
+		fundo.blit(pirata, (50, 350))
+		fundo.blit(casebre, (400, 100))
 	return fundo
 
 tela = [0, 0]
