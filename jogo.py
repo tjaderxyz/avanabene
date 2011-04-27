@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 # coding: utf-8
 
-import os, sys, pygame, random, animatedactor
+import os, sys, pygame, random, actor, animatedactor, object
 pygame.init()
 
 size = width, height = 640, 480
@@ -17,16 +17,25 @@ benevides = animatedactor.AnimatedActor('benevides', (pygame.K_a, pygame.K_d, py
 ananias.pos = (300, 188)
 benevides.pos = (328, 188)
 
-casa = pygame.image.load(os.path.join('images', 'o_casa.png'))
-casa = pygame.transform.scale(casa, [4 * i for i in casa.get_rect()][2:]).convert_alpha()
-casa2 = pygame.image.load(os.path.join('images', 'o_casa2.png'))
-casa2 = pygame.transform.scale(casa2, [4 * i for i in casa2.get_rect()][2:]).convert_alpha()
+#casa = pygame.image.load(os.path.join('images', 'o_casa.png'))
+#casa = pygame.transform.scale(casa, [4 * i for i in casa.get_rect()][2:]).convert_alpha()
+#casa2 = pygame.image.load(os.path.join('images', 'o_casa2.png'))
+#casa2 = pygame.transform.scale(casa2, [4 * i for i in casa2.get_rect()][2:]).convert_alpha()
 duende = pygame.image.load(os.path.join('images', 's_duende_baixo0.png'))
 duende = pygame.transform.scale(duende, [4 * i for i in duende.get_rect()][2:]).convert_alpha()
 pirata = pygame.image.load(os.path.join('images', 's_pirata_baixo0.png'))
 pirata = pygame.transform.scale(pirata, [4 * i for i in pirata.get_rect()][2:]).convert_alpha()
 casebre = pygame.image.load(os.path.join('images', 'o_casebre2.png'))
 casebre = pygame.transform.scale(casebre, [4 * i for i in casebre.get_rect()][2:]).convert_alpha()
+
+casa = object.Object('casa')
+casa.pos = (100, 90)
+casa2 = object.Object('casa2')
+casa2.pos = (200, 280)
+casebre = object.Object('casebre')
+casebre.pos = (400, 100)
+#duende = actor.Object('duende')
+
 
 try:
 	pygame.mixer.music.load(os.path.join('music', 'lojinha song.mp3'))
@@ -53,13 +62,6 @@ def gerafundo(tela):
 	txt = fonte.render(repr(tela), False, (255, 255, 255))
 #	txt = pygame.transform.scale(txt, [4 * i for i in txt.get_rect()][2:])
 	fundo.blit(txt, (size[0] - txt.get_rect()[2] - 10, size[1] - txt.get_rect()[3] - 10))
-	if tela[0] == -1 and tela[1] == 0:
-		fundo.blit(casa, (100, 90))
-		fundo.blit(casa2, (200, 280))
-	if tela[0] == 0 and tela[1] == 0:
-		fundo.blit(duende, (200, 200))
-		fundo.blit(pirata, (50, 350))
-		fundo.blit(casebre, (400, 100))
 	return fundo
 
 tela = [0, 0]
@@ -139,8 +141,18 @@ while True:
 
 	screen.blit(fundo, (0, 0))
 
-	ananias.render(screen)
-	benevides.render(screen)
+	coisasadesenhar = [ananias, benevides]
+	if tela[0] == -1 and tela[1] == 0:
+		coisasadesenhar += [casa, casa2]
+	if tela[0] == 0 and tela[1] == 0:
+		fundo.blit(duende, (200, 200))
+		fundo.blit(pirata, (50, 350))
+		coisasadesenhar += [casebre]
+
+	coisasadesenhar.sort(key=lambda x: x.pos[1] + x.get_rect()[3])
+	for coisaadesenhar in coisasadesenhar:
+		coisaadesenhar.render(screen)
+
 	if splash.get_alpha() > 0:
 		splash.set_alpha(max(0, splash.get_alpha() - 255./10))
 		screen.blit(splash, (0, 0))
