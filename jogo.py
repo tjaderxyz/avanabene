@@ -31,7 +31,7 @@ pirata = pygame.transform.scale(pirata, [4 * i for i in pirata.get_rect()][2:]).
 casa = object.Object('casa')
 casa.pos = (100, 90)
 arvoreseca = object.Object('arvoreseca')
-arvoreseca.pos = (200, 280)
+arvoreseca.pos = (300, 180)
 casebre = object.Object('casebre2')
 casebre.pos = (400, 100)
 #duende = actor.Object('duende')
@@ -45,10 +45,14 @@ except:
 	pass
 
 def gerafundo(tela):
-	pasto = pygame.image.load("images/t_grama.png")
+	if tela[0] == -1 and tela[1] == 0:
+		pasto = pygame.image.load("images/t_deserto.png")
+		fro = pygame.image.load("images/t_deserto.png")
+	else:
+		pasto = pygame.image.load("images/t_grama.png")
+		fro = pygame.image.load("images/t_gramaflor.png")
 	pasto = pygame.transform.scale(pasto, [4 * i for i in pasto.get_rect()][2:]).convert_alpha()
 	pastorect = pasto.get_rect()
-	fro = pygame.image.load("images/t_gramaflor.png")
 	fro = pygame.transform.scale(fro, [4 * i for i in fro.get_rect()][2:]).convert_alpha()
 	fundo = pygame.Surface(size)
 
@@ -143,7 +147,7 @@ while True:
 
 	coisasadesenhar = [ananias, benevides]
 	if tela[0] == -1 and tela[1] == 0:
-		coisasadesenhar += [casa, arvoreseca]
+		coisasadesenhar += [arvoreseca]
 	if tela[0] == 0 and tela[1] == 0:
 		fundo.blit(duende, (200, 200))
 		fundo.blit(pirata, (50, 350))
