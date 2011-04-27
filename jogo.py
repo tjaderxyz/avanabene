@@ -30,8 +30,8 @@ casebre = pygame.transform.scale(casebre, [4 * i for i in casebre.get_rect()][2:
 
 casa = object.Object('casa')
 casa.pos = (100, 90)
-casa2 = object.Object('casa2')
-casa2.pos = (200, 280)
+arvoreseca = object.Object('arvoreseca')
+arvoreseca.pos = (200, 280)
 casebre = object.Object('casebre')
 casebre.pos = (400, 100)
 #duende = actor.Object('duende')
@@ -143,7 +143,7 @@ while True:
 
 	coisasadesenhar = [ananias, benevides]
 	if tela[0] == -1 and tela[1] == 0:
-		coisasadesenhar += [casa, casa2]
+		coisasadesenhar += [casa, arvoreseca]
 	if tela[0] == 0 and tela[1] == 0:
 		fundo.blit(duende, (200, 200))
 		fundo.blit(pirata, (50, 350))
