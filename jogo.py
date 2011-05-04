@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 # coding: utf-8
 
-import os, sys, pygame, random, actor, animatedactor, object
+import os, sys, pygame, random, actor, animatedactor, object, pessoa
 pygame.init()
 
 size = width, height = 640, 480
@@ -34,11 +34,12 @@ arvoreseca = object.Object('arvoreseca')
 arvoreseca.pos = (300, 180)
 casebre = object.Object('casebre2')
 casebre.pos = (400, 100)
-#duende = actor.Object('duende')
+duende = pessoa.Pessoa('duende', (2, 2, 4, 4))
+duende.pos = [size[0] / 2, size[1] / 2]
 
 
 try:
-	pygame.mixer.music.load(os.path.join('music', 'lojinha song.mp3'))
+	pygame.mixer.music.load(os.path.join('music', '~/Dropbox/Música/Iron Maiden/The Number of the Beast/06 - Run to the Hills.ogg'))
 	pygame.mixer.music.play(-1)
 except:
 	#não esquenta
@@ -94,6 +95,7 @@ while True:
 
 	ananias.update()
 	benevides.update()
+	duende.update()
 
 	def mudatela(actor, outro):
 		if not actor.eventtime:
@@ -145,11 +147,10 @@ while True:
 
 	screen.blit(fundo, (0, 0))
 
-	coisasadesenhar = [ananias, benevides]
+	coisasadesenhar = [ananias, benevides, duende]
 	if tela[0] == -1 and tela[1] == 0:
 		coisasadesenhar += [arvoreseca]
 	if tela[0] == 0 and tela[1] == 0:
-		fundo.blit(duende, (200, 200))
 		fundo.blit(pirata, (50, 350))
 		coisasadesenhar += [casebre]
 
