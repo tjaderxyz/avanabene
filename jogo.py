@@ -31,7 +31,9 @@ pirata = pygame.transform.scale(pirata, [4 * i for i in pirata.get_rect()][2:]).
 casa = object.Object('casa')
 casa.pos = (100, 90)
 arvoreseca = object.Object('arvoreseca')
-arvoreseca.pos = (300, 180)
+arvoreseca.pos = (260, 180)
+arvoreseca2 = object.Object('arvoreseca2')
+arvoreseca2.pos = (400, 240)
 casebre = object.Object('casebre2')
 casebre.pos = (400, 100)
 duende = pessoa.Pessoa('duende', (2, 2, 4, 4))
@@ -152,7 +154,7 @@ while True:
 
 	coisasadesenhar = [ananias, benevides]
 	if tela[0] == -1 and tela[1] == 0:
-		coisasadesenhar += [arvoreseca, pirata]
+		coisasadesenhar += [arvoreseca, arvoreseca2, pirata]
 	if tela[0] == 0 and tela[1] == 0:
 		coisasadesenhar += [casebre, duende]
 
