@@ -36,6 +36,8 @@ casebre = object.Object('casebre2')
 casebre.pos = (400, 100)
 duende = pessoa.Pessoa('duende', (2, 2, 4, 4))
 duende.pos = [size[0] / 2, size[1] / 2]
+pirata = pessoa.Pessoa('pirata', (2, 2, 4, 4))
+pirata.pos = [size[0] / 2, size[1] / 2]
 
 
 try:
@@ -96,6 +98,7 @@ while True:
 	ananias.update()
 	benevides.update()
 	duende.update()
+	pirata.update()
 
 	def mudatela(actor, outro):
 		if not actor.eventtime:
@@ -149,9 +152,8 @@ while True:
 
 	coisasadesenhar = [ananias, benevides]
 	if tela[0] == -1 and tela[1] == 0:
-		coisasadesenhar += [arvoreseca]
+		coisasadesenhar += [arvoreseca, pirata]
 	if tela[0] == 0 and tela[1] == 0:
-		fundo.blit(pirata, (50, 350))
 		coisasadesenhar += [casebre, duende]
 
 	coisasadesenhar.sort(key=lambda x: x.pos[1] + x.get_rect()[3])
