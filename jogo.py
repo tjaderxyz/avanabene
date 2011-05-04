@@ -39,7 +39,7 @@ duende.pos = [size[0] / 2, size[1] / 2]
 
 
 try:
-	pygame.mixer.music.load(os.path.join('music', '~/Dropbox/Música/Iron Maiden/The Number of the Beast/06 - Run to the Hills.ogg'))
+	pygame.mixer.music.load(os.path.join('music', 'lojinha song.mp3'))
 	pygame.mixer.music.play(-1)
 except:
 	#não esquenta
@@ -147,12 +147,12 @@ while True:
 
 	screen.blit(fundo, (0, 0))
 
-	coisasadesenhar = [ananias, benevides, duende]
+	coisasadesenhar = [ananias, benevides]
 	if tela[0] == -1 and tela[1] == 0:
 		coisasadesenhar += [arvoreseca]
 	if tela[0] == 0 and tela[1] == 0:
 		fundo.blit(pirata, (50, 350))
-		coisasadesenhar += [casebre]
+		coisasadesenhar += [casebre, duende]
 
 	coisasadesenhar.sort(key=lambda x: x.pos[1] + x.get_rect()[3])
 	for coisaadesenhar in coisasadesenhar:
