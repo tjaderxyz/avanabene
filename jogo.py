@@ -65,7 +65,6 @@ def gerafundo(tela):
 				fundo.blit(pasto, (i, j))
 
 	txt = fonte.render(repr(tela), False, (255, 255, 255))
-#	txt = pygame.transform.scale(txt, [geral.px * i for i in txt.get_rect()][2:])
 	fundo.blit(txt, (geral.size[0] - txt.get_rect()[2] - 10, geral.size[1] - txt.get_rect()[3] - 10))
 	return fundo
 
@@ -163,5 +162,4 @@ while True:
 	pygame.display.flip()
 
 	tempo.tick(60)
-#	print tempo.get_fps(), 'QPS'
 
