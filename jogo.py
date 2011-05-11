@@ -33,8 +33,9 @@ try:
 except:
 	pass
 
+RandomFundo = random.Random()
 def gerafundo(tela):
-	random.seed((geral.seed ,tela[0], tela[1]))
+	RandomFundo.seed((geral.seed, tela[0], tela[1]))
 	if tela[0] == -1 and tela[1] == 0:
 		pasto = pygame.image.load("images/t_deserto.png")
 		fro = pygame.image.load("images/t_deserto.png")
@@ -48,7 +49,7 @@ def gerafundo(tela):
 
 	for i in range(0, geral.size[0], pastorect[2]):
 		for j in range(0, geral.size[1], pastorect[3]):
-			if random.random() > 0.92:
+			if RandomFundo.random() > 0.92:
 				fundo.blit(fro, (i, j))
 			else:
 				fundo.blit(pasto, (i, j))
