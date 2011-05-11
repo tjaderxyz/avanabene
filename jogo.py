@@ -138,9 +138,9 @@ while True:
 
 	coisasadesenhar = [ananias, benevides]
 	if tela[0] == -1 and tela[1] == 0:
-		coisasadesenhar += [arvoreseca, arvoreseca2, pirata]
+		coisasadesenhar += [arvoreseca, arvoreseca2, casa, pirata]
 	if tela[0] == 0 and tela[1] == 0:
-		coisasadesenhar += [casebre, casa, duende]
+		coisasadesenhar += [casebre, duende]
 
 	coisasadesenhar.sort(key=lambda x: x.pos[1] + x.get_rect()[3])
 	for coisaadesenhar in coisasadesenhar:
