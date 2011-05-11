@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 # coding: utf-8
 
-import os, sys, pygame, random, actor, animatedactor, object, pessoa, geral
+import os, sys, pygame, random, animatedactor, object, pessoa, geral
 pygame.init()
 
 fonte = pygame.font.Font('unifont-5.1.20080820.pcf', 16)
