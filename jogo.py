@@ -12,8 +12,8 @@ fonte = pygame.font.Font('unifont-5.1.20080820.pcf', 16)
 screen = pygame.display.set_mode(size)
 pygame.display.set_caption('Aventuras de Ananias e Benevides') 
 
-ananias = animatedactor.AnimatedActor('ananias', (pygame.K_LEFT, pygame.K_RIGHT, pygame.K_UP, pygame.K_DOWN), (2, 2, 4, 4))
-benevides = animatedactor.AnimatedActor('benevides', (pygame.K_a, pygame.K_d, pygame.K_w, pygame.K_s), (2, 2, 4, 4))
+ananias = animatedactor.AnimatedActor('ananias', (pygame.K_LEFT, pygame.K_RIGHT, pygame.K_UP, pygame.K_DOWN), (2, 2, 4, 4), (7, 8))
+benevides = animatedactor.AnimatedActor('benevides', (pygame.K_a, pygame.K_d, pygame.K_w, pygame.K_s), (2, 2, 4, 4), (7, 8))
 ananias.pos = (300, 188)
 benevides.pos = (328, 188)
 
@@ -41,12 +41,10 @@ duende.pos = [size[0] / 2, size[1] / 2]
 pirata = pessoa.Pessoa('pirata', (2, 2, 4, 4))
 pirata.pos = [size[0] / 2, size[1] / 2]
 
-
 try:
 	pygame.mixer.music.load(os.path.join('music', 'lojinha song.mp3'))
 	pygame.mixer.music.play(-1)
 except:
-	#não esquenta
 	pass
 
 def gerafundo(tela):
