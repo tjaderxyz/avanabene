@@ -3,12 +3,17 @@
 import os, pygame, object, random, geral
 
 class Pessoa(object.Object):
-	def __init__(self, id, frames):
+	def __init__(self, id, frames, size):
 		self.sprites = []
-		for direcao, nframes in zip(('esq', 'dir', 'cima', 'baixo'), frames):
-			sprites = (pygame.image.load(os.path.join('images', 's_' + id + '_' + direcao + str(i) + '.png')) for i in range(nframes))
-			sprites = [pygame.transform.scale(sprite, [geral.px * i for i in sprite.get_rect()][2:]).convert_alpha() for sprite in sprites]
-			self.sprites.append(sprites)
+		spritesheet = pygame.image.load(os.path.join('images', 'sh_' + id + '.png'))
+		spritesheet = pygame.transform.scale(spritesheet, [geral.px * i for i in spritesheet.get_rect()][2:]).convert_alpha()
+		for y, nframes in zip(range(4), frames):
+			spritesdir = []
+			for x in range(nframes):
+				rect = [(size[0] + 1) * x, (size[1] + 1) * y, size[0], size[1]]
+				rect = [geral.px * i for i in rect]
+				spritesdir.append(spritesheet.subsurface(rect))
+			self.sprites.append(spritesdir)
 		self.pos = [0, 0]
 		self.eventtime = True
 		self.speed = [0, 0]

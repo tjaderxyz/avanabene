@@ -14,17 +14,6 @@ benevides = animatedactor.AnimatedActor('benevides', (pygame.K_a, pygame.K_d, py
 ananias.pos = (geral.lwidth / 2 - 7, geral.lheight / 2 - 4)
 benevides.pos = (geral.lwidth / 2 + 7, geral.lheight / 2 - 4)
 
-#casa = pygame.image.load(os.path.join('images', 'o_casa.png'))
-#casa = pygame.transform.scale(casa, [geral.px * i for i in casa.get_rect()][2:]).convert_alpha()
-#casa2 = pygame.image.load(os.path.join('images', 'o_casa2.png'))
-#casa2 = pygame.transform.scale(casa2, [geral.px * i for i in casa2.get_rect()][2:]).convert_alpha()
-duende = pygame.image.load(os.path.join('images', 's_duende_baixo0.png'))
-duende = pygame.transform.scale(duende, [geral.px * i for i in duende.get_rect()][2:]).convert_alpha()
-pirata = pygame.image.load(os.path.join('images', 's_pirata_baixo0.png'))
-pirata = pygame.transform.scale(pirata, [geral.px * i for i in pirata.get_rect()][2:]).convert_alpha()
-#casebre = pygame.image.load(os.path.join('images', 'o_casebre2.png'))
-#casebre = pygame.transform.scale(casebre, [geral.px * i for i in casebre.get_rect()][2:]).convert_alpha()
-
 casa = object.Object('casa')
 casa.pos = (25, 20)
 arvoreseca = object.Object('arvoreseca')
@@ -33,9 +22,9 @@ arvoreseca2 = object.Object('arvoreseca2')
 arvoreseca2.pos = (100, 60)
 casebre = object.Object('casebre2')
 casebre.pos = (100, 25)
-duende = pessoa.Pessoa('duende', (2, 2, 4, 4))
+duende = pessoa.Pessoa('duende', (2, 2, 4, 4), (7, 9))
 duende.pos = [geral.lwidth / 2, geral.lheight / 2]
-pirata = pessoa.Pessoa('pirata', (2, 2, 4, 4))
+pirata = pessoa.Pessoa('pirata', (2, 2, 4, 4), (7, 8))
 pirata.pos = [geral.lwidth / 2, geral.lheight / 2]
 
 try:
