@@ -14,7 +14,7 @@ benevides = animatedactor.AnimatedActor('benevides', (pygame.K_a, pygame.K_d, py
 ananias.pos = (geral.lwidth / 2 - 7, geral.lheight / 2 - 4)
 benevides.pos = (geral.lwidth / 2 + 7, geral.lheight / 2 - 4)
 
-casa = object.Object('casa')
+casa = object.Object('casa_tijolos')
 casa.pos = (25, 20)
 arvoreseca = object.Object('arvoreseca')
 arvoreseca.pos = (65, 45)
@@ -140,7 +140,7 @@ while True:
 	if tela[0] == -1 and tela[1] == 0:
 		coisasadesenhar += [arvoreseca, arvoreseca2, pirata]
 	if tela[0] == 0 and tela[1] == 0:
-		coisasadesenhar += [casebre, duende]
+		coisasadesenhar += [casebre, casa, duende]
 
 	coisasadesenhar.sort(key=lambda x: x.pos[1] + x.get_rect()[3])
 	for coisaadesenhar in coisasadesenhar:
