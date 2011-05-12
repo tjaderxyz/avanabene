@@ -1,9 +1,9 @@
 # coding: utf-8
 
-import os, pygame, geral
+import os, pygame, object, random, geral
 
-class AnimatedActor:
-	def __init__(self, id, controls, frames, size):
+class Pessoa(object.Object):
+	def __init__(self, id, frames, size):
 		self.sprites = []
 		spritesheet = pygame.image.load(os.path.join('images', 'sh_' + id + '.png'))
 		spritesheet = pygame.transform.scale(spritesheet, [geral.px * i for i in spritesheet.get_rect()][2:]).convert_alpha()
@@ -15,7 +15,6 @@ class AnimatedActor:
 				spritesdir.append(spritesheet.subsurface(rect))
 			self.sprites.append(spritesdir)
 		self.pos = [0, 0]
-		self.controls = controls
 		self.eventtime = True
 		self.speed = [0, 0]
 		self.eventqueue = []
@@ -48,34 +47,40 @@ class AnimatedActor:
 		screen.blit(self.sprites[self.direction][nframe], [i * geral.px for i in self.pos])
 
 	def input(self, events):
-		self.eventqueue += [i for i in events if i.type in (pygame.KEYUP, pygame.KEYDOWN) and i.key in self.controls]
-		if self.eventtime:
-			while self.eventqueue:
-				event = self.eventqueue.pop()
-				if event.type == pygame.KEYDOWN:
-					if event.key == self.controls[0]:
-						self.speed[0] -= .5
-						self.set_direction(0)
-					if event.key == self.controls[1]:
-						self.speed[0] += .5
-						self.set_direction(1)
-					if event.key == self.controls[2]:
-						self.speed[1] -= .5
-						self.set_direction(2)
-					if event.key == self.controls[3]:
-						self.speed[1] += .5
-						self.set_direction(3)
-				elif event.type == pygame.KEYUP:
-					if event.key == self.controls[0]:
-						self.speed[0] += .5
-					if event.key == self.controls[1]:
-						self.speed[0] -= .5
-					if event.key == self.controls[2]:
-						self.speed[1] += .5
-					if event.key == self.controls[3]:
-						self.speed[1] -= .5
-		self.eventtime = not self.eventtime
+		pass
 
 	def update(self):
+		if random.random() > 0.99:
+			if self.speed == [0, 0]:
+				self.speed = [random.choice((-.5, 0, .5)), random.choice((-.5, 0, .5))]
+				if self.speed[0] < 0:
+					self.set_direction(0)
+				if self.speed[0] > 0:
+					self.set_direction(1)
+				if self.speed[1] < 0:
+					self.set_direction(2)
+				if self.speed[1] > 0:
+					self.set_direction(3)
+			else:
+				self.speed = [0, 0]
+		if self.speed != [0, 0]:
+			if random.random() > 0.95:
+				self.speed[0] = random.choice((-.5, 0, .5))
+				if self.speed[0] < 0:
+					self.set_direction(0)
+				if self.speed[0] > 0:
+					self.set_direction(1)
+			if random.random() > 0.95:
+				self.speed[1] = random.choice((-.5, 0, .5))
+				if self.speed[1] < 0:
+					self.set_direction(2)
+				if self.speed[1] > 0:
+					self.set_direction(3)
+			if (self.pos[0] < 3 and self.speed[0] < 0) or \
+			   (self.pos[0] > geral.lsize[0] - 3 - self.get_rect()[2] and self.speed[0] > 0):
+				self.speed[0] = -self.speed[0]
+			if (self.pos[1] < 3 and self.speed[1] < 0) or \
+			   (self.pos[1] > geral.lsize[1] - 3 - self.get_rect()[3] and self.speed[1] > 0):
+				self.speed[1] = -self.speed[1]
 		self.pos = [sum(i) for i in zip(self.pos, self.speed)]
 
