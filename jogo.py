@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 # coding: utf-8
 
-import os, sys, pygame, random, animatedactor, object, pessoa, geral
+import os, sys, pygame, random, animatedactor, object, pessoa, geral, tela as telaa
 pygame.init()
 
 fonte = pygame.font.Font('unifont-5.1.20080820.pcf', 16)
@@ -33,34 +33,8 @@ try:
 except:
 	pass
 
-RandomFundo = random.Random()
-def gerafundo(tela):
-	RandomFundo.seed((geral.seed, tela[0], tela[1]))
-	if tela[0] == -1 and tela[1] == 0:
-		pasto = pygame.image.load("images/t_deserto.png")
-		fro = pygame.image.load("images/t_deserto.png")
-	else:
-		pasto = pygame.image.load("images/t_grama.png")
-		fro = pygame.image.load("images/t_gramaflor.png")
-	pasto = pygame.transform.scale(pasto, [geral.px * i for i in pasto.get_rect()][2:]).convert_alpha()
-	pastorect = pasto.get_rect()
-	fro = pygame.transform.scale(fro, [geral.px * i for i in fro.get_rect()][2:]).convert_alpha()
-	fundo = pygame.Surface(geral.size)
-
-	for i in range(0, geral.size[0], pastorect[2]):
-		for j in range(0, geral.size[1], pastorect[3]):
-			if RandomFundo.random() > 0.92:
-				fundo.blit(fro, (i, j))
-			else:
-				fundo.blit(pasto, (i, j))
-
-	txt = fonte.render(repr(tela), False, (255, 255, 255))
-	fundo.blit(txt, (geral.size[0] - txt.get_rect()[2] - 10, geral.size[1] - txt.get_rect()[3] - 10))
-	return fundo
-
 tela = [0, 0]
-
-fundo = gerafundo(tela)
+t = telaa.Telas('telas.xml')
 
 titulo = fonte.render('Aventuras de Ananias e Benevides', False, (255, 255, 255))
 titulo = pygame.transform.scale(titulo, [(geral.px / 2) * i for i in titulo.get_rect()][2:])
@@ -86,6 +60,7 @@ while True:
 	benevides.update()
 	duende.update()
 	pirata.update()
+	t[tuple(tela)].update()
 
 	def mudatela(actor, outro):
 		if not actor.eventtime:
@@ -128,19 +103,14 @@ while True:
 			outro.set_direction(3)
 		else:
 			return
-		global fundo
-		fundo = gerafundo(tela)
 
 	mudatela(ananias, benevides)
 	mudatela(benevides, ananias)
 
-	screen.blit(fundo, (0, 0))
+	screen.blit(t[tuple(tela)].fundo, (0, 0))
 
 	coisasadesenhar = [ananias, benevides]
-	if tela[0] == -1 and tela[1] == 0:
-		coisasadesenhar += [arvoreseca, arvoreseca2, pirata]
-	if tela[0] == 0 and tela[1] == 0:
-		coisasadesenhar += [casebre, casa, duende]
+	coisasadesenhar += t[tuple(tela)].coisasadesenhar
 
 	coisasadesenhar.sort(key=lambda x: x.pos[1] + x.get_rect()[3])
 	for coisaadesenhar in coisasadesenhar:
