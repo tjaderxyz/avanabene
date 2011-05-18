@@ -1,0 +1,7 @@
+<mundo>
+	<tela x='0' y='0'>
+		<objeto id='casebre' x='100' y='50' />
+		<pessoa id='duende' frames='2,2,4,4' w='7' h='9' x='10' y='10' />
+	</tela>
+</mundo>
+
