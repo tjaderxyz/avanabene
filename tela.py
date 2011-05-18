@@ -48,7 +48,10 @@ class Tela:
 	def __init__(self, atr):
 		self.coisasadesenhar = []
 		self.coisasaupdatear = []
-		self.fundo = gerafundo((int(atr['x']), int(atr['y'])))
+		try:
+			self.fundo = gerafundo((int(atr['x']), int(atr['y'])))
+		except:
+			self.fundo = gerafundo((0, 0))
 	def insere(self, tipo, atr):
 		if tipo == 'objeto':
 			o = object.Object(atr['id'])
