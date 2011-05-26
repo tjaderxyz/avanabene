@@ -14,19 +14,6 @@ benevides = animatedactor.AnimatedActor('benevides', (pygame.K_a, pygame.K_d, py
 ananias.pos = (geral.lwidth / 2 - 7, geral.lheight / 2 - 4)
 benevides.pos = (geral.lwidth / 2 + 7, geral.lheight / 2 - 4)
 
-casa = object.Object('casa_tijolos_simples')
-casa.pos = (25, 20)
-arvoreseca = object.Object('arvoreseca_simples')
-arvoreseca.pos = (65, 45)
-arvoreseca2 = object.Object('arvoreseca2_simples')
-arvoreseca2.pos = (100, 60)
-casebre = object.Object('casebre1_simples')
-casebre.pos = (100, 25)
-duende = pessoa.Pessoa('duende', (2, 2, 4, 4), (7, 9))
-duende.pos = [geral.lwidth / 2, geral.lheight / 2]
-pirata = pessoa.Pessoa('pirata', (2, 2, 4, 4), (7, 8))
-pirata.pos = [geral.lwidth / 2, geral.lheight / 2]
-
 try:
 	pygame.mixer.music.load(os.path.join('music', 'lojinha song.mp3'))
 	pygame.mixer.music.play(-1)
@@ -58,8 +45,6 @@ while True:
 
 	ananias.update()
 	benevides.update()
-	duende.update()
-	pirata.update()
 	t[tuple(tela)].update()
 
 	def mudatela(actor, outro):

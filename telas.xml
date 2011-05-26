@@ -1,7 +1,15 @@
 <mundo>
 	<tela x='0' y='0'>
+		<fundo tipo='flores' />
 		<objeto id='casebre1' x='100' y='50' />
-		<pessoa id='duende' frames='2,2,4,4' w='7' h='9' x='10' y='10' />
+		<pessoa id='duende' frames='2,2,4,4' w='7' h='9' x='80' y='60' />
+	</tela>
+	<tela x='-1' y='0'>
+		<fundo tipo='ladrilhado' imagem='deserto' />
+		<objeto id='arvoreseca' x='65' y='45' />
+		<objeto id='arvoreseca2' x='100' y='60' />
+		<objeto id='casa_tijolos' x='25' y='20' />
+		<pessoa id='pirata' frames='2,2,4,4' w='7' h='8' x='80' y='60' />
 	</tela>
 </mundo>
 
