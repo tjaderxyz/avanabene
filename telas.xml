@@ -11,5 +11,60 @@
 		<objeto id='casa_tijolos' x='25' y='20' />
 		<pessoa id='pirata' frames='2,2,4,4' w='7' h='8' x='80' y='60' />
 	</tela>
+	<tela x='0' y='-1'>
+		<fundo tipo='flores' />
+		<objeto id='casebre2' x='108' y='34' />
+		<objeto id='rio_margemesq' x='58' y='60' />
+		<objeto id='rio' x='69' y='60' />
+		<objeto id='rio' x='80' y='60' />
+		<objeto id='rio' x='91' y='60' />
+		<objeto id='rio' x='69' y='50' />
+		<objeto id='rio' x='80' y='50' />
+		<objeto id='rio' x='91' y='50' />
+		<objeto id='rio_margeminfesq' x='58' y='70' />
+		<objeto id='rio_margeminf' x='69' y='70' />
+		<objeto id='rio_margeminf' x='80' y='70' />
+		<objeto id='rio_margeminf' x='91' y='70' />
+		<objeto id='rio_curvainfesq' x='58' y='50' />
+		<objeto id='rio_margeminf' x='47' y='50' />
+		<objeto id='rio_margeminfesq' x='36' y='50' />
+		<objeto id='rio_margeminfdir' x='102' y='70' />
+		<objeto id='rio_margemdir' x='102' y='60' />
+		<objeto id='rio_margemdir' x='102' y='50' />
+		<objeto id='rio_curvainfdir' x='102' y='40' />
+		<objeto id='rio_margeminfdir' x='113' y='40' />
+		<objeto id='rio_margemdir' x='113' y='30' />
+		<objeto id='rio_margemdir' x='113' y='20' />
+		<objeto id='rio_margemdir' x='113' y='10' />
+		<objeto id='rio_margemdir' x='113' y='0' />
+		<objeto id='rio' x='102' y='0' />
+		<objeto id='rio' x='102' y='10' />
+		<objeto id='rio' x='102' y='20' />
+		<objeto id='rio' x='102' y='30' />
+		<objeto id='rio' x='91' y='20' />
+		<objeto id='rio' x='91' y='30' />
+		<objeto id='rio' x='91' y='40' />
+		<objeto id='rio' x='80' y='40' />
+		<objeto id='rio_margemesq' x='91' y='0' />
+		<objeto id='rio_curvasupesq' x='91' y='10' />
+		<objeto id='rio_margemsupesq' x='80' y='10' />
+		<objeto id='rio_margemesq' x='80' y='20' />
+		<objeto id='rio_curvasupesq' x='80' y='30' />
+		<objeto id='rio_curvasupdir' x='69' y='30' />
+		<objeto id='rio_margemsupdir' x='69' y='20' />
+		<objeto id='rio_margemsup' x='58' y='20' />
+		<objeto id='rio_curvainfesq' x='36' y='40' />
+		<objeto id='rio_margeminfesq' x='25' y='40' />
+		<objeto id='rio_margemesq' x='25' y='30' />
+		<objeto id='rio_margemsupesq' x='25' y='20' />
+		<objeto id='rio_margemsup' x='36' y='20' />
+		<objeto id='rio_margemsup' x='47' y='20' />
+		<objeto id='rio' x='58' y='40' />
+		<objeto id='rio' x='69' y='40' />
+		<objeto id='rio' x='36' y='30' />
+		<objeto id='rio' x='47' y='30' />
+		<objeto id='rio' x='58' y='30' />
+		<objeto id='rio' x='47' y='40' />
+	</tela>
 </mundo>
 
