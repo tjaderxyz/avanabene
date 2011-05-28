@@ -65,6 +65,7 @@
 		<objeto id='rio' x='47' y='30' />
 		<objeto id='rio' x='58' y='30' />
 		<objeto id='rio' x='47' y='40' />
+		<pessoa id='lemanco' frames='3,3,6,6' w='7' h='8' x='30' y='100' />
 	</tela>
 </mundo>
 

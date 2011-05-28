@@ -9,7 +9,7 @@ fonte = pygame.font.Font('unifont-5.1.20080820.pcf', 16)
 screen = pygame.display.set_mode(geral.size)
 pygame.display.set_caption('Aventuras de Ananias e Benevides') 
 
-ananias = animatedactor.AnimatedActor('ananias', (pygame.K_LEFT, pygame.K_RIGHT, pygame.K_UP, pygame.K_DOWN), (3, 3, 4, 4), (7, 8))
+ananias = animatedactor.AnimatedActor('lemanco', (pygame.K_LEFT, pygame.K_RIGHT, pygame.K_UP, pygame.K_DOWN), (3, 3, 6, 6), (7, 8))
 benevides = animatedactor.AnimatedActor('benevides', (pygame.K_a, pygame.K_d, pygame.K_w, pygame.K_s), (2, 2, 4, 4), (7, 8))
 ananias.pos = (geral.lwidth / 2 - 7, geral.lheight / 2 - 4)
 benevides.pos = (geral.lwidth / 2 + 7, geral.lheight / 2 - 4)
