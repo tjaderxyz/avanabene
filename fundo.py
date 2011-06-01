@@ -18,6 +18,8 @@ class Fundo:
 		elif tipo == 'ladrilhado':
 			imagem = node.getAttribute('imagem')
 			fundo.fundo = gerafundoladrilhado(imagem, (x, y))
+		elif tipo == '':
+			fundo.fundo = pygame.Surface(geral.size)
 		else:
 			raise Exception
 		for elemento in node.childNodes:

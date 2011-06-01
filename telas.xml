@@ -12,7 +12,7 @@
 		<pessoa id='pirata' frames='2,2,4,4' w='7' h='8' x='80' y='60' />
 	</tela>
 	<tela x='0' y='-1'>
-		<fundo tipo='flores'>
+		<fundo>
 			<objeto id='rio_margemesq' x='58' y='60' />
 			<objeto id='rio' x='69' y='60' />
 			<objeto id='rio' x='80' y='60' />
