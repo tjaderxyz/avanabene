@@ -15,6 +15,7 @@ ananias.pos = (geral.lwidth / 2 - 7, geral.lheight / 2 - 4)
 benevides.pos = (geral.lwidth / 2 + 7, geral.lheight / 2 - 4)
 
 try:
+	volume = 0
 	pygame.mixer.music.load(os.path.join('music', 'lojinha song.mp3'))
 	pygame.mixer.music.play(-1)
 except:
@@ -30,18 +31,28 @@ splash.blit(titulo, [geral.px * i for i in (geral.lwidth / 2 - titulo.get_rect()
 splash.set_alpha(255)
 screen.blit(splash, (0, 0))
 pygame.display.flip()
-pygame.time.wait(2000)
+acabouosplash = False
+pygame.time.set_timer(pygame.USEREVENT, 2000)
 
 tempo = pygame.time.Clock()
 
 while True:
 	events = pygame.event.get()
-	ananias.input(events)
-	benevides.input(events)
 	for event in events:
 		if event.type == pygame.QUIT \
 		   or (event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE):
 			sys.exit()
+		elif event.type == pygame.USEREVENT:
+			acabouosplash = True
+		elif (event.type == pygame.KEYDOWN and event.key == pygame.K_m):
+			a = pygame.mixer.music.get_volume()
+			pygame.mixer.music.set_volume(volume)
+			volume = a
+	if not acabouosplash:
+		continue
+
+	ananias.input(events)
+	benevides.input(events)
 
 	ananias.update()
 	benevides.update()
