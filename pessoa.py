@@ -21,6 +21,18 @@ class Pessoa(object.Object):
 		self.direction = 0
 		self.frameswalkinginthisdirection = 0
 
+	@staticmethod
+	def XML(node):
+		id = node.getAttribute('id')
+		x = int(node.getAttribute('x'))
+		y = int(node.getAttribute('y'))
+		w = int(node.getAttribute('w'))
+		h = int(node.getAttribute('h'))
+		frames = [int(i) for i in node.getAttribute('frames').split(',')]
+		pessoa = Pessoa(id, frames, (w, h))
+		pessoa.pos = x, y
+		return pessoa
+
 	def get_rect(self):
 		return [i / geral.px for i in self.sprites[0][0].get_rect()]
 
