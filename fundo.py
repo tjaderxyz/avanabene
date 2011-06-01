@@ -1,6 +1,6 @@
 # coding: utf-8
 
-import random, geral, pygame, os, xml.dom, object
+import random, geral, pygame, os, xml.dom, object, tile
 
 class Fundo:
 	def __init__(self):
@@ -18,6 +18,8 @@ class Fundo:
 		elif tipo == 'ladrilhado':
 			imagem = node.getAttribute('imagem')
 			fundo.fundo = gerafundoladrilhado(imagem, (x, y))
+		elif tipo == '':
+			fundo.fundo = pygame.Surface(geral.size)
 		else:
 			raise Exception
 		for elemento in node.childNodes:
@@ -26,6 +28,11 @@ class Fundo:
 			elif elemento.tagName == 'objeto':
 				o = object.Object.XML(elemento)
 				fundo.coisasadesenhar.append(o)
+			elif elemento.tagName == 'tile':
+				t = tile.Tile.XML(elemento)
+				fundo.coisasadesenhar.append(t)
+			else:
+				raise Exception
 		return fundo
 
 	def render(self, screen):
