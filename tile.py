@@ -8,20 +8,25 @@ class Tile:
 		self.sprite = pygame.transform.scale(self.sprite, [geral.px * i for i in self.sprite.get_rect()][2:]).convert_alpha()
 		self.pos = pos
 		self.size = size
-		self.spritemesmo = pygame.Surface([i * geral.px for i in self.size])
 		ladrilhorect = self.sprite.get_rect()
-		print [i * geral.px for i in self.size]
-		for i in range(0, size[0] * geral.px, ladrilhorect[2]):
-			for j in range(0, size[1] * geral.px, ladrilhorect[3]):
-				self.spritemesmo.blit(self.sprite, (i, j))
+		self.spritemesmo = pygame.Surface((self.size[0] * ladrilhorect[2], self.size[1] * ladrilhorect[3]))
+		for i in range(size[0]):
+			for j in range(size[1]):
+				self.spritemesmo.blit(self.sprite, (i * ladrilhorect[2], j * ladrilhorect[3]))
 
 	@staticmethod
 	def XML(node):
 		id = node.getAttribute('id')
 		x = int(node.getAttribute('x'))
 		y = int(node.getAttribute('y'))
-		w = int(node.getAttribute('w'))
-		h = int(node.getAttribute('h'))
+		try:
+			w = int(node.getAttribute('w'))
+		except ValueError:
+			w = 1
+		try:
+			h = int(node.getAttribute('h'))
+		except ValueError:
+			h = 1
 		tile = Tile(id, (x, y), (w, h))
 		return tile
 
