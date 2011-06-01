@@ -1,10 +1,10 @@
 # coding: utf-8
 
-import random, geral, pygame, os
+import random, geral, pygame, os, xml.dom, object
 
 class Fundo:
 	def __init__(self):
-		pass
+		self.coisasadesenhar = []
 
 	@staticmethod
 	def XML(node):
@@ -20,10 +20,18 @@ class Fundo:
 			fundo.fundo = gerafundoladrilhado(imagem, (x, y))
 		else:
 			raise Exception
+		for elemento in node.childNodes:
+			if elemento.nodeType != xml.dom.Node.ELEMENT_NODE:
+				continue
+			elif elemento.tagName == 'objeto':
+				o = object.Object.XML(elemento)
+				fundo.coisasadesenhar.append(o)
 		return fundo
 
 	def render(self, screen):
 		screen.blit(self.fundo, (0, 0))
+		for coisa in self.coisasadesenhar:
+			coisa.render(screen)
 
 RandomFundo = random.Random()
 
