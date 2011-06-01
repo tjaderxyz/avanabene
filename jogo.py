@@ -2,6 +2,7 @@
 # coding: utf-8
 
 import os, sys, pygame, random, animatedactor, object, pessoa, geral, tela as telaa
+
 pygame.init()
 
 fonte = pygame.font.Font('unifont-5.1.20080820.pcf', 16)
@@ -15,7 +16,11 @@ ananias.pos = (geral.lwidth / 2 - 7, geral.lheight / 2 - 4)
 benevides.pos = (geral.lwidth / 2 + 7, geral.lheight / 2 - 4)
 
 try:
-	volume = 0
+	if '-m' in sys.argv:
+		volume = pygame.mixer.music.get_volume()
+		pygame.mixer.music.set_volume(0)
+	else:
+		volume = 0
 	pygame.mixer.music.load(os.path.join('music', 'lojinha song.mp3'))
 	pygame.mixer.music.play(-1)
 except:
