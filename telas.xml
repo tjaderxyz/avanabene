@@ -14,23 +14,20 @@
 	<tela x='0' y='-1'>
 		<fundo tipo='flores'>
 			<tile id='rio_margemesq' x='58' y='60' />
-			<tile id='rio' x='69' y='60' w='3' h='1' />
-			<tile id='rio' x='69' y='50' w='3' h='1' />
+			<tile id='rio' x='69' y='60' w='3' />
+			<tile id='rio' x='69' y='50' w='3' />
 			<tile id='rio_margeminfesq' x='58' y='70' />
-			<tile id='rio_margeminf' x='69' y='70' w='3' h='1' />
+			<tile id='rio_margeminf' x='69' y='70' w='3' />
 			<tile id='rio_curvainfesq' x='58' y='50' />
 			<tile id='rio_margeminf' x='47' y='50' />
 			<tile id='rio_margeminfesq' x='36' y='50' />
 			<tile id='rio_margeminfdir' x='102' y='70' />
-			<tile id='rio_margemdir' x='102' y='50' w='1' h='2' />
+			<tile id='rio_margemdir' x='102' y='50' h='2' />
 			<tile id='rio_curvainfdir' x='102' y='40' />
 			<tile id='rio_margeminfdir' x='113' y='40' />
-			<tile id='rio_margemdir' x='113' y='30' />
-			<tile id='rio_margemdir' x='113' y='20' />
-			<tile id='rio_margemdir' x='113' y='10' />
-			<tile id='rio_margemdir' x='113' y='0' />
-			<tile id='rio' x='102' y='0' w='1' h='4' />
-			<tile id='rio' x='91' y='40' w='1' h='3' />
+			<tile id='rio_margemdir' x='113' y='0' h='4'/>
+			<tile id='rio' x='102' y='0' h='4' />
+			<tile id='rio' x='91' y='20' h='3' />
 			<tile id='rio' x='80' y='40' />
 			<tile id='rio_margemesq' x='91' y='0' />
 			<tile id='rio_curvasupesq' x='91' y='10' />
@@ -44,9 +41,9 @@
 			<tile id='rio_margeminfesq' x='25' y='40' />
 			<tile id='rio_margemesq' x='25' y='30' />
 			<tile id='rio_margemsupesq' x='25' y='20' />
-			<tile id='rio_margemsup' x='36' y='20' w='2' h='1'/>
-			<tile id='rio' x='36' y='30' w='3' h='1' />
-			<tile id='rio' x='47' y='40' w='3' h='1' />
+			<tile id='rio_margemsup' x='36' y='20' w='2' />
+			<tile id='rio' x='36' y='30' w='3' />
+			<tile id='rio' x='47' y='40' w='3' />
 		</fundo>
 		<objeto id='casebre2' x='115' y='40' />
 		<objeto id='arvoreseca2' x='135' y='60' />
@@ -54,47 +51,20 @@
 	</tela>
 	<tela x='0' y='-2'>
 		<fundo tipo='flores'>
-			<tile id='rio_margemdir' x='113' y='120' />
-			<tile id='rio_margemdir' x='113' y='110' />
-			<tile id='rio_margemdir' x='113' y='100' />
-			<tile id='rio_margemdir' x='113' y='90' />
-			<tile id='rio_margemdir' x='113' y='80' />
-			<tile id='rio_margemdir' x='113' y='70' />
-			<tile id='rio_margemdir' x='113' y='60' />
-			<tile id='rio_margemdir' x='113' y='50' />
-			<tile id='rio_margemdir' x='113' y='40' />
-			<tile id='rio_margemdir' x='113' y='30' />
-			<tile id='rio_margemdir' x='113' y='20' />
-			<tile id='rio_margemdir' x='113' y='10' />
-			<tile id='rio_margemdir' x='113' y='0' />
-			<tile id='rio' x='102' y='0' />
-			<tile id='rio' x='102' y='10' />
-			<tile id='rio' x='102' y='20' />
-			<tile id='rio' x='102' y='30' />
-			<tile id='rio' x='102' y='40' />
-			<tile id='rio' x='102' y='50' />
-			<tile id='rio' x='102' y='60' />
-			<tile id='rio' x='102' y='70' />
-			<tile id='rio' x='102' y='80' />
-			<tile id='rio' x='102' y='90' />
-			<tile id='rio' x='102' y='100' />
-			<tile id='rio' x='102' y='110' />
-			<tile id='rio' x='102' y='120' />
-			<tile id='rio_margemesq' x='91' y='0' />
-			<tile id='rio_margemesq' x='91' y='10' />
-			<tile id='rio_margemesq' x='91' y='20' />
-			<tile id='rio_margemesq' x='91' y='30' />
-			<tile id='rio_margemesq' x='91' y='40' />
-			<tile id='rio_margemesq' x='91' y='50' />
-			<tile id='rio_margemesq' x='91' y='60' />
-			<tile id='rio_margemesq' x='91' y='70' />
-			<tile id='rio_margemesq' x='91' y='80' />
-			<tile id='rio_margemesq' x='91' y='90' />
-			<tile id='rio_margemesq' x='91' y='100' />
-			<tile id='rio_margemesq' x='91' y='110' />
-			<tile id='rio_margemesq' x='91' y='120' />
+			<tile id='rio_margemdir' x='113' y='0' h='13' />
+			<tile id='rio' x='102' y='0' h='13' />
+			<tile id='rio_margemesq' x='91' y='0' h='13' />
 		</fundo>
 		<objeto id='casa_tijolos_telhado1' x='118' y='30' />
+	</tela><tela x='0' y='-3'>
+		<fundo tipo='flores'>
+			<tile id='rio_margemsupdir' x='113' y='90' />
+			<tile id='rio_margemsup' x='102' y='90' />
+			<tile id='rio_margemsupesq' x='91' y='90' />
+			<tile id='rio_margemdir' x='113' y='100' h='2'/>
+			<tile id='rio' x='102' y='100' h='2' />
+			<tile id='rio_margemesq' x='91' y='100' h='2'/>
+		</fundo>
 	</tela>
 </mundo>
 
