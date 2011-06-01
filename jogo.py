@@ -108,7 +108,7 @@ while True:
 	mudatela(ananias, benevides)
 	mudatela(benevides, ananias)
 
-	screen.blit(t[tuple(tela)].fundo, (0, 0))
+	t[tuple(tela)].fundo.render(screen)
 
 	coisasadesenhar = [ananias, benevides]
 	coisasadesenhar += t[tuple(tela)].coisasadesenhar

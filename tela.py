@@ -1,83 +1,58 @@
-#! /usr/bin/env python
 # coding: utf-8
 
-import xml.parsers.expat, random, object, geral, pygame, pessoa, os
+import xml.dom.minidom, random, object, geral, pygame, pessoa, os, fundo
 
 class Telas:
 	def __init__(self, arq):
 		self.tela = None
 		self.telas = {}
-		p = xml.parsers.expat.ParserCreate()
-		p.StartElementHandler = self.elemento
-		p.Parse(open(arq).read())
-	def elemento(self, nome, atr):
-		if nome == 'tela':
-			self.tela = int(atr['x']), int(atr['y'])
-			self.telas[self.tela] = Tela(atr)
-		else:
-			if self.tela is not None:
-				self.telas[self.tela].insere(nome, atr)
+		self.xml = xml.dom.minidom.parse(arq)
+		mundo = self.xml.documentElement
+		if mundo.tagName != 'mundo':
+			raise Exception
+		for elemento in mundo.childNodes:
+			if elemento.nodeType != xml.dom.Node.ELEMENT_NODE:
+				continue
+			if elemento.tagName == 'tela':
+				t = Tela.XML(elemento)
+				self.telas[t.pos] = Tela.XML(elemento)
+			else:
+				raise Exception
 	def __getitem__(self, index):
 		try:
 			return self.telas[index]
 		except KeyError:
-			self.telas[index] = Tela({'x': str(index[0]), 'y': str(index[1])})
-			self.telas[index].fundo = gerafundoflores(index)
+			self.telas[index] = Tela(index)
+			self.telas[index].fundo = fundo.Fundo()
+			self.telas[index].fundo.fundo = fundo.gerafundoflores(index)
 			return self.telas[index]
 
-RandomFundo = random.Random()
-
-def gerafundoflores(tela):
-	RandomFundo.seed((geral.seed, tela[0], tela[1]))
-	pasto = pygame.image.load("images/t_grama.png")
-	flor = pygame.image.load("images/t_gramaflor.png")
-	pasto = pygame.transform.scale(pasto, [geral.px * i for i in pasto.get_rect()][2:]).convert_alpha()
-	pastorect = pasto.get_rect()
-	flor = pygame.transform.scale(flor, [geral.px * i for i in flor.get_rect()][2:]).convert_alpha()
-	fundo = pygame.Surface(geral.size)
-
-	for i in range(0, geral.size[0], pastorect[2]):
-		for j in range(0, geral.size[1], pastorect[3]):
-			if RandomFundo.random() > 0.92:
-				fundo.blit(flor, (i, j))
-			else:
-				fundo.blit(pasto, (i, j))
-
-	return fundo
-
-def gerafundoladrilhado(imagem, tela):
-	RandomFundo.seed((geral.seed, tela[0], tela[1]))
-	ladrilho = pygame.image.load(os.path.join('images', 't_' + imagem + '.png'))
-	ladrilho = pygame.transform.scale(ladrilho, [geral.px * i for i in ladrilho.get_rect()][2:]).convert_alpha()
-	ladrilhorect = ladrilho.get_rect()
-	fundo = pygame.Surface(geral.size)
-
-	for i in range(0, geral.size[0], ladrilhorect[2]):
-		for j in range(0, geral.size[1], ladrilhorect[3]):
-			fundo.blit(ladrilho, (i, j))
-
-	return fundo
-
 class Tela:
-	def __init__(self, atr):
+	def __init__(self, pos):
 		self.coisasadesenhar = []
 		self.coisasaupdatear = []
-		self.pos = int(atr['x']), int(atr['y'])
-	def insere(self, tipo, atr):
-		if tipo == 'fundo':
-			if atr['tipo'] == 'flores':
-				self.fundo = gerafundoflores(self.pos)
-			elif atr['tipo'] == 'ladrilhado':
-				self.fundo = gerafundoladrilhado(atr['imagem'], self.pos)
-		elif tipo == 'objeto':
-			o = object.Object(atr['id'])
-			o.pos = int(atr['x']), int(atr['y'])
-			self.coisasadesenhar.append(o)
-		elif tipo == 'pessoa':
-			p = pessoa.Pessoa(atr['id'], [int(i) for i in atr['frames'].split(',')], (int(atr['w']), int(atr['h'])))
-			p.pos = int(atr['x']), int(atr['y'])
-			self.coisasadesenhar.append(p)
-			self.coisasaupdatear.append(p)
+		self.pos = pos
+
+	@staticmethod
+	def XML(node):
+		x = int(node.getAttribute('x'))
+		y = int(node.getAttribute('y'))
+		tela = Tela((x, y))
+		for elemento in node.childNodes:
+			if elemento.nodeType != xml.dom.Node.ELEMENT_NODE:
+				continue
+			if elemento.tagName == 'fundo':
+				tela.fundo = fundo.Fundo.XML(elemento)
+			elif elemento.tagName == 'objeto':
+				o = object.Object.XML(elemento)
+				tela.coisasadesenhar.append(o)
+			elif elemento.tagName == 'pessoa':
+				p = pessoa.Pessoa.XML(elemento)
+				tela.coisasadesenhar.append(p)
+				tela.coisasaupdatear.append(p)
+			else:
+				raise Exception
+		return tela
 
 	def update(self):
 		for coisa in self.coisasaupdatear:

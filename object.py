@@ -11,6 +11,15 @@ class Object:
 		self.eventqueue = []
 		self.direction = 0
 
+	@staticmethod
+	def XML(node):
+		id = node.getAttribute('id')
+		x = int(node.getAttribute('x'))
+		y = int(node.getAttribute('y'))
+		object = Object(id)
+		object.pos = x, y
+		return object
+
 	def get_rect(self):
 		return [i / geral.px for i in self.sprite.get_rect()]
 
