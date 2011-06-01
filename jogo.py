@@ -41,10 +41,8 @@ pygame.time.set_timer(pygame.USEREVENT, 2000)
 
 tempo = pygame.time.Clock()
 
-events = []
-
 while True:
-	events += pygame.event.get()
+	events = pygame.event.get()
 	for event in events:
 		if event.type == pygame.QUIT \
 		   or (event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE):
@@ -55,12 +53,11 @@ while True:
 			a = pygame.mixer.music.get_volume()
 			pygame.mixer.music.set_volume(volume)
 			volume = a
-	if not acabouosplash:
-		continue
 
 	ananias.input(events)
 	benevides.input(events)
-	events = []
+	if not acabouosplash:
+		continue
 
 	ananias.update()
 	benevides.update()
