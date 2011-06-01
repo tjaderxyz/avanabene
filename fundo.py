@@ -1,6 +1,6 @@
 # coding: utf-8
 
-import random, geral, pygame, os, xml.dom, object
+import random, geral, pygame, os, xml.dom, object, tile
 
 class Fundo:
 	def __init__(self):
@@ -28,6 +28,11 @@ class Fundo:
 			elif elemento.tagName == 'objeto':
 				o = object.Object.XML(elemento)
 				fundo.coisasadesenhar.append(o)
+			elif elemento.tagName == 'tile':
+				t = tile.Tile.XML(elemento)
+				fundo.coisasadesenhar.append(t)
+			else:
+				raise Exception
 		return fundo
 
 	def render(self, screen):

@@ -64,6 +64,7 @@
 			<objeto id='rio' x='47' y='30' />
 			<objeto id='rio' x='58' y='30' />
 			<objeto id='rio' x='47' y='40' />
+			<tile id='praia' x='30' y='30' w='33' h='20' />
 		</fundo>
 		<objeto id='casebre2' x='115' y='40' />
 		<objeto id='arvoreseca2' x='135' y='60' />
