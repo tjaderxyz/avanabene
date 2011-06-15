@@ -41,7 +41,7 @@
 			<tile id='rio_margeminfesq' x='30' y='40' />
 			<tile id='rio_margemesq' x='30' y='30' />
 			<tile id='rio_margemsupesq' x='30' y='20' />
-			<tile id='rio_margemsup' x='40' y='20' w='2' /> 3640 4750 5860 6970 8080 9190 102100 113110 
+			<tile id='rio_margemsup' x='40' y='20' w='2' />
 			<tile id='rio' x='40' y='30' w='3' />
 			<tile id='rio' x='50' y='40' w='3' />
 		</fundo>
