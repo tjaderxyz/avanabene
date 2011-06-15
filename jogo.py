@@ -56,6 +56,7 @@ while True:
 
 	ananias.input(events)
 	benevides.input(events)
+	t[tuple(tela)].input(events)
 	if not acabouosplash:
 		continue
 
