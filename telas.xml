@@ -51,6 +51,11 @@
 	</tela>
 	<tela x='1' y='0'>
 		<fundo tipo='ladrilhado' imagem='deserto'>
+			<tile id='grama' x='0' y='0' h='12' />
+			<tile id='grama_margemdir' x='10' y='0' h='12' />
+			<tile id='grama_curvainfdir' x='10' y='0' />
+			<tile id='grama_curvainfesq' x='90' y='0' />
+			<tile id='grama_margeminf' x='20' y='0' w='8' />
 			<tile id='grama_margemesq' x='60' y='60' />
 			<tile id='grama' x='70' y='60' w='3' />
 			<tile id='grama' x='70' y='50' w='3' />
