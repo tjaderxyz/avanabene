@@ -8,7 +8,7 @@ pygame.init()
 fonte = pygame.font.Font('unifont-5.1.20080820.pcf', 16)
 
 screen = pygame.display.set_mode(geral.size)
-pygame.display.set_caption('Aventuras de Ananias e Benevides') 
+pygame.display.set_caption(geral.titulo) 
 
 ananias = animatedactor.AnimatedActor('ananias', (pygame.K_LEFT, pygame.K_RIGHT, pygame.K_UP, pygame.K_DOWN), (2, 2, 4, 4), (7, 8)) #(3, 3, 3, 3), (8, 10)
 benevides = animatedactor.AnimatedActor('benevides', (pygame.K_a, pygame.K_d, pygame.K_w, pygame.K_s), (2, 2, 4, 4), (7, 8)) #(3, 3, 3, 3), (7, 8)
@@ -29,7 +29,7 @@ except:
 tela = [0, 0]
 t = telaa.Telas('telas.xml')
 
-titulo = fonte.render('Ananias & Benevides', False, (255, 255, 255))
+titulo = fonte.render(geral.titulo, False, (255, 255, 255))
 titulo = pygame.transform.scale(titulo, [(geral.px / 2) * i for i in titulo.get_rect()][2:])
 splash = pygame.Surface(geral.size)
 splash.blit(titulo, [geral.px * i for i in (geral.lwidth / 2 - titulo.get_rect()[2] / geral.px / 2, geral.lheight / 2 - titulo.get_rect()[3] / geral.px / 2)])
