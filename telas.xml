@@ -49,23 +49,43 @@
 		<objeto id='arvoreseca2' x='135' y='60' />
 		<pessoa id='hare' frames='2,2,4,4' w='7' h='8' x='30' y='100' />
 	</tela>
-	<tela x='0' y='-2'>
-		<fundo tipo='flores'>
-			<tile id='rio_margemsupesq' x='90' y='90' />
-			<tile id='rio_margemsupesq' x='110' y='70' />
-			<tile id='rio_diagsupesq' x='120' y='70' />
-			<tile id='rio_margemsupesq' x='100' y='80' />
-			<tile id='rio_diagsupesq' x='110' y='80' />
-			<tile id='rio_diagsupesq' x='100' y='90' />
-			<tile id='rio_diaginfdir' x='110' y='90' />
-			<tile id='rio_margeminfdir' x='120' y='90' />
-			<tile id='rio_diaginfdir' x='120' y='80' />
-			<tile id='rio_margeminfdir' x='130' y='80' />
-			<tile id='rio_diaginfdir' x='130' y='70' />
-			<tile id='rio_margemdir' x='110' y='100' h='2' />
-			<tile id='rio' x='100' y='100' h='2' />
-			<tile id='rio_margemesq' x='90' y='100' h='2' />
+	<tela x='1' y='0'>
+		<fundo tipo='ladrilhado' imagem='deserto'>
+			<tile id='grama_margemesq' x='60' y='60' />
+			<tile id='grama' x='70' y='60' w='3' />
+			<tile id='grama' x='70' y='50' w='3' />
+			<tile id='grama_margeminfesq' x='60' y='70' />
+			<tile id='grama_margeminf' x='70' y='70' w='3' />
+			<tile id='grama_curvainfesq' x='60' y='50' />
+			<tile id='grama_margeminf' x='50' y='50' />
+			<tile id='grama_margeminfesq' x='40' y='50' />
+			<tile id='grama_margeminfdir' x='100' y='70' />
+			<tile id='grama_margemdir' x='100' y='50' h='2' />
+			<tile id='grama_curvainfdir' x='100' y='40' />
+			<tile id='grama_margeminfdir' x='110' y='40' />
+			<tile id='grama_margemdir' x='110' y='0' h='4'/>
+			<tile id='grama' x='100' y='0' h='4' />
+			<tile id='grama' x='90' y='20' h='3' />
+			<tile id='grama' x='80' y='40' />
+			<tile id='grama_margemesq' x='90' y='0' />
+			<tile id='grama_curvasupesq' x='90' y='10' />
+			<tile id='grama_margemsupesq' x='80' y='10' />
+			<tile id='grama_margemesq' x='80' y='20' />
+			<tile id='grama_curvasupesq' x='80' y='30' />
+			<tile id='grama_curvasupdir' x='70' y='30' />
+			<tile id='grama_margemsupdir' x='70' y='20' />
+			<tile id='grama_margemsup' x='60' y='20' />
+			<tile id='grama_curvainfesq' x='40' y='40' />
+			<tile id='grama_margeminfesq' x='30' y='40' />
+			<tile id='grama_margemesq' x='30' y='30' />
+			<tile id='grama_margemsupesq' x='30' y='20' />
+			<tile id='grama_margemsup' x='40' y='20' w='2' />
+			<tile id='grama' x='40' y='30' w='3' />
+			<tile id='grama' x='50' y='40' w='3' />
 		</fundo>
+		<objeto id='casebre2' x='115' y='40' />
+		<objeto id='arvoreseca2' x='135' y='60' />
+		<pessoa id='hare' frames='2,2,4,4' w='7' h='8' x='30' y='100' />
 	</tela>
 </mundo>
 
