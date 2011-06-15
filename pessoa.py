@@ -59,9 +59,6 @@ class Pessoa(object.Object):
 		screen.blit(self.sprites[self.direction][nframe], [i * geral.px for i in self.pos])
 
 	def input(self, events):
-		pass
-
-	def update(self):
 		if random.random() > 0.99:
 			if self.speed == [0, 0]:
 				self.speed = [random.choice((-.5, 0, .5)), random.choice((-.5, 0, .5))]
@@ -94,5 +91,7 @@ class Pessoa(object.Object):
 			if (self.pos[1] < 3 and self.speed[1] < 0) or \
 			   (self.pos[1] > geral.lsize[1] - 3 - self.get_rect()[3] and self.speed[1] > 0):
 				self.speed[1] = -self.speed[1]
+
+	def update(self):
 		self.pos = [sum(i) for i in zip(self.pos, self.speed)]
 

@@ -29,8 +29,9 @@ class Telas:
 
 class Tela:
 	def __init__(self, pos):
-		self.coisasadesenhar = []
 		self.coisasaupdatear = []
+		self.coisasainputear = []
+		self.coisasadesenhar = []
 		self.pos = pos
 
 	@staticmethod
@@ -48,11 +49,16 @@ class Tela:
 				tela.coisasadesenhar.append(o)
 			elif elemento.tagName == 'pessoa':
 				p = pessoa.Pessoa.XML(elemento)
-				tela.coisasadesenhar.append(p)
+				tela.coisasainputear.append(p)
 				tela.coisasaupdatear.append(p)
+				tela.coisasadesenhar.append(p)
 			else:
 				raise Exception
 		return tela
+
+	def input(self, events):
+		for coisa in self.coisasainputear:
+			coisa.input(events)
 
 	def update(self):
 		for coisa in self.coisasaupdatear:
