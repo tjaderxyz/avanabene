@@ -7,6 +7,19 @@ class AnimatedActor(pessoa.Pessoa):
 		pessoa.Pessoa.__init__(self, id, frames, size)
 		self.controls = controls
 
+	@staticmethod
+	def XML(node):
+		id = node.getAttribute('id')
+		x = int(node.getAttribute('x'))
+		y = int(node.getAttribute('y'))
+		w = int(node.getAttribute('w'))
+		h = int(node.getAttribute('h'))
+		controles = tuple(getattr(pygame, tecla) for tecla in node.getAttribute('controles').split(','))
+		frames = [int(i) for i in node.getAttribute('frames').split(',')]
+		ator = AnimatedActor(id, controles, frames, (w, h))
+		ator.pos = x, y
+		return ator
+
 	def input(self, events):
 		self.eventqueue += [i for i in events if i.type in (pygame.KEYUP, pygame.KEYDOWN) and i.key in self.controls]
 		if self.eventtime:
