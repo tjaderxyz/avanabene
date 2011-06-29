@@ -93,5 +93,12 @@ class Pessoa(object.Object):
 				self.speed[1] = -self.speed[1]
 
 	def update(self):
-		self.pos = [sum(i) for i in zip(self.pos, self.speed)]
+		pos = [sum(i) for i in zip(self.pos, self.speed)]
+#<objeto id='casebre1' x='100' y='50' />
+		if (pos[0] > 100 - self.get_rect()[2]
+		    and pos[0] < 100 + 28 - 3
+		    and pos[1] > 50 + 6 - self.get_rect()[3]
+		    and pos[1] < 50 + 25):
+			return
+		self.pos = pos
 
