@@ -50,7 +50,7 @@
 		<pessoa id='hare' frames='2,2,4,4' w='7' h='8' x='30' y='100' />
 	</tela>
 	<tela x='1' y='0'>
-		<fundo tipo='ladrilhado' imagem='deserto'>
+		<fundo tipo='ladrilhado' imagem='neve'>
 			<tile id='grama' x='0' y='0' h='12' />
 			<tile id='grama_margemdir' x='10' y='0' h='12' />
 			<tile id='grama_curvainfdir' x='10' y='0' />
