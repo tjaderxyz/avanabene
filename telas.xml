@@ -50,46 +50,46 @@
 		<pessoa id='hare' frames='2,2,4,4' w='7' h='8' x='30' y='100' />
 	</tela>
 	<tela x='1' y='0'>
-		<fundo tipo='ladrilhado' imagem='neve'>
-			<tile id='grama' x='0' y='0' h='12' />
-			<tile id='grama_margemdir' x='10' y='0' h='12' />
-			<tile id='grama_curvainfdir' x='10' y='0' />
-			<tile id='grama_curvainfesq' x='90' y='0' />
-			<tile id='grama_margeminf' x='20' y='0' w='8' />
-			<tile id='grama_margemesq' x='60' y='60' />
-			<tile id='grama' x='70' y='60' w='3' />
-			<tile id='grama' x='70' y='50' w='3' />
-			<tile id='grama_margeminfesq' x='60' y='70' />
-			<tile id='grama_margeminf' x='70' y='70' w='3' />
-			<tile id='grama_curvainfesq' x='60' y='50' />
-			<tile id='grama_margeminf' x='50' y='50' />
-			<tile id='grama_margeminfesq' x='40' y='50' />
-			<tile id='grama_margeminfdir' x='100' y='70' />
-			<tile id='grama_margemdir' x='100' y='50' h='2' />
-			<tile id='grama_curvainfdir' x='100' y='40' />
-			<tile id='grama_margeminfdir' x='110' y='40' />
-			<tile id='grama_margemdir' x='110' y='0' h='4'/>
-			<tile id='grama' x='100' y='0' h='4' />
-			<tile id='grama' x='90' y='20' h='3' />
-			<tile id='grama' x='80' y='40' />
-			<tile id='grama_margemesq' x='90' y='0' />
-			<tile id='grama_curvasupesq' x='90' y='10' />
-			<tile id='grama_margemsupesq' x='80' y='10' />
-			<tile id='grama_margemesq' x='80' y='20' />
-			<tile id='grama_curvasupesq' x='80' y='30' />
-			<tile id='grama_curvasupdir' x='70' y='30' />
-			<tile id='grama_margemsupdir' x='70' y='20' />
-			<tile id='grama_margemsup' x='60' y='20' />
-			<tile id='grama_curvainfesq' x='40' y='40' />
-			<tile id='grama_margeminfesq' x='30' y='40' />
-			<tile id='grama_margemesq' x='30' y='30' />
-			<tile id='grama_margemsupesq' x='30' y='20' />
-			<tile id='grama_margemsup' x='40' y='20' w='2' />
-			<tile id='grama' x='40' y='30' w='3' />
-			<tile id='grama' x='50' y='40' w='3' />
+		<fundo tipo='ladrilhado' imagem='grama'>
+			<tile id='neve' x='0' y='0' h='12' />
+			<tile id='neve_margemdir' x='10' y='0' h='12' />
+			<tile id='neve_curvainfdir' x='10' y='0' />
+			<tile id='neve_curvainfesq' x='90' y='0' />
+			<tile id='neve_margeminf' x='20' y='0' w='8' />
+			<tile id='neve_margemesq' x='60' y='60' />
+			<tile id='neve' x='70' y='60' w='3' />
+			<tile id='neve' x='70' y='50' w='3' />
+			<tile id='neve_margeminfesq' x='60' y='70' />
+			<tile id='neve_margeminf' x='70' y='70' w='3' />
+			<tile id='neve_curvainfesq' x='60' y='50' />
+			<tile id='neve_margeminf' x='50' y='50' />
+			<tile id='neve_margeminfesq' x='40' y='50' />
+			<tile id='neve_margeminfdir' x='100' y='70' />
+			<tile id='neve_margemdir' x='100' y='50' h='2' />
+			<tile id='neve_curvainfdir' x='100' y='40' />
+			<tile id='neve_margeminfdir' x='110' y='40' />
+			<tile id='neve_margemdir' x='110' y='0' h='4'/>
+			<tile id='neve' x='100' y='0' h='4' />
+			<tile id='neve' x='90' y='20' h='3' />
+			<tile id='neve' x='80' y='40' />
+			<tile id='neve_margemesq' x='90' y='0' />
+			<tile id='neve_curvasupesq' x='90' y='10' />
+			<tile id='neve_margemsupesq' x='80' y='10' />
+			<tile id='neve_margemesq' x='80' y='20' />
+			<tile id='neve_curvasupesq' x='80' y='30' />
+			<tile id='neve_curvasupdir' x='70' y='30' />
+			<tile id='neve_margemsupdir' x='70' y='20' />
+			<tile id='neve_margemsup' x='60' y='20' />
+			<tile id='neve_curvainfesq' x='40' y='40' />
+			<tile id='neve_margeminfesq' x='30' y='40' />
+			<tile id='neve_margemesq' x='30' y='30' />
+			<tile id='neve_margemsupesq' x='30' y='20' />
+			<tile id='neve_margemsup' x='40' y='20' w='2' />
+			<tile id='neve' x='40' y='30' w='3' />
+			<tile id='neve' x='50' y='40' w='3' />
 		</fundo>
 		<objeto id='casebre2' x='115' y='40' />
-		<objeto id='arvoreseca2' x='135' y='60' />
+		<objeto id='arvoresecamov' x='135' y='60' frames='2' w='18' h= '29' />
 		<pessoa id='hare' frames='2,2,4,4' w='7' h='8' x='30' y='100' />
 	</tela>
 </mundo>
