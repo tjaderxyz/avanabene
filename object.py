@@ -15,7 +15,7 @@ class Object:
 		for x in range(frames):
 			rect = [(size[0] + 1) * x, 0, size[0], size[1]]
 			rect = [geral.px * i for i in rect]
-			self.spritesdir.append(spritesheet.subsurface(rect))
+			self.sprites.append(spritesheet.subsurface(rect))
 
 	@staticmethod
 	def XML(node):
@@ -23,7 +23,7 @@ class Object:
 		x = int(node.getAttribute('x'))
 		y = int(node.getAttribute('y'))
 		try:
-			frames = int(node.getAttribute('frames').split(','))
+			frames = int(node.getAttribute('frames'))
 		except:
 			frames = 1
 		if frames == 1:
@@ -42,6 +42,7 @@ class Object:
 		v = 12
 		nframe = ((self.frames + v-1) / v) % len(self.sprites)
 		screen.blit(self.sprites[nframe], [i * geral.px for i in self.pos])
+		self.frames += 1
 
 	def input(self, events):
 		pass
