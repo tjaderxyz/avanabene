@@ -3,12 +3,12 @@
 import os, pygame, geral
 
 class Object:
-	def __init__(self, id, frames, size, animado = True):
+	def __init__(self, id, frames, size):
 		self.pos = [0, 0]
 		self.frames = 0
 		spritesheet = pygame.image.load(os.path.join('images', 'o_' + id + '.png'))
 		spritesheet = pygame.transform.scale(spritesheet, [geral.px * i for i in spritesheet.get_rect()][2:]).convert_alpha()
-		if not animado:
+		if frames == 1:
 			self.sprites = [spritesheet]
 			return
 		self.sprites = []
@@ -24,15 +24,14 @@ class Object:
 		y = int(node.getAttribute('y'))
 		try:
 			frames = int(node.getAttribute('frames').split(','))
-			w = int(node.getAttribute('w'))
-			h = int(node.getAttribute('h'))
-			animado = True
 		except:
 			frames = 1
-			w = 0
-			h = 0
-			animado = False
-		object = Object(id, frames, (w, h), animado)
+		if frames == 1:
+			w = h = 0
+		else:
+			w = int(node.getAttribute('w'))
+			h = int(node.getAttribute('h'))
+		object = Object(id, frames, (w, h))
 		object.pos = x, y
 		return object
 
