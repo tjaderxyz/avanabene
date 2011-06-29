@@ -1,9 +1,12 @@
 # coding: utf-8
 
-import xml.dom.minidom, random, object, geral, pygame, pessoa, os, fundo
+import xml.dom.minidom, random, object, geral, pygame, pessoa, os, fundo, animatedactor
 
 class Telas:
 	def __init__(self, arq):
+		self.coisasaupdatear = []
+		self.coisasainputear = []
+		self.coisasadesenhar = []
 		self.tela = None
 		self.telas = {}
 		self.xml = xml.dom.minidom.parse(arq)
@@ -16,8 +19,14 @@ class Telas:
 			if elemento.tagName == 'tela':
 				t = Tela.XML(elemento)
 				self.telas[t.pos] = Tela.XML(elemento)
+			elif elemento.tagName == 'ator':
+				a = animatedactor.AnimatedActor.XML(elemento)
+				self.coisasainputear.append(a)
+				self.coisasaupdatear.append(a)
+				self.coisasadesenhar.append(a)
 			else:
 				raise Exception
+
 	def __getitem__(self, index):
 		try:
 			return self.telas[index]
@@ -26,6 +35,14 @@ class Telas:
 			self.telas[index].fundo = fundo.Fundo()
 			self.telas[index].fundo.fundo = fundo.gerafundoflores(index)
 			return self.telas[index]
+
+	def input(self, events):
+		for coisa in self.coisasainputear:
+			coisa.input(events)
+
+	def update(self):
+		for coisa in self.coisasaupdatear:
+			coisa.update()
 
 class Tela:
 	def __init__(self, pos):

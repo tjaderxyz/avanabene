@@ -56,12 +56,14 @@ while True:
 
 	ananias.input(events)
 	benevides.input(events)
+	t.input(events)
 	t[tuple(tela)].input(events)
 	if not acabouosplash:
 		continue
 
 	ananias.update()
 	benevides.update()
+	t.update()
 	t[tuple(tela)].update()
 
 	def mudatela(actor, outro):
@@ -112,6 +114,7 @@ while True:
 	t[tuple(tela)].fundo.render(screen)
 
 	coisasadesenhar = [ananias, benevides]
+	coisasadesenhar += t.coisasadesenhar
 	coisasadesenhar += t[tuple(tela)].coisasadesenhar
 
 	coisasadesenhar.sort(key=lambda x: x.pos[1] + x.get_rect()[3])
