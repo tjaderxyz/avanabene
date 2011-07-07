@@ -10,8 +10,11 @@ fonte = pygame.font.Font('unifont-5.1.20080820.pcf', 16)
 screen = pygame.display.set_mode(geral.size)
 pygame.display.set_caption(geral.titulo) 
 
-ananias = animatedactor.AnimatedActor('ananias', (geral.lwidth / 2 - 7, geral.lheight / 2 - 4), (pygame.K_LEFT, pygame.K_RIGHT, pygame.K_UP, pygame.K_DOWN), (2, 2, 4, 4), (7, 8)) #(3, 3, 3, 3), (8, 10)
-benevides = animatedactor.AnimatedActor('benevides', (geral.lwidth / 2 + 7, geral.lheight / 2 - 4), (pygame.K_a, pygame.K_d, pygame.K_w, pygame.K_s), (2, 2, 4, 4), (7, 8)) #(3, 3, 3, 3), (7, 8)
+ananias = animatedactor.AnimatedActor('ananias', (geral.lwidth / 2 - 7, geral.lheight / 2 - 4), (0, 0, 7, 6), (pygame.K_LEFT, pygame.K_RIGHT, pygame.K_UP, pygame.K_DOWN), (2, 2, 4, 4), (7, 8)) #(3, 3, 3, 3), (8, 10)
+benevides = animatedactor.AnimatedActor('benevides', (geral.lwidth / 2 + 7, geral.lheight / 2 - 4), (0, 0, 7, 6), (pygame.K_a, pygame.K_d, pygame.K_w, pygame.K_s), (2, 2, 4, 4), (7, 8)) #(3, 3, 3, 3), (7, 8)
+
+print (geral.lwidth / 2 - 7, geral.lheight / 2 - 4)
+print (geral.lwidth / 2 + 7, geral.lheight / 2 - 4)
 
 try:
 	if '-m' in sys.argv:
@@ -25,7 +28,7 @@ except:
 	pass
 
 tela = [0, 0]
-t = telaa.Telas('telas.xml')
+t = telaa.Telas('telas.xml', [ananias, benevides])
 
 titulo = fonte.render(geral.titulo, False, (255, 255, 255))
 titulo = pygame.transform.scale(titulo, [(geral.px / 2) * i for i in titulo.get_rect()][2:])
@@ -52,16 +55,12 @@ while True:
 			pygame.mixer.music.set_volume(volume)
 			volume = a
 
-	ananias.input(events)
-	benevides.input(events)
 	t.input(events)
 	t[tuple(tela)].input(events)
 	if not acabouosplash:
 		continue
 
-	ananias.update()
-	benevides.update()
-	t.update()
+	t.update(t[tuple(tela)])
 	t[tuple(tela)].update()
 
 	def mudatela(actor, outro):

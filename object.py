@@ -3,8 +3,9 @@
 import os, pygame, geral
 
 class Object:
-	def __init__(self, id, pos, frames, size):
+	def __init__(self, id, pos, colisao, frames, size):
 		self.pos = pos
+		self.colisao = colisao
 		self.frames = 0
 		spritesheet = pygame.image.load(os.path.join('images', 'o_' + id + '.png'))
 		spritesheet = pygame.transform.scale(spritesheet, [geral.px * i for i in spritesheet.get_rect()][2:]).convert_alpha()
@@ -31,7 +32,11 @@ class Object:
 		else:
 			w = int(node.getAttribute('w'))
 			h = int(node.getAttribute('h'))
-		object = Object(id, (x, y), frames, (w, h))
+		try:
+			colisao = [int(i) for i in node.getAttribute('colisao').split(',')]
+		except:
+			colisao = None
+		object = Object(id, (x, y), colisao, frames, (w, h))
 		return object
 
 	def get_rect(self):

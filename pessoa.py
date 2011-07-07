@@ -3,7 +3,7 @@
 import os, pygame, object, random, geral
 
 class Pessoa(object.Object):
-	def __init__(self, id, pos, frames, size):
+	def __init__(self, id, pos, colisao, frames, size):
 		self.sprites = []
 		spritesheet = pygame.image.load(os.path.join('images', 'sh_' + id + '.png'))
 		spritesheet = pygame.transform.scale(spritesheet, [geral.px * i for i in spritesheet.get_rect()][2:]).convert_alpha()
@@ -15,6 +15,7 @@ class Pessoa(object.Object):
 				spritesdir.append(spritesheet.subsurface(rect))
 			self.sprites.append(spritesdir)
 		self.pos = pos
+		self.colisao = colisao
 		self.eventtime = True
 		self.speed = [0, 0]
 		self.eventqueue = []
@@ -29,7 +30,11 @@ class Pessoa(object.Object):
 		w = int(node.getAttribute('w'))
 		h = int(node.getAttribute('h'))
 		frames = [int(i) for i in node.getAttribute('frames').split(',')]
-		pessoa = Pessoa(id, (x, y), frames, (w, h))
+		try:
+			colisao = [int(i) for i in node.getAttribute('colisao').split(',')]
+		except:
+			colisao = None
+		pessoa = Pessoa(id, (x, y), colisao, frames, (w, h))
 		return pessoa
 
 	def get_rect(self):
@@ -91,13 +96,11 @@ class Pessoa(object.Object):
 			   (self.pos[1] > geral.lsize[1] - 3 - self.get_rect()[3] and self.speed[1] > 0):
 				self.speed[1] = -self.speed[1]
 
-	def update(self):
+	def update(self, tela):
+		self.eventtime = not self.eventtime
 		pos = [sum(i) for i in zip(self.pos, self.speed)]
-#<objeto id='casebre1' x='100' y='50' />
-		if (pos[0] > 100 - self.get_rect()[2]
-		    and pos[0] < 100 + 28 - 3
-		    and pos[1] > 50 + 6 - self.get_rect()[3]
-		    and pos[1] < 50 + 25):
+		if (self.colisao is not None
+		    and not tela.podemover(pos, self)):
 			return
 		self.pos = pos
 

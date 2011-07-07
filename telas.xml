@@ -1,4 +1,6 @@
 <mundo>
+	<!--ator id='ananias' frames='2,2,4,4' w='7' h='8' x='73' y='56' controles='K_LEFT,K_RIGHT,K_UP,K_DOWN' /-->
+	<!--ator id='benevides' frames='2,2,4,4' w='7' h='8' x='87' y='56' controles='K_a,K_d,K_w,K_s' /-->
 	<tela x='0' y='0'>
 		<fundo tipo='flores' />
 		<objeto id='casebre1' x='100' y='50' />
