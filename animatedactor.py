@@ -30,24 +30,24 @@ class AnimatedActor(pessoa.Pessoa):
 				event = self.eventqueue.pop()
 				if event.type == pygame.KEYDOWN:
 					if event.key == self.controls[0]:
-						self.speed[0] -= .5
+						self.speed[0] -= 1
 						self.set_direction(0)
 					if event.key == self.controls[1]:
-						self.speed[0] += .5
+						self.speed[0] += 1
 						self.set_direction(1)
 					if event.key == self.controls[2]:
-						self.speed[1] -= .5
+						self.speed[1] -= 1
 						self.set_direction(2)
 					if event.key == self.controls[3]:
-						self.speed[1] += .5
+						self.speed[1] += 1
 						self.set_direction(3)
 				elif event.type == pygame.KEYUP:
 					if event.key == self.controls[0]:
-						self.speed[0] += .5
+						self.speed[0] += 1
 					if event.key == self.controls[1]:
-						self.speed[0] -= .5
+						self.speed[0] -= 1
 					if event.key == self.controls[2]:
-						self.speed[1] += .5
+						self.speed[1] += 1
 					if event.key == self.controls[3]:
-						self.speed[1] -= .5
+						self.speed[1] -= 1
 

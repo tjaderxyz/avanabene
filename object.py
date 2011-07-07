@@ -43,7 +43,7 @@ class Object:
 		return [i / geral.px for i in self.sprites[0].get_rect()]
 
 	def render(self, screen):
-		v = 12
+		v = 24
 		nframe = ((self.frames + v-1) / v) % len(self.sprites)
 		screen.blit(self.sprites[nframe], [i * geral.px for i in self.pos])
 

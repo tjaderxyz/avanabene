@@ -90,8 +90,8 @@ class Tela:
 				continue
 			caixac = [sum(i) for i in zip(coisa.pos + coisa.pos, coisa.colisao)]
 			print caixa, caixac
-			if (caixa[0] <= caixac[2] and caixa[2] >= caixac[0]
-			    and caixa[1] <= caixac[3] and caixa[3] >= caixac[1]):
+			if (caixa[0] < caixac[2] and caixa[2] > caixac[0]
+			    and caixa[1] < caixac[3] and caixa[3] > caixac[1]):
 				return False
 		return True
 

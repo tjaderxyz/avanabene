@@ -21,6 +21,7 @@ class Pessoa(object.Object):
 		self.eventqueue = []
 		self.direction = 0
 		self.frameswalkinginthisdirection = 0
+		self.conta = 0
 
 	@staticmethod
 	def XML(node):
@@ -58,7 +59,7 @@ class Pessoa(object.Object):
 		elif self.speed[0] == 0 == self.speed[1]:
 			self.frameswalkinginthisdirection = 0
 
-		v = 12
+		v = 24
 		nframe = ((self.frameswalkinginthisdirection + v-1) / v) % len(self.sprites[self.direction])
 		screen.blit(self.sprites[self.direction][nframe], [i * geral.px for i in self.pos])
 
@@ -97,10 +98,12 @@ class Pessoa(object.Object):
 				self.speed[1] = -self.speed[1]
 
 	def update(self, tela):
-		self.eventtime = not self.eventtime
-		pos = [sum(i) for i in zip(self.pos, self.speed)]
-		if (self.colisao is not None
-		    and not tela.podemover(pos, self)):
-			return
-		self.pos = pos
+		self.conta += 1
+		self.eventtime = self.conta % 1 == 0
+		if self.eventtime:
+			pos = [sum(i) for i in zip(self.pos, self.speed)]
+			if (self.colisao is not None
+			    and not tela.podemover(pos, self)):
+				return
+			self.pos = pos
 
