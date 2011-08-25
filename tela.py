@@ -70,7 +70,7 @@ class Tela:
 				o = object.Object.XML(elemento)
 				tela.coisasadesenhar.append(o)
 				if o.colisao is not None:
-					self.coisasacolidir.append(o)
+					tela.coisasacolidir.append(o)
 			elif elemento.tagName == 'pessoa':
 				p = pessoa.Pessoa.XML(elemento)
 				tela.coisasainputear.append(p)
@@ -83,13 +83,17 @@ class Tela:
 		return tela
 
 	def podemover(self, pos, objeto):
-		caixa = [sum(i) for i in zip(pos + pos, objeto.colisao)]
-		print self.coisasacolidir
+		caixa = [pos[0] + objeto.colisao[0],
+		         pos[1] + objeto.colisao[1],
+		         pos[0] + objeto.colisao[0] + objeto.colisao[2],
+		         pos[1] + objeto.colisao[1] + objeto.colisao[3]]
 		for coisa in self.coisasacolidir:
 			if coisa == objeto:
 				continue
-			caixac = [sum(i) for i in zip(coisa.pos + coisa.pos, coisa.colisao)]
-			print caixa, caixac
+			caixac = [coisa.pos[0] + coisa.colisao[0],
+			          coisa.pos[1] + coisa.colisao[1],
+			          coisa.pos[0] + coisa.colisao[0] + coisa.colisao[2],
+			          coisa.pos[1] + coisa.colisao[1] + coisa.colisao[3]]
 			if (caixa[0] < caixac[2] and caixa[2] > caixac[0]
 			    and caixa[1] < caixac[3] and caixa[3] > caixac[1]):
 				return False

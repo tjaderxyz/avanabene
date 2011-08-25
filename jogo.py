@@ -10,8 +10,8 @@ fonte = pygame.font.Font('unifont-5.1.20080820.pcf', 16)
 screen = pygame.display.set_mode(geral.size)
 pygame.display.set_caption(geral.titulo) 
 
-ananias = animatedactor.AnimatedActor('ananias', (geral.lwidth / 2 - 7, geral.lheight / 2 - 4), (2, 0, 5, 3), (pygame.K_LEFT, pygame.K_RIGHT, pygame.K_UP, pygame.K_DOWN), (2, 2, 4, 4), (7, 8)) #(3, 3, 3, 3), (8, 10)
-benevides = animatedactor.AnimatedActor('benevides', (geral.lwidth / 2 + 7, geral.lheight / 2 - 4), (2, 0, 5, 3), (pygame.K_a, pygame.K_d, pygame.K_w, pygame.K_s), (2, 2, 4, 4), (7, 8)) #(3, 3, 3, 3), (7, 8)
+ananias = animatedactor.AnimatedActor('ananias', (geral.lwidth / 2 - 7, geral.lheight / 2 - 4), (2, 5, 3, 3), (pygame.K_LEFT, pygame.K_RIGHT, pygame.K_UP, pygame.K_DOWN), (2, 2, 4, 4), (7, 8))
+benevides = animatedactor.AnimatedActor('benevides', (geral.lwidth / 2 + 7, geral.lheight / 2 - 4), (2, 5, 3, 3), (pygame.K_a, pygame.K_d, pygame.K_w, pygame.K_s), (2, 2, 4, 4), (7, 8))
 
 print (geral.lwidth / 2 - 7, geral.lheight / 2 - 4)
 print (geral.lwidth / 2 + 7, geral.lheight / 2 - 4)
@@ -117,6 +117,17 @@ while True:
 	coisasadesenhar.sort(key=lambda x: x.pos[1] + x.get_rect()[3])
 	for coisaadesenhar in coisasadesenhar:
 		coisaadesenhar.render(screen)
+
+	#desenha caixas de colisão
+	print
+	for coisa in t[tuple(tela)].coisasacolidir:
+		caixa = [coisa.pos[0] + coisa.colisao[0],
+		         coisa.pos[1] + coisa.colisao[1],
+		         coisa.colisao[2],
+		         coisa.colisao[3]]
+		print caixa
+		caixa = [i * geral.px for i in caixa]
+		pygame.draw.rect(screen, (255, 0, 255), caixa, 1)
 
 	if splash.get_alpha() > 0:
 		splash.set_alpha(max(0, splash.get_alpha() - 255./10))
