@@ -1,0 +1,7 @@
+metodo usado no mapa:
+
+-primeiramente montamos uma organização apra os elementos em uma mesa, de forma totalmente manual criando peças que pudessem ser reposicionadas até que a disposição dos elementos parecesse mais correta.
+-foram entao tiradas algumas fotografias que levadas ao computador foram tratadas apra servirem de base apra a ilustração da primeira versao do mapa.
+-optou-se por realizar um redesenho rapido esquematico dos elementos do mapa para uma layer em separado a titulo de organização e limpeza da tela.
+-posteriormete o uso das cores da forma mais geral possivel foi considerada a tecnica mais propicia pois as cores sao um elemento muito forte na progreção do jogo, pois quanto mais diversas as experiencias dos jogadores, mais diversas e saturadas serão as cores presentes na tela.
+- o uso de manchas antes de uma definição formal dos elementos também foi considerado util pela tecnica de silhoetas (em que a lineart é posteriormente criada e refinada). 
