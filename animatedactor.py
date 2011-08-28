@@ -3,8 +3,8 @@
 import os, pygame, geral, pessoa
 
 class AnimatedActor(pessoa.Pessoa):
-	def __init__(self, id, controls, frames, size):
-		pessoa.Pessoa.__init__(self, id, frames, size)
+	def __init__(self, id, pos, colisao, controls, frames, size):
+		pessoa.Pessoa.__init__(self, id, pos, colisao, frames, size)
 		self.controls = controls
 
 	@staticmethod
@@ -16,8 +16,11 @@ class AnimatedActor(pessoa.Pessoa):
 		h = int(node.getAttribute('h'))
 		controles = tuple(getattr(pygame, tecla) for tecla in node.getAttribute('controles').split(','))
 		frames = [int(i) for i in node.getAttribute('frames').split(',')]
-		ator = AnimatedActor(id, controles, frames, (w, h))
-		ator.pos = x, y
+		try:
+			colisao = [int(i) for i in node.getAttribute('colisao').split(',')]
+		except:
+			colisao = None
+		ator = AnimatedActor(id, (x, y), colisao, controles, frames, (w, h))
 		return ator
 
 	def input(self, events):
@@ -47,5 +50,4 @@ class AnimatedActor(pessoa.Pessoa):
 						self.speed[1] += .5
 					if event.key == self.controls[3]:
 						self.speed[1] -= .5
-		self.eventtime = not self.eventtime
 

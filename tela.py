@@ -3,10 +3,11 @@
 import xml.dom.minidom, random, object, geral, pygame, pessoa, os, fundo, animatedactor
 
 class Telas:
-	def __init__(self, arq):
-		self.coisasaupdatear = []
-		self.coisasainputear = []
-		self.coisasadesenhar = []
+	def __init__(self, arq, atores):
+		self.coisasaupdatear = [i for i in atores]
+		self.coisasainputear = [i for i in atores]
+		self.coisasadesenhar = [i for i in atores]
+		self.coisasacolidir = [i for i in atores]
 		self.tela = None
 		self.telas = {}
 		self.xml = xml.dom.minidom.parse(arq)
@@ -18,12 +19,15 @@ class Telas:
 				continue
 			if elemento.tagName == 'tela':
 				t = Tela.XML(elemento)
-				self.telas[t.pos] = Tela.XML(elemento)
+				t.coisasacolidir += self.coisasacolidir
+				self.telas[t.pos] = t
 			elif elemento.tagName == 'ator':
 				a = animatedactor.AnimatedActor.XML(elemento)
 				self.coisasainputear.append(a)
 				self.coisasaupdatear.append(a)
 				self.coisasadesenhar.append(a)
+				if a.colisao:
+					self.coisasacolidir.append(a)
 			else:
 				raise Exception
 
@@ -40,15 +44,16 @@ class Telas:
 		for coisa in self.coisasainputear:
 			coisa.input(events)
 
-	def update(self):
+	def update(self, tela):
 		for coisa in self.coisasaupdatear:
-			coisa.update()
+			coisa.update(tela)
 
 class Tela:
 	def __init__(self, pos):
 		self.coisasaupdatear = []
 		self.coisasainputear = []
 		self.coisasadesenhar = []
+		self.coisasacolidir = []
 		self.pos = pos
 
 	@staticmethod
@@ -64,14 +69,35 @@ class Tela:
 			elif elemento.tagName == 'objeto':
 				o = object.Object.XML(elemento)
 				tela.coisasadesenhar.append(o)
+				if o.colisao is not None:
+					tela.coisasacolidir.append(o)
 			elif elemento.tagName == 'pessoa':
 				p = pessoa.Pessoa.XML(elemento)
 				tela.coisasainputear.append(p)
 				tela.coisasaupdatear.append(p)
 				tela.coisasadesenhar.append(p)
+				if p.colisao:
+					self.coisasacolidir.append(p)
 			else:
 				raise Exception
 		return tela
+
+	def podemover(self, pos, objeto):
+		caixa = [pos[0] + objeto.colisao[0],
+		         pos[1] + objeto.colisao[1],
+		         pos[0] + objeto.colisao[0] + objeto.colisao[2],
+		         pos[1] + objeto.colisao[1] + objeto.colisao[3]]
+		for coisa in self.coisasacolidir:
+			if coisa == objeto:
+				continue
+			caixac = [coisa.pos[0] + coisa.colisao[0],
+			          coisa.pos[1] + coisa.colisao[1],
+			          coisa.pos[0] + coisa.colisao[0] + coisa.colisao[2],
+			          coisa.pos[1] + coisa.colisao[1] + coisa.colisao[3]]
+			if (caixa[0] < caixac[2] and caixa[2] > caixac[0]
+			    and caixa[1] < caixac[3] and caixa[3] > caixac[1]):
+				return False
+		return True
 
 	def input(self, events):
 		for coisa in self.coisasainputear:
@@ -79,5 +105,5 @@ class Tela:
 
 	def update(self):
 		for coisa in self.coisasaupdatear:
-			coisa.update()
+			coisa.update(self)
 
