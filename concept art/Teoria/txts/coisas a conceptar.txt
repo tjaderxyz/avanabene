@@ -1,2 +1,4 @@
 transiçoes de terreno
 tribo maori
+
+estilos por área(formas básicas, cores, padroes cromáticos)
