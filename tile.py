@@ -35,7 +35,9 @@ class Tile:
 		return [i / geral.px for i in self.sprite.get_rect()]
 
 	def render(self, screen):
-		screen.blit(self.spritemesmo, [i * geral.px for i in self.pos])
+		pos = (self.pos[0] * geral.px,
+		       (geral.lheight - self.pos[1] - self.get_rect()[3]) * geral.px)
+		screen.blit(self.spritemesmo, pos)
 
 	def input(self, events):
 		pass

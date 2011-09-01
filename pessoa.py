@@ -41,8 +41,8 @@ class Pessoa(object.Object):
 		return [i / geral.px for i in self.sprites[0][0].get_rect()]
 
 	def set_direction(self, direction):
-		if self.direction != direction:
-			self.direction = direction
+		if self.direction != [0, 1, 3, 2][direction]:
+			self.direction = [0, 1, 3, 2][direction]
 			self.frameswalkinginthisdirection = 0
 
 	def render(self, screen):
@@ -60,7 +60,9 @@ class Pessoa(object.Object):
 
 		v = 12
 		nframe = ((self.frameswalkinginthisdirection + v-1) / v) % len(self.sprites[self.direction])
-		screen.blit(self.sprites[self.direction][nframe], [i * geral.px for i in self.pos])
+		pos = (self.pos[0] * geral.px,
+		       (geral.lheight - self.pos[1] - self.get_rect()[3]) * geral.px)
+		screen.blit(self.sprites[self.direction][nframe], pos)
 
 	def input(self, events):
 		if random.random() > 0.99:

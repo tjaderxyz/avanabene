@@ -45,7 +45,9 @@ class Object:
 	def render(self, screen):
 		v = 12
 		nframe = ((self.frames + v-1) / v) % len(self.sprites)
-		screen.blit(self.sprites[nframe], [i * geral.px for i in self.pos])
+		pos = (self.pos[0] * geral.px,
+		       (geral.lheight - self.pos[1] - self.get_rect()[3]) * geral.px)
+		screen.blit(self.sprites[nframe], pos)
 		self.frames += 1
 
 	def input(self, events):
