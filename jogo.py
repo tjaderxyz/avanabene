@@ -120,7 +120,7 @@ while True:
 		coisaadesenhar.render(screen)
 
 	#desenha caixas de colisão
-	for coisa in t[tuple(tela)].coisasacolidir:
+	for coisa in t.coisasadesenhar + t[tuple(tela)].coisasacolidir:
 		caixa = [coisa.pos[0] + coisa.colisao[0],
 		         geral.lheight - (coisa.pos[1] + coisa.colisao[1]),
 		         coisa.colisao[2],

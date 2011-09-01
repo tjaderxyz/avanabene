@@ -18,8 +18,7 @@ class Telas:
 			if elemento.nodeType != xml.dom.Node.ELEMENT_NODE:
 				continue
 			if elemento.tagName == 'tela':
-				t = Tela.XML(elemento)
-				t.coisasacolidir += self.coisasacolidir
+				t = Tela.XML(elemento, self)
 				self.telas[t.pos] = t
 			elif elemento.tagName == 'ator':
 				a = animatedactor.AnimatedActor.XML(elemento)
@@ -35,7 +34,7 @@ class Telas:
 		try:
 			return self.telas[index]
 		except KeyError:
-			self.telas[index] = Tela(index)
+			self.telas[index] = Tela(index, self)
 			self.telas[index].fundo = fundo.Fundo()
 			self.telas[index].fundo.fundo = fundo.gerafundoflores(index)
 			return self.telas[index]
@@ -49,18 +48,19 @@ class Telas:
 			coisa.update(tela)
 
 class Tela:
-	def __init__(self, pos):
+	def __init__(self, pos, telas):
 		self.coisasaupdatear = []
 		self.coisasainputear = []
 		self.coisasadesenhar = []
 		self.coisasacolidir = []
+		self.telas = telas
 		self.pos = pos
 
 	@staticmethod
-	def XML(node):
+	def XML(node, telas):
 		x = int(node.getAttribute('x'))
 		y = int(node.getAttribute('y'))
-		tela = Tela((x, y))
+		tela = Tela((x, y), telas)
 		for elemento in node.childNodes:
 			if elemento.nodeType != xml.dom.Node.ELEMENT_NODE:
 				continue
@@ -87,7 +87,7 @@ class Tela:
 		         pos[1] + objeto.colisao[1],
 		         pos[0] + objeto.colisao[0] + objeto.colisao[2],
 		         pos[1] + objeto.colisao[1] + objeto.colisao[3]]
-		for coisa in self.coisasacolidir:
+		for coisa in self.telas.coisasacolidir + self.coisasacolidir:
 			if coisa == objeto:
 				continue
 			caixac = [coisa.pos[0] + coisa.colisao[0],
