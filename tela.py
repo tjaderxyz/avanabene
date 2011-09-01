@@ -1,6 +1,6 @@
 # coding: utf-8
 
-import xml.dom.minidom, random, object, geral, pygame, pessoa, os, fundo, animatedactor
+import xml.dom.minidom, random, object, geral, pygame, pessoa, os, fundo, animatedactor, collision
 
 class Telas:
 	def __init__(self, arq, atores):
@@ -78,6 +78,9 @@ class Tela:
 				tela.coisasadesenhar.append(p)
 				if p.colisao:
 					self.coisasacolidir.append(p)
+			elif elemento.tagName == 'colisao':
+				c = collision.Collision.XML(elemento)
+				tela.coisasacolidir.append(c)
 			else:
 				raise Exception
 		return tela

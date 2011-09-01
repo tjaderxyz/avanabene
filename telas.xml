@@ -3,7 +3,8 @@
 	<!--ator id='benevides' frames='2,2,4,4' w='7' h='8' x='87' y='56' controles='K_a,K_d,K_w,K_s' /-->
 	<tela x='0' y='0'>
 		<fundo tipo='flores' />
-		<objeto id='casebre1' x='100' y='50' colisao='1,0,24,17' />
+		<objeto id='casebre1' x='100' y='50'/>
+		<colisao x='100' y='50' colisao='1,0,24,17' />
 		<pessoa id='duende' frames='2,2,4,4' w='7' h='9' x='80' y='60' />
 	</tela>
 	<tela x='-1' y='0'>

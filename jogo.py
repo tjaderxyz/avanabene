@@ -108,7 +108,6 @@ while True:
 	mudatela(ananias, benevides)
 	mudatela(benevides, ananias)
 
-	print tela
 	t[tuple(tela)].fundo.render(screen)
 
 	coisasadesenhar = []
