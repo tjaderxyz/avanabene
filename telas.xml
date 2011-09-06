@@ -4,7 +4,24 @@
 	<tela x='0' y='0'>
 		<fundo tipo='flores' />
 		<objeto id='casebre1' x='100' y='50'/>
-		<colisao x='100' y='50' colisao='1,0,28,14' />
+		<colisao x='100' y='50' colisao='1,0,24,16' />
+		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='80' y='60'/>
+		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='80' y='60'/>
+		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='80' y='60'/>
+		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='80' y='60'/>
+		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='80' y='60'/>
+		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='80' y='60'/>
+		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='80' y='60'/>
+		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='80' y='60'/>
+		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='80' y='60'/>
+		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='80' y='60'/>
+		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='80' y='60'/>
+		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='80' y='60'/>
+		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='80' y='60'/>
+		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='80' y='60'/>
+		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='80' y='60'/>
+		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='80' y='60'/>
+		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='80' y='60'/>
 		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='80' y='60'/>
 		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='70' y='60'/>
 		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='80' y='80'/>
@@ -14,6 +31,21 @@
 		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='100' y='60'/>
 		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='90' y='50'/>
 		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='50' y='80'/>
+		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='90' y='60'/>
+		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='90' y='60'/>
+		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='90' y='60'/>
+		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='90' y='60'/>
+		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='90' y='60'/>
+		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='90' y='60'/>
+		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='90' y='60'/>
+		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='90' y='60'/>
+		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='90' y='60'/>
+		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='90' y='60'/>
+		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='90' y='60'/>
+		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='90' y='60'/>
+		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='90' y='60'/>
+		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='90' y='60'/>
+		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='90' y='60'/>
 	</tela>
 	<tela x='-1' y='0'>
 		<fundo tipo='ladrilhado' imagem='deserto' />
