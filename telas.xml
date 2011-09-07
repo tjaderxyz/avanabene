@@ -2,6 +2,30 @@
 	<!--ator id='ananias' frames='2,2,4,4' w='7' h='8' x='73' y='56' controles='K_LEFT,K_RIGHT,K_UP,K_DOWN' /-->
 	<!--ator id='benevides' frames='2,2,4,4' w='7' h='8' x='87' y='56' controles='K_a,K_d,K_w,K_s' /-->
 	<tela x='0' y='0'>
+		<fundo tipo='ladrilhado' imagem='deserto' />
+		<objeto id='casaT_tabuasvert' x='95' y='65' />
+		<colisao x='95' y='65' colisao='0, 2, 11, 16' />
+		<colisao x='95' y='65' colisao='11, 0, 4, 18' />
+		<colisao x='95' y='65' colisao='15, 9, 7, 9' />
+		<colisao x='95' y='65' colisao='22, 0, 4, 18' />
+		<colisao x='95' y='65' colisao='26, 2, 4, 16' />
+	</tela>
+	<tela x='0' y='-1'>
+		<fundo tipo='flores' />
+		<pessoa id='tribal1' frames='2,2,4,4' w='7' h='8' x='10' y='60' />
+		<pessoa id='tribal2' frames='2,2,4,4' w='7' h='8' x='20' y='60' />
+		<pessoa id='tribal3' frames='2,2,4,4' w='7' h='8' x='30' y='60' />
+		<pessoa id='tribal4' frames='2,2,4,4' w='7' h='8' x='40' y='60' />
+		<pessoa id='tribal5' frames='2,2,4,4' w='7' h='8' x='50' y='60' />
+		<pessoa id='tribal6' frames='2,2,12,4' w='7' h='8' x='70' y='60' />
+		<pessoa id='tribal7' frames='4,4,4,4' w='7' h='8' x='80' y='60' />
+		<objeto id='casebre_bambu' x='10' y='90' />
+		<objeto id='casebre_bambu2' x='50' y='90' />
+		<objeto id='casebre_bambu3' x='90' y='90' />
+		<objeto id='casebre_bambu4' x='130' y='90' />
+		<objeto id='casebre_bambu5' x='60' y='30' />
+	</tela>
+	<tela x='0' y='-2'>
 		<fundo tipo='flores' />
 		<objeto id='casebre1' x='100' y='50'/>
 		<colisao x='100' y='50' colisao='1,0,24,16' />
@@ -47,6 +71,27 @@
 		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='90' y='60'/>
 		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='90' y='60'/>
 	</tela>
+	<tela x='-1' y='-1'>
+		<fundo tipo='ladrilhado' imagem='deserto' />
+		<pessoa id='lemanco' frames='3,3,3,3' w='7' h='8' x='10' y='60' />
+		<objeto id='casebre_cupula2' x='10' y='90' />
+		<objeto id='casebre_cupula3' x='50' y='90' />
+		<objeto id='casebre_cupula4_amarela2' x='90' y='90' />
+		<objeto id='casebre_trelica3_alta' x='130' y='90' />
+		<objeto id='casebre_cupula2_janelafina' x='30' y='30' />
+		<objeto id='casebre_trelica2_teste2' x='60' y='30' />
+		<objeto id='predio_castelinho_janelafina' x='90' y='20' />
+	</tela>
+	<tela x='-1' y='-2'>
+		<fundo tipo='flores' />
+		<pessoa id='lemanco' frames='3,3,3,3' w='7' h='8' x='10' y='60' />
+		<pessoa id='rodrigogalomontes2' frames='2,2,4,4' w='9' h='9' x='20' y='60' />
+		<pessoa id='faquir' frames='2,2,4,4' w='7' h='10' x='30' y='60' />
+		<pessoa id='hare' frames='3,3,12,4' w='7' h='7' x='40' y='60' />
+		<pessoa id='patinador' frames='3,3,3,3' w='7' h='10' x='50' y='60' />
+		<pessoa id='pirata' frames='2,2,4,4' w='7' h='8' x='70' y='60' />
+		<pessoa id='duende' frames='2,2,4,4' w='7' h='9' x='80' y='60' />
+	</tela>
 	<tela x='-1' y='0'>
 		<fundo tipo='ladrilhado' imagem='deserto' />
 		<objeto id='arvoreseca' x='65' y='45' />
@@ -54,7 +99,7 @@
 		<objeto id='casa_pedras' x='25' y='20' />
 		<pessoa id='pirata' frames='2,2,4,4' w='7' h='8' x='80' y='60' />
 	</tela>
-	<tela x='0' y='-1'>
+	<tela x='0' y='-3'>
 		<fundo tipo='flores'>
 			<tile id='rio_margemesq' x='60' y='60' />
 			<tile id='rio' x='70' y='60' w='3' />
@@ -139,6 +184,14 @@
 		<objeto id='arvoresecamov' x='25' y='80' frames='2' w='18' h= '29' />
 		<objeto id='arvoresecamov' x='80' y='35' frames='2' w='18' h= '29' />
 		<pessoa id='hare' frames='2,2,4,4' w='7' h='8' x='30' y='100' />
+	</tela>
+	<tela x='2' y='-1'>
+		<fundo tipo='flores' />
+		<pessoa id='soldado' frames='2,2,4,4' w='7' h='8' x='10' y='60' />
+		<pessoa id='soldadoescudo' frames='2,2,4,4' w='9' h='8' x='20' y='60' />
+		<pessoa id='soldadomachado' frames='2,2,4,4' w='9' h='8' x='30' y='60' />
+		<pessoa id='soldadomachadoesc' frames='2,2,4,4' w='9' h='8' x='40' y='60' />
+		<pessoa id='soldadolanca' frames='2,2,4,4' w='7' h='9' x='50' y='60' />
 	</tela>
 </mundo>
 
