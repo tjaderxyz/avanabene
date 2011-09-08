@@ -32,7 +32,7 @@ class Tile:
 		return tile
 
 	def get_rect(self):
-		return [i / geral.px for i in self.sprite.get_rect()]
+		return [i / geral.px for i in self.spritemesmo.get_rect()]
 
 	def render(self, screen):
 		pos = (self.pos[0] * geral.px,
