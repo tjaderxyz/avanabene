@@ -11,9 +11,16 @@
 		<colisao x='95' y='65' colisao='26, 2, 4, 16' />
 	</tela>
 	<tela x='-1' y='0'>
-		<fundo tipo='ladrilhado' imagem='deserto'>
-			<tile id='grama_margemdir' x='30' y='0' h='12' />
-			<tile id='grama' x='0' y='0' w='3' h='12' />
+		<fundo tipo='flores'>
+			<tile id='deserto' x='60' y='50' w='2' h='2' />
+			<tile id='deserto_margemesq' x='50' y='50' h='2' />
+			<tile id='deserto_margemsupesq' x='50' y='70' />
+			<tile id='deserto_margemsup' x='60' y='70' w='2' />
+			<tile id='deserto_margemsupdir' x='80' y='70' />
+			<tile id='deserto_margemdir' x='80' y='50' h='2' />
+			<tile id='deserto_margeminfdir' x='80' y='40' />
+			<tile id='deserto_margeminf' x='60' y='40' w='2' />
+			<tile id='deserto_margeminfesq' x='50' y='40' />
 		</fundo>
 	</tela>
 	<tela x='1' y='0'>
