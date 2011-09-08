@@ -10,7 +10,26 @@
 		<colisao x='95' y='65' colisao='22, 0, 4, 18' />
 		<colisao x='95' y='65' colisao='26, 2, 4, 16' />
 	</tela>
+	<tela x='-1' y='0'>
+		<fundo tipo='ladrilhado' imagem='deserto'>
+			<tile id='grama_margemdir' x='30' y='0' h='12' />
+			<tile id='grama' x='0' y='0' w='3' h='12' />
+		</fundo>
+	</tela>
+	<tela x='1' y='0'>
+		<fundo tipo='ladrilhado' imagem='deserto'>
+			<tile id='grama_margemesq' x='80' y='0' h='12' />
+			<tile id='grama' x='90' y='0' w='80' h='12' />
+		</fundo>			
+	</tela>
 	<tela x='0' y='-1'>
+		<fundo tipo='ladrilhado' imagem='deserto'>
+		</fundo>
+	</tela>
+	<tela x='0' y='1'>
+		<fundo tipo='ladrilhado' imagem='deserto' />
+	</tela>
+	<tela x='0' y='-11'>
 		<fundo tipo='flores' />
 		<pessoa id='tribal1' frames='2,2,4,4' w='7' h='8' x='10' y='60' />
 		<pessoa id='tribal2' frames='2,2,4,4' w='7' h='8' x='20' y='60' />
@@ -25,20 +44,10 @@
 		<objeto id='casebre_bambu4' x='130' y='90' />
 		<objeto id='casebre_bambu5' x='60' y='30' />
 	</tela>
-	<tela x='0' y='-2'>
+	<tela x='0' y='-12'>
 		<fundo tipo='flores' />
 		<objeto id='casebre1' x='100' y='50'/>
 		<colisao x='100' y='50' colisao='1,0,24,16' />
-		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='80' y='60'/>
-		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='80' y='60'/>
-		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='80' y='60'/>
-		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='80' y='60'/>
-		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='80' y='60'/>
-		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='80' y='60'/>
-		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='80' y='60'/>
-		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='80' y='60'/>
-		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='80' y='60'/>
-		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='80' y='60'/>
 		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='80' y='60'/>
 		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='80' y='60'/>
 		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='80' y='60'/>
@@ -71,7 +80,7 @@
 		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='90' y='60'/>
 		<pessoa id='borboleta' frames='2,2,2,2' w='3' h='3' x='90' y='60'/>
 	</tela>
-	<tela x='-1' y='-1'>
+	<tela x='-1' y='-11'>
 		<fundo tipo='ladrilhado' imagem='deserto' />
 		<pessoa id='lemanco' frames='3,3,3,3' w='7' h='8' x='10' y='60' />
 		<objeto id='casebre_cupula2' x='10' y='90' />
@@ -82,7 +91,7 @@
 		<objeto id='casebre_trelica2_teste2' x='60' y='30' />
 		<objeto id='predio_castelinho_janelafina' x='90' y='20' />
 	</tela>
-	<tela x='-1' y='-2'>
+	<tela x='-1' y='-12'>
 		<fundo tipo='flores' />
 		<pessoa id='lemanco' frames='3,3,3,3' w='7' h='8' x='10' y='60' />
 		<pessoa id='rodrigogalomontes2' frames='2,2,4,4' w='9' h='9' x='20' y='60' />
@@ -92,14 +101,14 @@
 		<pessoa id='pirata' frames='2,2,4,4' w='7' h='8' x='70' y='60' />
 		<pessoa id='duende' frames='2,2,4,4' w='7' h='9' x='80' y='60' />
 	</tela>
-	<tela x='-1' y='0'>
+	<tela x='-1' y='10'>
 		<fundo tipo='ladrilhado' imagem='deserto' />
 		<objeto id='arvoreseca' x='65' y='45' />
 		<objeto id='arvoreseca2' x='100' y='60' />
 		<objeto id='casa_pedras' x='25' y='20' />
 		<pessoa id='pirata' frames='2,2,4,4' w='7' h='8' x='80' y='60' />
 	</tela>
-	<tela x='0' y='-3'>
+	<tela x='0' y='-13'>
 		<fundo tipo='flores'>
 			<tile id='rio_margemesq' x='60' y='60' />
 			<tile id='rio' x='70' y='60' w='3' />
@@ -137,7 +146,7 @@
 		<objeto id='arvoreseca2' x='135' y='60' />
 		<pessoa id='faquir' frames='2,2,4,4' w='7' h='10' x='30' y='100' />
 	</tela>
-	<tela x='1' y='0'>
+	<tela x='1' y='10'>
 		<fundo tipo='ladrilhado' imagem='deserto'>
 			<tile id='grama' x='0' y='0' h='12' />
 			<tile id='grama_margemdir' x='10' y='0' h='12' />
@@ -185,7 +194,7 @@
 		<objeto id='arvoresecamov' x='80' y='35' frames='2' w='18' h= '29' />
 		<pessoa id='hare' frames='2,2,4,4' w='7' h='8' x='30' y='100' />
 	</tela>
-	<tela x='2' y='-1'>
+	<tela x='2' y='-11'>
 		<fundo tipo='flores' />
 		<pessoa id='soldado' frames='2,2,4,4' w='7' h='8' x='10' y='60' />
 		<pessoa id='soldadoescudo' frames='2,2,4,4' w='9' h='8' x='20' y='60' />
