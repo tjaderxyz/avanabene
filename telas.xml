@@ -17,22 +17,22 @@
 			<tile id='grama' x='10' y='50' h='7' />
 			<tile id='grama' x='20' y='50' h='2' />
 			<tile id='grama' x='20' y='110' />
-			<tile id='grama_margemdir' x='20' y='0' h='2' />
-			<tile id='grama_margemsupdir' x='20' y='20' />
-			<tile id='grama_curvasupdir' x='10' y='20' />
-			<tile id='grama_margemdir' x='10' y='30' />
-			<tile id='grama_curvainfdir' x='10' y='40' />
-			<tile id='grama_margeminf' x='20' y='40' /> <!--><-->
-			<tile id='grama_margeminfdir' x='30' y='40' />
-			<tile id='grama_margemdir' x='30' y='50' h='2' />
-			<tile id='grama_margemsupdir' x='30' y='70' />
-			<tile id='grama_curvasupdir' x='20' y='70' />
-			<tile id='grama_margemdir' x='20' y='80' h='2' />
-			<tile id='grama_curvainfdir' x='20' y='100' />
-			<tile id='grama_margeminfdir' x='30' y='100' />
-			<tile id='grama_curvainfdir' x='30' y='110' />
-			<tile id='grama_margeminf' x='40' y='110' />
-			<tile id='grama_margeminfdir' x='50' y='110' />
+			<tile id='grama_dir' x='20' y='0' h='2' />
+			<tile id='grama_supdir' x='20' y='20' />
+			<tile id='grama_supdirc' x='10' y='20' />
+			<tile id='grama_dir' x='10' y='30' />
+			<tile id='grama_infdirc' x='10' y='40' />
+			<tile id='grama_inf' x='20' y='40' />
+			<tile id='grama_infdir' x='30' y='40' />
+			<tile id='grama_dir' x='30' y='50' h='2' />
+			<tile id='grama_supdir' x='30' y='70' />
+			<tile id='grama_supdirc' x='20' y='70' />
+			<tile id='grama_dir' x='20' y='80' h='2' />
+			<tile id='grama_infdirc' x='20' y='100' />
+			<tile id='grama_infdir' x='30' y='100' />
+			<tile id='grama_infdirc' x='30' y='110' />
+			<tile id='grama_inf' x='40' y='110' />
+			<tile id='grama_infdir' x='50' y='110' />
 		</fundo>
 	</tela>
 	<tela x='-1' y='-1'> <!-- arredores do inicio -->
@@ -41,27 +41,27 @@
 			<tile id='grama' x='10' y='70' h='2' />
 			<tile id='grama' x='10' y='110' />
 			<tile id='grama' x='20' y='60' h='3' />
-			<tile id='grama_margeminf' x='0' y='60' />
-			<tile id='grama_curvainfesq' x='10' y='60' />			
-			<tile id='grama_margeminfesq' x='10' y='50' />
-			<tile id='grama_margeminf' x='20' y='50' />
-			<tile id='grama_margeminfdir' x='30' y='50' />
-			<tile id='grama_margemdir' x='30' y='60' h='3' />
-			<tile id='grama_margemsupdir' x='30' y='90' />
-			<tile id='grama_margemsup' x='20' y='90' />
-			<tile id='grama_curvasupdir' x='10' y='90' />
-			<tile id='grama_curvainfdir' x='10' y='100' />
-			<tile id='grama_margeminfdir' x='20' y='100' />
-			<tile id='grama_margemdir' x='20' y='110' />
+			<tile id='grama_inf' x='0' y='60' />
+			<tile id='grama_infesqc' x='10' y='60' />			
+			<tile id='grama_infesq' x='10' y='50' />
+			<tile id='grama_inf' x='20' y='50' />
+			<tile id='grama_infdir' x='30' y='50' />
+			<tile id='grama_dir' x='30' y='60' h='3' />
+			<tile id='grama_supdir' x='30' y='90' />
+			<tile id='grama_sup' x='20' y='90' />
+			<tile id='grama_supdirc' x='10' y='90' />
+			<tile id='grama_infdirc' x='10' y='100' />
+			<tile id='grama_infdir' x='20' y='100' />
+			<tile id='grama_dir' x='20' y='110' />
 			<tile id='grama' x='130' y='0' h='2' w='3' />
 			<tile id='grama' x='140' y='20' />
-			<tile id='grama_margemesq' x='120' y='0' h='2' />
-			<tile id='grama_margemsupesq' x='120' y='20' />
-			<tile id='grama_curvasupesq' x='130' y='20' />
-			<tile id='grama_margemsupesq' x='130' y='30' />
-			<tile id='grama_margemsup' x='140' y='30' />
-			<tile id='grama_margemsupdir' x='150' y='30' />
-			<tile id='grama_curvasupdir' x='150' y='20' />
+			<tile id='grama_esq' x='120' y='0' h='2' />
+			<tile id='grama_supesq' x='120' y='20' />
+			<tile id='grama_supesqc' x='130' y='20' />
+			<tile id='grama_supesq' x='130' y='30' />
+			<tile id='grama_sup' x='140' y='30' />
+			<tile id='grama_supdir' x='150' y='30' />
+			<tile id='grama_supdirc' x='150' y='20' />
 		</fundo>
 	</tela>
 	<tela x='0' y='-1'> <!-- arredores do inicio -->
@@ -73,53 +73,53 @@
 			<tile id='grama' x='10' y='30' />
 			<tile id='grama' x='80' y='30' w='3' />
 			<tile id='grama' x='80' y='40' />
-			<tile id='grama_curvasupesq' x='0' y='20' />
-			<tile id='grama_margemesq' x='0' y='30' />
-			<tile id='grama_margemsupesq' x='0' y='40' />
-			<tile id='grama_margemsup' x='10' y='40' />
-			<tile id='grama_margemsupdir' x='20' y='40' />
-			<tile id='grama_curvasupdir' x='20' y='30' />
-			<tile id='grama_margemsupdir' x='30' y='30' />
-			<tile id='grama_curvasupdir' x='30' y='20' />
-			<tile id='grama_margemsup' x='40' y='20' />
-			<tile id='grama_curvasupesq' x='50' y='20' />
-			<tile id='grama_margemsupesq' x='50' y='30' />
-			<tile id='grama_margemsup' x='60' y='30' />
-			<tile id='grama_curvasupesq' x='70' y='30' />
-			<tile id='grama_margemesq' x='70' y='40' />
-			<tile id='grama_margemsupesq' x='70' y='50' />
-			<tile id='grama_margemsup' x='80' y='50' />
-			<tile id='grama_margemsupdir' x='90' y='50' />
-			<tile id='grama_curvasupdir' x='90' y='40' />
-			<tile id='grama_margemsup' x='100' y='40' />
-			<tile id='grama_margemsupdir' x='110' y='40' />
-			<tile id='grama_margemdir' x='110' y='20' h='2' />
-			<tile id='grama_curvasupdir' x='110' y='10' />
-			<tile id='grama_margemsupdir' x='120' y='10' />
-			<tile id='grama_margemdir' x='120' y='0' />
+			<tile id='grama_supesqc' x='0' y='20' />
+			<tile id='grama_esq' x='0' y='30' />
+			<tile id='grama_supesq' x='0' y='40' />
+			<tile id='grama_sup' x='10' y='40' />
+			<tile id='grama_supdir' x='20' y='40' />
+			<tile id='grama_supdirc' x='20' y='30' />
+			<tile id='grama_supdir' x='30' y='30' />
+			<tile id='grama_supdirc' x='30' y='20' />
+			<tile id='grama_sup' x='40' y='20' />
+			<tile id='grama_supesqc' x='50' y='20' />
+			<tile id='grama_supesq' x='50' y='30' />
+			<tile id='grama_sup' x='60' y='30' />
+			<tile id='grama_supesqc' x='70' y='30' />
+			<tile id='grama_esq' x='70' y='40' />
+			<tile id='grama_supesq' x='70' y='50' />
+			<tile id='grama_sup' x='80' y='50' />
+			<tile id='grama_supdir' x='90' y='50' />
+			<tile id='grama_supdirc' x='90' y='40' />
+			<tile id='grama_sup' x='100' y='40' />
+			<tile id='grama_supdir' x='110' y='40' />
+			<tile id='grama_dir' x='110' y='20' h='2' />
+			<tile id='grama_supdirc' x='110' y='10' />
+			<tile id='grama_supdir' x='120' y='10' />
+			<tile id='grama_dir' x='120' y='0' />
 			<tile id='grama' x='140' y='30' h='2' />
 			<tile id='grama' x='150' y='10' h='5' />
-			<tile id='grama_margeminf' x='150' y='0' />
-			<tile id='grama_margeminfesq' x='140' y='0' />
-			<tile id='grama_margemesq' x='140' y='10' />
-			<tile id='grama_curvainfesq' x='140' y='20' />
-			<tile id='grama_margeminfesq' x='130' y='20' />
-			<tile id='grama_margemesq' x='130' y='30' h='2' />
-			<tile id='grama_margemsupesq' x='130' y='50' />
-			<tile id='grama_curvasupesq' x='140' y='50' />
-			<tile id='grama_margemsupesq' x='140' y='60' />
-			<tile id='grama_margemsup' x='150' y='60' />
+			<tile id='grama_inf' x='150' y='0' />
+			<tile id='grama_infesq' x='140' y='0' />
+			<tile id='grama_esq' x='140' y='10' />
+			<tile id='grama_infesqc' x='140' y='20' />
+			<tile id='grama_infesq' x='130' y='20' />
+			<tile id='grama_esq' x='130' y='30' h='2' />
+			<tile id='grama_supesq' x='130' y='50' />
+			<tile id='grama_supesqc' x='140' y='50' />
+			<tile id='grama_supesq' x='140' y='60' />
+			<tile id='grama_sup' x='150' y='60' />
 		</fundo>
 	</tela>
 	<tela x='1' y='-1'> <!-- arredores do inicio -->
 		<fundo tipo='ladrilhado' imagem='deserto'>
-			<tile id='grama_margeminf' x='0' y='0' w='2' />
-			<tile id='grama_margeminfdir' x='20' y='0' />
-			<tile id='grama_curvainfdir' x='20' y='10' />
-			<tile id='grama_margeminf' x='30' y='10' />
-			<tile id='grama_curvainfesq' x='40' y='10' />
-			<tile id='grama_curvasupesq' x='40' y='0' />
-			<tile id='grama_margemsupesq' x='30' y='0' />
+			<tile id='grama_inf' x='0' y='0' w='2' />
+			<tile id='grama_infdir' x='20' y='0' />
+			<tile id='grama_infdirc' x='20' y='10' />
+			<tile id='grama_inf' x='30' y='10' />
+			<tile id='grama_infesqc' x='40' y='10' />
+			<tile id='grama_supesqc' x='40' y='0' />
+			<tile id='grama_supesq' x='30' y='0' />
 			<tile id='grama' x='0' y='10' h='5' w='2' />
 			<tile id='grama' x='20' y='20' h='5' />
 			<tile id='grama' x='30' y='20' h='3' />
@@ -131,35 +131,35 @@
 			<tile id='grama' x='120' y='0' h='10' w='4' />
 			<tile id='grama' x='110' y='90' />
 			<tile id='grama' x='130' y='100' h='2' w='3' />
-			<tile id='grama_margemsup' x='0' y='60' />
-			<tile id='grama_curvasupesq' x='10' y='60' />
-			<tile id='grama_margemsupesq' x='10' y='70' />
-			<tile id='grama_margemsup' x='20' y='70' />
-			<tile id='grama_margemsupdir' x='30' y='70' />
-			<tile id='grama_margemdir' x='30' y='60' />
-			<tile id='grama_curvasupdir' x='30' y='50' />
-			<tile id='grama_margemsupdir' x='40' y='50' />
-			<tile id='grama_curvasupdir' x='40' y='40' />
-			<tile id='grama_curvasupesq' x='50' y='40' />
-			<tile id='grama_margemesq' x='50' y='50' h='2' />
-			<tile id='grama_margemsupesq' x='50' y='70' />
-			<tile id='grama_curvasupesq' x='60' y='70' />
-			<tile id='grama_margemsupesq' x='60' y='80' />
-			<tile id='grama_margemsup' x='70' y='80' />
-			<tile id='grama_margemsupdir' x='80' y='80' />
-			<tile id='grama_curvasupdir' x='80' y='70' />
-			<tile id='grama_margemsup' x='90' y='70' />
-			<tile id='grama_margemsupdir' x='100' y='70' />
-			<tile id='grama_curvasupdir' x='100' y='60' />
-			<tile id='grama_curvasupesq' x='110' y='60' />
-			<tile id='grama_margemesq' x='110' y='70' />
-			<tile id='grama_curvainfesq' x='110' y='80' />
-			<tile id='grama_margeminfesq' x='100' y='80' />
-			<tile id='grama_margemesq' x='100' y='90' />
-			<tile id='grama_margemsupesq' x='100' y='100' />
-			<tile id='grama_margemsup' x='110' y='100' />
-			<tile id='grama_curvasupesq' x='120' y='100' />
-			<tile id='grama_margemesq' x='120' y='110' />
+			<tile id='grama_sup' x='0' y='60' />
+			<tile id='grama_supesqc' x='10' y='60' />
+			<tile id='grama_supesq' x='10' y='70' />
+			<tile id='grama_sup' x='20' y='70' />
+			<tile id='grama_supdir' x='30' y='70' />
+			<tile id='grama_dir' x='30' y='60' />
+			<tile id='grama_supdirc' x='30' y='50' />
+			<tile id='grama_supdir' x='40' y='50' />
+			<tile id='grama_supdirc' x='40' y='40' />
+			<tile id='grama_supesqc' x='50' y='40' />
+			<tile id='grama_esq' x='50' y='50' h='2' />
+			<tile id='grama_supesq' x='50' y='70' />
+			<tile id='grama_supesqc' x='60' y='70' />
+			<tile id='grama_supesq' x='60' y='80' />
+			<tile id='grama_sup' x='70' y='80' />
+			<tile id='grama_supdir' x='80' y='80' />
+			<tile id='grama_supdirc' x='80' y='70' />
+			<tile id='grama_sup' x='90' y='70' />
+			<tile id='grama_supdir' x='100' y='70' />
+			<tile id='grama_supdirc' x='100' y='60' />
+			<tile id='grama_supesqc' x='110' y='60' />
+			<tile id='grama_esq' x='110' y='70' />
+			<tile id='grama_infesqc' x='110' y='80' />
+			<tile id='grama_infesq' x='100' y='80' />
+			<tile id='grama_esq' x='100' y='90' />
+			<tile id='grama_supesq' x='100' y='100' />
+			<tile id='grama_sup' x='110' y='100' />
+			<tile id='grama_supesqc' x='120' y='100' />
+			<tile id='grama_esq' x='120' y='110' />
 		</fundo>			
 	</tela>
 	<tela x='1' y='0'> <!-- arredores do inicio -->
@@ -170,25 +170,25 @@
 			<tile id='grama' x='110' y='110' />
 			<tile id='grama' x='120' y='10' h='11' />
 			<tile id='grama' x='130' y='0' h='12' w='3' />
-			<tile id='grama_margemesq' x='100' y='110' />
-			<tile id='grama_margeminfesq' x='100' y='100' />
-			<tile id='grama_curvainfesq' x='110' y='100' />
-			<tile id='grama_curvasupesq' x='110' y='90' />
-			<tile id='grama_margemsup' x='100' y='90' />
-			<tile id='grama_margemsupesq' x='90' y='90' />
-			<tile id='grama_margemesq' x='90' y='80' />
-			<tile id='grama_margeminfesq' x='90' y='70' />
-			<tile id='grama_curvainfesq' x='100' y='70' />
-			<tile id='grama_margemesq' x='100' y='60' />
-			<tile id='grama_curvasupesq' x='100' y='50' />
-			<tile id='grama_margemsupesq' x='90' y='50' />
-			<tile id='grama_margemesq' x='90' y='30' h='2' />
-			<tile id='grama_margeminfesq' x='90' y='20' />
-			<tile id='grama_margeminf' x='100' y='20' />
-			<tile id='grama_curvainfesq' x='110' y='20' />
-			<tile id='grama_margemesq' x='110' y='10' />
-			<tile id='grama_margeminfesq' x='110' y='0' />
-			<tile id='grama_curvainfesq' x='120' y='0' />
+			<tile id='grama_esq' x='100' y='110' />
+			<tile id='grama_infesq' x='100' y='100' />
+			<tile id='grama_infesqc' x='110' y='100' />
+			<tile id='grama_supesqc' x='110' y='90' />
+			<tile id='grama_sup' x='100' y='90' />
+			<tile id='grama_supesq' x='90' y='90' />
+			<tile id='grama_esq' x='90' y='80' />
+			<tile id='grama_infesq' x='90' y='70' />
+			<tile id='grama_infesqc' x='100' y='70' />
+			<tile id='grama_esq' x='100' y='60' />
+			<tile id='grama_supesqc' x='100' y='50' />
+			<tile id='grama_supesq' x='90' y='50' />
+			<tile id='grama_esq' x='90' y='30' h='2' />
+			<tile id='grama_infesq' x='90' y='20' />
+			<tile id='grama_inf' x='100' y='20' />
+			<tile id='grama_infesqc' x='110' y='20' />
+			<tile id='grama_esq' x='110' y='10' />
+			<tile id='grama_infesq' x='110' y='0' />
+			<tile id='grama_infesqc' x='120' y='0' />
 		</fundo>
 	</tela>
 	<tela x='1' y='1'> <!-- arredores do inicio -->
@@ -201,28 +201,28 @@
 			<tile id='grama' x='70' y='40' h='8' w='9' />
 			<tile id='grama' x='100' y='10' h='3' w='6' />
 			<tile id='grama' x='110' y='0' w='5' />
-			<tile id='grama_curvainfesq' x='0' y='90' />
-			<tile id='grama_margemesq' x='0' y='80' />
-			<tile id='grama_margeminfesq' x='0' y='70' />
-			<tile id='grama_margeminf' x='10' y='70' />
-			<tile id='grama_margeminfdir' x='20' y='70' />
-			<tile id='grama_curvainfdir' x='20' y='80' />
-			<tile id='grama_margeminf' x='30' y='80' />
-			<tile id='grama_curvainfesq' x='40' y='80' />
-			<tile id='grama_margeminfesq' x='40' y='70' />
-			<tile id='grama_margeminf' x='50' y='70' /> //
-			<tile id='grama_curvainfesq' x='60' y='70' />
-			<tile id='grama_curvasupesq' x='60' y='60' />
-			<tile id='grama_margemsupesq' x='50' y='60' />
-			<tile id='grama_margemesq' x='50' y='50' />
-			<tile id='grama_margeminfesq' x='50' y='40' />
-			<tile id='grama_curvainfesq' x='60' y='40' />
-			<tile id='grama_margeminfesq' x='60' y='30' />
-			<tile id='grama_margeminf' x='70' y='30' w='2' />
-			<tile id='grama_curvainfesq' x='90' y='30' />
-			<tile id='grama_margemesq' x='90' y='10' h='2' />
-			<tile id='grama_margeminfesq' x='90' y='0' />
-			<tile id='grama_curvainfesq' x='100' y='0' />
+			<tile id='grama_infesqc' x='0' y='90' />
+			<tile id='grama_esq' x='0' y='80' />
+			<tile id='grama_infesq' x='0' y='70' />
+			<tile id='grama_inf' x='10' y='70' />
+			<tile id='grama_infdir' x='20' y='70' />
+			<tile id='grama_infdirc' x='20' y='80' />
+			<tile id='grama_inf' x='30' y='80' />
+			<tile id='grama_infesqc' x='40' y='80' />
+			<tile id='grama_infesq' x='40' y='70' />
+			<tile id='grama_inf' x='50' y='70' /> //
+			<tile id='grama_infesqc' x='60' y='70' />
+			<tile id='grama_supesqc' x='60' y='60' />
+			<tile id='grama_supesq' x='50' y='60' />
+			<tile id='grama_esq' x='50' y='50' />
+			<tile id='grama_infesq' x='50' y='40' />
+			<tile id='grama_infesqc' x='60' y='40' />
+			<tile id='grama_infesq' x='60' y='30' />
+			<tile id='grama_inf' x='70' y='30' w='2' />
+			<tile id='grama_infesqc' x='90' y='30' />
+			<tile id='grama_esq' x='90' y='10' h='2' />
+			<tile id='grama_infesq' x='90' y='0' />
+			<tile id='grama_infesqc' x='100' y='0' />
 		</fundo>
 	</tela>
 	<tela x='0' y='1'> <!-- arredores do inicio -->
@@ -230,30 +230,30 @@
 			<tile id='grama' x='10' y='110' w='5' />
 			<tile id='grama' x='10' y='100' w='3' />
 			<tile id='grama' x='30' y='90' />
-			<tile id='grama_curvainfesq' x='0' y='110' />
-			<tile id='grama_margemesq' x='0' y='100' />
-			<tile id='grama_margeminfesq' x='0' y='90' />
-			<tile id='grama_margeminf' x='10' y='90' />
-			<tile id='grama_curvainfesq' x='20' y='90' />
-			<tile id='grama_margeminfesq' x='20' y='80' />
-			<tile id='grama_margeminf' x='30' y='80' />
-			<tile id='grama_margeminfdir' x='40' y='80' />
-			<tile id='grama_margemdir' x='40' y='90' />
-			<tile id='grama_curvainfdir' x='40' y='100' />
-			<tile id='grama_margeminf' x='50' y='100' />
-			<tile id='grama_margeminfdir' x='60' y='100' />
-			<tile id='grama_curvainfdir' x='60' y='110' />
-			<tile id='grama_margeminfdir' x='70' y='110' />
+			<tile id='grama_infesqc' x='0' y='110' />
+			<tile id='grama_esq' x='0' y='100' />
+			<tile id='grama_infesq' x='0' y='90' />
+			<tile id='grama_inf' x='10' y='90' />
+			<tile id='grama_infesqc' x='20' y='90' />
+			<tile id='grama_infesq' x='20' y='80' />
+			<tile id='grama_inf' x='30' y='80' />
+			<tile id='grama_infdir' x='40' y='80' />
+			<tile id='grama_dir' x='40' y='90' />
+			<tile id='grama_infdirc' x='40' y='100' />
+			<tile id='grama_inf' x='50' y='100' />
+			<tile id='grama_infdir' x='60' y='100' />
+			<tile id='grama_infdirc' x='60' y='110' />
+			<tile id='grama_infdir' x='70' y='110' />
 			
 			<tile id='grama' x='130' y='100' h='2' w='3' />
 			<tile id='grama' x='140' y='90' />
-			<tile id='grama_margemesq' x='120' y='100' h='2' />
-			<tile id='grama_margeminfesq' x='120' y='90' />
-			<tile id='grama_curvainfesq' x='130' y='90' />
-			<tile id='grama_margeminfesq' x='130' y='80' />
-			<tile id='grama_margeminf' x='140' y='80' />
-			<tile id='grama_margeminfdir' x='150' y='80' />
-			<tile id='grama_curvainfdir' x='150' y='90' />
+			<tile id='grama_esq' x='120' y='100' h='2' />
+			<tile id='grama_infesq' x='120' y='90' />
+			<tile id='grama_infesqc' x='130' y='90' />
+			<tile id='grama_infesq' x='130' y='80' />
+			<tile id='grama_inf' x='140' y='80' />
+			<tile id='grama_infdir' x='150' y='80' />
+			<tile id='grama_infdirc' x='150' y='90' />
 		</fundo>
 	</tela>
 	<tela x='-1' y='1'> <!-- arredores do inicio -->
@@ -265,27 +265,27 @@
 			<tile id='grama' x='90' y='90' h='3' w='3' />
 			<tile id='grama' x='110' y='80' />
 			<tile id='grama' x='120' y='110' w='2' />
-			<tile id='grama_margemdir' x='50' y='0' />
-			<tile id='grama_curvainfdir' x='50' y='10' />
-			<tile id='grama_margeminfdir' x='60' y='10' />
-			<tile id='grama_margemdir' x='60' y='20' h='5' />
-			<tile id='grama_curvainfdir' x='60' y='70' />
-			<tile id='grama_curvainfesq' x='70' y='70' />
-			<tile id='grama_margeminfesq' x='70' y='60' />
-			<tile id='grama_margeminf' x='80' y='60' />
-			<tile id='grama_margeminfdir' x='90' y='60' />
-			<tile id='grama_margemdir' x='90' y='70' />
-			<tile id='grama_curvainfdir' x='90' y='80' />
-			<tile id='grama_curvainfesq' x='100' y='80' />
-			<tile id='grama_margeminfesq' x='100' y='70' />
-			<tile id='grama_margeminf' x='110' y='70' />
-			<tile id='grama_margeminfdir' x='120' y='70' />
-			<tile id='grama_margemdir' x='120' y='80' h='2' />
-			<tile id='grama_curvainfdir' x='120' y='100' />
-			<tile id='grama_margeminf' x='130' y='100' />
-			<tile id='grama_margeminfdir' x='140' y='100' />
-			<tile id='grama_curvainfdir' x='140' y='110' />
-			<tile id='grama_margeminf' x='150' y='110' />
+			<tile id='grama_dir' x='50' y='0' />
+			<tile id='grama_infdirc' x='50' y='10' />
+			<tile id='grama_infdir' x='60' y='10' />
+			<tile id='grama_dir' x='60' y='20' h='5' />
+			<tile id='grama_infdirc' x='60' y='70' />
+			<tile id='grama_infesqc' x='70' y='70' />
+			<tile id='grama_infesq' x='70' y='60' />
+			<tile id='grama_inf' x='80' y='60' />
+			<tile id='grama_infdir' x='90' y='60' />
+			<tile id='grama_dir' x='90' y='70' />
+			<tile id='grama_infdirc' x='90' y='80' />
+			<tile id='grama_infesqc' x='100' y='80' />
+			<tile id='grama_infesq' x='100' y='70' />
+			<tile id='grama_inf' x='110' y='70' />
+			<tile id='grama_infdir' x='120' y='70' />
+			<tile id='grama_dir' x='120' y='80' h='2' />
+			<tile id='grama_infdirc' x='120' y='100' />
+			<tile id='grama_inf' x='130' y='100' />
+			<tile id='grama_infdir' x='140' y='100' />
+			<tile id='grama_infdirc' x='140' y='110' />
+			<tile id='grama_inf' x='150' y='110' />
 		</fundo>
 	</tela>
 
@@ -370,35 +370,35 @@
 	</tela>
 	<tela x='0' y='-13'> <!-- rio -->
 		<fundo tipo='flores'>
-			<tile id='rio_margemesq' x='60' y='60' />
+			<tile id='rio_esq' x='60' y='60' />
 			<tile id='rio' x='70' y='60' w='3' />
 			<tile id='rio' x='70' y='50' w='3' />
-			<tile id='rio_margeminfesq' x='60' y='70' />
-			<tile id='rio_margeminf' x='70' y='70' w='3' />
-			<tile id='rio_curvainfesq' x='60' y='50' />
-			<tile id='rio_margeminf' x='50' y='50' />
-			<tile id='rio_margeminfesq' x='40' y='50' />
-			<tile id='rio_margeminfdir' x='100' y='70' />
-			<tile id='rio_margemdir' x='100' y='50' h='2' />
-			<tile id='rio_curvainfdir' x='100' y='40' />
-			<tile id='rio_margeminfdir' x='110' y='40' />
-			<tile id='rio_margemdir' x='110' y='0' h='4'/>
+			<tile id='rio_infesq' x='60' y='70' />
+			<tile id='rio_inf' x='70' y='70' w='3' />
+			<tile id='rio_infesqc' x='60' y='50' />
+			<tile id='rio_inf' x='50' y='50' />
+			<tile id='rio_infesq' x='40' y='50' />
+			<tile id='rio_infdir' x='100' y='70' />
+			<tile id='rio_dir' x='100' y='50' h='2' />
+			<tile id='rio_infdirc' x='100' y='40' />
+			<tile id='rio_infdir' x='110' y='40' />
+			<tile id='rio_dir' x='110' y='0' h='4'/>
 			<tile id='rio' x='100' y='0' h='4' />
 			<tile id='rio' x='90' y='20' h='3' />
 			<tile id='rio' x='80' y='40' />
-			<tile id='rio_margemesq' x='90' y='0' />
-			<tile id='rio_curvasupesq' x='90' y='10' />
-			<tile id='rio_margemsupesq' x='80' y='10' />
-			<tile id='rio_margemesq' x='80' y='20' />
-			<tile id='rio_curvasupesq' x='80' y='30' />
-			<tile id='rio_curvasupdir' x='70' y='30' />
-			<tile id='rio_margemsupdir' x='70' y='20' />
-			<tile id='rio_margemsup' x='60' y='20' />
-			<tile id='rio_curvainfesq' x='40' y='40' />
-			<tile id='rio_margeminfesq' x='30' y='40' />
-			<tile id='rio_margemesq' x='30' y='30' />
-			<tile id='rio_margemsupesq' x='30' y='20' />
-			<tile id='rio_margemsup' x='40' y='20' w='2' />
+			<tile id='rio_esq' x='90' y='0' />
+			<tile id='rio_supesqc' x='90' y='10' />
+			<tile id='rio_supesq' x='80' y='10' />
+			<tile id='rio_esq' x='80' y='20' />
+			<tile id='rio_supesqc' x='80' y='30' />
+			<tile id='rio_supdirc' x='70' y='30' />
+			<tile id='rio_supdir' x='70' y='20' />
+			<tile id='rio_sup' x='60' y='20' />
+			<tile id='rio_infesqc' x='40' y='40' />
+			<tile id='rio_infesq' x='30' y='40' />
+			<tile id='rio_esq' x='30' y='30' />
+			<tile id='rio_supesq' x='30' y='20' />
+			<tile id='rio_sup' x='40' y='20' w='2' />
 			<tile id='rio' x='40' y='30' w='3' />
 			<tile id='rio' x='50' y='40' w='3' />
 		</fundo>
@@ -409,42 +409,42 @@
 	<tela x='1' y='10'> <!-- arvores movimento -->
 		<fundo tipo='ladrilhado' imagem='deserto'>
 			<tile id='grama' x='0' y='0' h='12' />
-			<tile id='grama_margemdir' x='10' y='0' h='12' />
-			<tile id='grama_curvainfdir' x='10' y='0' />
-			<tile id='grama_curvainfesq' x='90' y='0' />
-			<tile id='grama_margeminf' x='20' y='0' w='8' />
-			<tile id='grama_margemesq' x='60' y='60' />
+			<tile id='grama_dir' x='10' y='0' h='12' />
+			<tile id='grama_infdirc' x='10' y='0' />
+			<tile id='grama_infesqc' x='90' y='0' />
+			<tile id='grama_inf' x='20' y='0' w='8' />
+			<tile id='grama_esq' x='60' y='60' />
 			<tile id='grama' x='70' y='60' w='3' />
 			<tile id='grama' x='70' y='50' w='3' />
-			<tile id='grama_margeminfesq' x='60' y='70' />
-			<tile id='grama_margeminf' x='70' y='70' w='3' />
-			<tile id='grama_curvainfesq' x='60' y='50' />
-			<tile id='grama_margeminf' x='50' y='50' />
-			<tile id='grama_margeminfesq' x='40' y='50' />
-			<tile id='grama_margeminfdir' x='100' y='70' />
-			<tile id='grama_margemdir' x='100' y='50' h='2' />
-			<tile id='grama_curvainfdir' x='100' y='40' />
-			<tile id='grama_margeminfdir' x='110' y='40' />
-			<tile id='grama_margemdir' x='110' y='0' h='4'/>
+			<tile id='grama_infesq' x='60' y='70' />
+			<tile id='grama_inf' x='70' y='70' w='3' />
+			<tile id='grama_infesqc' x='60' y='50' />
+			<tile id='grama_inf' x='50' y='50' />
+			<tile id='grama_infesq' x='40' y='50' />
+			<tile id='grama_infdir' x='100' y='70' />
+			<tile id='grama_dir' x='100' y='50' h='2' />
+			<tile id='grama_infdirc' x='100' y='40' />
+			<tile id='grama_infdir' x='110' y='40' />
+			<tile id='grama_dir' x='110' y='0' h='4'/>
 			<tile id='grama' x='100' y='0' h='4' />
 			<tile id='grama' x='90' y='20' h='3' />
 			<tile id='grama' x='80' y='40' />
-			<tile id='grama_margemesq' x='90' y='0' />
-			<tile id='grama_curvasupesq' x='90' y='10' />
-			<tile id='grama_margemsupesq' x='80' y='10' />
-			<tile id='grama_margemesq' x='80' y='20' />
-			<tile id='grama_curvasupesq' x='80' y='30' />
-			<tile id='grama_curvasupdir' x='70' y='30' />
-			<tile id='grama_margemsupdir' x='70' y='20' />
-			<tile id='grama_margemsup' x='60' y='20' />
-			<tile id='grama_curvainfesq' x='40' y='40' />
-			<tile id='grama_margeminfesq' x='30' y='40' />
-			<tile id='grama_margemesq' x='30' y='30' />
-			<tile id='grama_margemsupesq' x='30' y='20' />
-			<tile id='grama_margemsup' x='40' y='20' w='2' />
+			<tile id='grama_esq' x='90' y='0' />
+			<tile id='grama_supesqc' x='90' y='10' />
+			<tile id='grama_supesq' x='80' y='10' />
+			<tile id='grama_esq' x='80' y='20' />
+			<tile id='grama_supesqc' x='80' y='30' />
+			<tile id='grama_supdirc' x='70' y='30' />
+			<tile id='grama_supdir' x='70' y='20' />
+			<tile id='grama_sup' x='60' y='20' />
+			<tile id='grama_infesqc' x='40' y='40' />
+			<tile id='grama_infesq' x='30' y='40' />
+			<tile id='grama_esq' x='30' y='30' />
+			<tile id='grama_supesq' x='30' y='20' />
+			<tile id='grama_sup' x='40' y='20' w='2' />
 			<tile id='grama' x='40' y='30' w='3' />
 			<tile id='grama' x='50' y='40' w='3' />
-			<!--<tile id='neve_margemesq' x='140' y='0' h='12'/>
+			<!--<tile id='neve_esq' x='140' y='0' h='12'/>
 			<tile id='neve' x='150' y='0' h='12'/>-->
 		</fundo>
 		<objeto id='casebre2' x='115' y='40' />
