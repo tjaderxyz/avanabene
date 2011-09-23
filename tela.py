@@ -88,7 +88,6 @@ class Tela:
 	def podemover(self, sp, objeto):
 		for speed in sp, [0, sp[1]], [sp[0], 0]:
 			pos = [sum(i) for i in zip(objeto.pos, speed)]
-			print speed, pos
 			caixa = [pos[0] + objeto.colisao[0],
 					 pos[1] + objeto.colisao[1],
 					 pos[0] + objeto.colisao[0] + objeto.colisao[2],
