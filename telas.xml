@@ -9,6 +9,10 @@
 		<colisao x='95' y='65' colisao='15, 9, 7, 9' />
 		<colisao x='95' y='65' colisao='22, 0, 4, 18' />
 		<colisao x='95' y='65' colisao='26, 2, 4, 16' />
+		<objeto id='arvorevento1' x='30' y='80' />
+		<objeto id='arvorevento2' x='70' y='20' />
+		<objeto id='arvorevento3' x='40' y='40' />
+		<objeto id='arvorevento4' x='110' y='10' />
 	</tela>
 	<tela x='-1' y='0'> <!-- arredores do inicio -->
 		<fundo tipo='ladrilhado' imagem='deserto'>
