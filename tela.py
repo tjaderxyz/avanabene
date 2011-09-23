@@ -85,22 +85,30 @@ class Tela:
 				raise Exception
 		return tela
 
-	def podemover(self, pos, objeto):
-		caixa = [pos[0] + objeto.colisao[0],
-		         pos[1] + objeto.colisao[1],
-		         pos[0] + objeto.colisao[0] + objeto.colisao[2],
-		         pos[1] + objeto.colisao[1] + objeto.colisao[3]]
-		for coisa in self.telas.coisasacolidir + self.coisasacolidir:
-			if coisa == objeto:
+	def podemover(self, sp, objeto):
+		for speed in sp, [0, sp[1]], [sp[0], 0]:
+			pos = [sum(i) for i in zip(objeto.pos, speed)]
+			print speed, pos
+			caixa = [pos[0] + objeto.colisao[0],
+					 pos[1] + objeto.colisao[1],
+					 pos[0] + objeto.colisao[0] + objeto.colisao[2],
+					 pos[1] + objeto.colisao[1] + objeto.colisao[3]]
+			colidiu = False
+			for coisa in self.telas.coisasacolidir + self.coisasacolidir:
+				if coisa == objeto:
+					continue
+				caixac = [coisa.pos[0] + coisa.colisao[0],
+						  coisa.pos[1] + coisa.colisao[1],
+						  coisa.pos[0] + coisa.colisao[0] + coisa.colisao[2],
+						  coisa.pos[1] + coisa.colisao[1] + coisa.colisao[3]]
+				if (caixa[0] < caixac[2] and caixa[2] > caixac[0]
+					and caixa[1] < caixac[3] and caixa[3] > caixac[1]):
+					colidiu = True
+					break
+			if colidiu:
 				continue
-			caixac = [coisa.pos[0] + coisa.colisao[0],
-			          coisa.pos[1] + coisa.colisao[1],
-			          coisa.pos[0] + coisa.colisao[0] + coisa.colisao[2],
-			          coisa.pos[1] + coisa.colisao[1] + coisa.colisao[3]]
-			if (caixa[0] < caixac[2] and caixa[2] > caixac[0]
-			    and caixa[1] < caixac[3] and caixa[3] > caixac[1]):
-				return False
-		return True
+			return speed
+		return [0, 0]
 
 	def input(self, events):
 		for coisa in self.coisasainputear:
