@@ -2,16 +2,16 @@
 	<!--ator id='ananias' frames='2,2,4,4' w='7' h='8' x='73' y='56' controles='K_LEFT,K_RIGHT,K_UP,K_DOWN' /-->
 	<!--ator id='benevides' frames='2,2,4,4' w='7' h='8' x='87' y='56' controles='K_a,K_d,K_w,K_s' /-->
 	<tela x='0' y='0'> <!-- inicio -->
-		<fundo tipo='ladrilhado' imagem='tilexadrez' />
+		<fundo tipo='ladrilhado' imagem='deserto' />
 		<objeto id='casaT_tabuasvert' x='95' y='65' />
 		<colisao x='95' y='65' colisao='0, 2, 11, 16' />
 		<colisao x='95' y='65' colisao='11, 0, 4, 18' />
 		<colisao x='95' y='65' colisao='15, 9, 7, 9' />
 		<colisao x='95' y='65' colisao='22, 0, 4, 18' />
 		<colisao x='95' y='65' colisao='26, 2, 4, 16' />
-		<objeto id='arvorevento1' x='30' y='80' />
+		<objeto id='arvoreS1' x='10' y='50' />
 		<objeto id='arvorevento2' x='70' y='20' />
-		<objeto id='arvorevento3' x='40' y='40' />
+		<objeto id='arvoreS2' x='40' y='40' />
 		<objeto id='arvorevento4' x='110' y='10' />
 	</tela>
 	<tela x='-1' y='0'> <!-- arredores do inicio -->
