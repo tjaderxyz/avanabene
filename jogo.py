@@ -119,14 +119,14 @@ while True:
 		coisaadesenhar.render(screen)
 
 	#desenha caixas de colisão
-	for coisa in t.coisasadesenhar + t[tuple(tela)].coisasacolidir:
-		caixa = [coisa.pos[0] + coisa.colisao[0],
-		         geral.lheight - (coisa.pos[1] + coisa.colisao[1]),
-		         coisa.colisao[2],
-		         coisa.colisao[3]]
-		caixa[1] -= caixa[3] 
-		caixa = [i * geral.px for i in caixa]
-		pygame.draw.rect(screen, (255, 0, 255), caixa, 1)
+##	for coisa in t.coisasadesenhar + t[tuple(tela)].coisasacolidir:
+##		caixa = [coisa.pos[0] + coisa.colisao[0],
+##		         geral.lheight - (coisa.pos[1] + coisa.colisao[1]),
+##		         coisa.colisao[2],
+##		         coisa.colisao[3]]
+##		caixa[1] -= caixa[3] 
+##		caixa = [i * geral.px for i in caixa]
+##		pygame.draw.rect(screen, (255, 0, 255), caixa, 1)
 
 	if splash.get_alpha() > 0:
 		splash.set_alpha(max(0, splash.get_alpha() - 255./10))
@@ -134,4 +134,5 @@ while True:
 	pygame.display.flip()
 
 	tempo.tick(60)
+	print tempo.get_fps()
 

@@ -9,10 +9,6 @@
 		<colisao x='95' y='65' colisao='15, 9, 7, 9' />
 		<colisao x='95' y='65' colisao='22, 0, 4, 18' />
 		<colisao x='95' y='65' colisao='26, 2, 4, 16' />
-		<objeto id='arvoreS1' x='10' y='50' />
-		<objeto id='arvorevento2' x='70' y='20' />
-		<objeto id='arvoreS2' x='40' y='40' />
-		<objeto id='arvorevento4' x='110' y='10' />
 	</tela>
 	<tela x='-1' y='0'> <!-- arredores do inicio -->
 		<fundo tipo='ladrilhado' imagem='deserto'>
@@ -38,6 +34,8 @@
 			<tile id='grama_inf' x='40' y='110' />
 			<tile id='grama_infdir' x='50' y='110' />
 		</fundo>
+		<objeto id='casaT_tabuasvert' x='55' y='50' />
+		<objeto id='casa_viuvas1' x='100' y='50' />
 	</tela>
 	<tela x='-1' y='-1'> <!-- arredores do inicio -->
 		<fundo tipo='ladrilhado' imagem='deserto'>
@@ -67,6 +65,59 @@
 			<tile id='grama_supdir' x='150' y='30' />
 			<tile id='grama_supdirc' x='150' y='20' />
 		</fundo>
+	</tela>
+	<tela x='-2' y='-1'> <!-- arredores do inicio -->
+		<fundo tipo='ladrilhado' imagem='deserto'>
+			<tile id='grama' x='0' y='70' h='5' w='9' />
+			<tile id='grama' x='20' y='60' w='7' />
+			<tile id='grama' x='90' y='80' h='4' w='4' />
+			<tile id='grama' x='130' y='70' h='5' w='3' />
+			<tile id='grama_inf' x='130' y='60' w='3' />
+			<tile id='grama_infesq' x='120' y='60' />
+			<tile id='grama_infesqc' x='120' y='70' />
+			<tile id='grama_inf' x='100' y='70' w='2' />
+			<tile id='grama_infdirc' x='90' y='70' />
+			<tile id='grama_dir' x='90' y='60' />
+			<tile id='grama_infdir' x='90' y='50' />
+			<tile id='grama_inf' x='20' y='50' w='7' />
+			<tile id='grama_infesq' x='10' y='50' />
+			<tile id='grama_infesqc' x='10' y='60' />
+			<tile id='grama_inf' x='0' y='60' />
+			<tile id='grama' x='30' y='0' h='2' w='5' />
+			<tile id='grama' x='80' y='0' w='3' />
+			<tile id='grama_supdir' x='0' y='10' />
+			<tile id='grama_supdirc' x='0' y='0' />
+			<tile id='grama_sup' x='10' y='0' />
+			<tile id='grama_supesqc' x='20' y='0' />
+			<tile id='grama_esq' x='20' y='10' />
+			<tile id='grama_supesq' x='20' y='20' />
+			<tile id='grama_sup' x='30' y='20' w='5' />
+			<tile id='grama_supdir' x='80' y='20' />
+			<tile id='grama_supdirc' x='80' y='10' />
+			<tile id='grama_sup' x='90' y='10' w='2' />
+			<tile id='grama_supdir' x='110' y='10' />
+			<tile id='grama_dir' x='110' y='0' />
+			<objeto id='casa_viuvas_deg34' x='55' y='60' />
+		</fundo>
+		<objeto id='casa_viuvas6' x='10' y='75' />
+		<colisao x='10' y='75' colisao='0, 0, 11, 10' />
+		<colisao x='10' y='75' colisao='18, 0, 11, 10' />
+		<colisao x='10' y='75' colisao='0, 10, 29, 8' />
+		<objeto id='casa_viuvas4' x='55' y='65' />
+		<colisao x='55' y='65' colisao='0, 0, 11, 10' />
+		<colisao x='55' y='65' colisao='18, 0, 11, 10' />
+		<colisao x='55' y='65' colisao='0, 10, 29, 8' />
+		<colisao x='55' y='60' colisao='4, 1, 1, 4' />
+		<colisao x='55' y='60' colisao='24, 1, 1, 4' />
+<!--		<objeto id='casa_viuvas2' x='10' y='75' />
+		<objeto id='casa_viuvas3' x='10' y='75' />
+		<objeto id='casa_viuvas4' x='10' y='75' />
+		<objeto id='casa_viuvas5' x='10' y='75' /> -->
+		<pessoa id='viuva1' frames='2,2,4,4' w='7' h='8' x='10' y='50' />
+		<pessoa id='viuva2' frames='2,2,4,4' w='7' h='8' x='20' y='50' />
+		<pessoa id='viuva3' frames='2,2,4,4' w='7' h='8' x='30' y='50' />
+		<pessoa id='viuva4' frames='2,2,4,4' w='7' h='9' x='40' y='50' />
+		<pessoa id='viuva5' frames='2,2,4,4' w='7' h='8' x='50' y='50' />
 	</tela>
 	<tela x='0' y='-1'> <!-- arredores do inicio -->
 		<fundo tipo='ladrilhado' imagem='deserto'>
@@ -292,7 +343,20 @@
 			<tile id='grama_inf' x='150' y='110' />
 		</fundo>
 	</tela>
-
+	<tela x='0' y='-2'> <!-- testando arvores -->
+		<fundo tipo='flores' />
+		<objeto id='arvoreS1' x='10' y='50' colisao='6, 1, 11, 2' />
+		<objeto id='arvoreS4' x='70' y='20' colisao='7, 1, 12, 2' />
+		<objeto id='arvoreS2' x='40' y='40' colisao='15, 1, 10, 2' />
+		<objeto id='arvoreS3' x='110' y='10' colisao='7, 1, 11, 2' />
+		<objeto id='arvoreS1' x='30' y='30' colisao='6, 1, 11, 2' />
+		<objeto id='arvoreS4' x='20' y='70' colisao='7, 1, 12, 2' />
+		<objeto id='arvoreS2' x='50' y='80' colisao='15, 1, 10, 2' />
+		<objeto id='arvoreS3' x='40' y='00' colisao='7, 1, 11, 2' />
+		<objeto id='arvoreS1' x='15' y='90' colisao='6, 1, 11, 2' />
+		<objeto id='arvoreS4' x='90' y='80' colisao='7, 1, 12, 2' />
+		<objeto id='arvoreS2' x='100' y='50' colisao='15, 1, 10, 2' />
+	</tela>
 	<tela x='0' y='-11'> <!-- tribo do bambu -->
 		<fundo tipo='flores' />
 		<pessoa id='tribal1' frames='2,2,4,4' w='7' h='8' x='10' y='60' />
