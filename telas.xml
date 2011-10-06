@@ -34,8 +34,6 @@
 			<tile id='grama_inf' x='40' y='110' />
 			<tile id='grama_infdir' x='50' y='110' />
 		</fundo>
-		<objeto id='casaT_tabuasvert' x='55' y='50' />
-		<objeto id='casa_viuvas1' x='100' y='50' />
 	</tela>
 	<tela x='-1' y='-1'> <!-- arredores do inicio -->
 		<fundo tipo='ladrilhado' imagem='deserto'>
@@ -66,7 +64,7 @@
 			<tile id='grama_supdirc' x='150' y='20' />
 		</fundo>
 	</tela>
-	<tela x='-2' y='-1'> <!-- arredores do inicio -->
+	<tela x='-2' y='-1'> <!-- vila das viuvas entrada -->
 		<fundo tipo='ladrilhado' imagem='deserto'>
 			<tile id='grama' x='0' y='70' h='5' w='9' />
 			<tile id='grama' x='20' y='60' w='7' />
@@ -97,28 +95,83 @@
 			<tile id='grama_sup' x='90' y='10' w='2' />
 			<tile id='grama_supdir' x='110' y='10' />
 			<tile id='grama_dir' x='110' y='0' />
-			<objeto id='casa_viuvas_deg34' x='55' y='60' />
+			<objeto id='casa_viuvas_deg1' x='55' y='60' />
+			<objeto id='casa_viuvas_deg34' x='-22' y='60' /> <!-- teste de casa em duas telas -->
 		</fundo>
 		<objeto id='casa_viuvas6' x='10' y='75' />
 		<colisao x='10' y='75' colisao='0, 0, 11, 10' />
 		<colisao x='10' y='75' colisao='18, 0, 11, 10' />
 		<colisao x='10' y='75' colisao='0, 10, 29, 8' />
-		<objeto id='casa_viuvas4' x='55' y='65' />
+		<objeto id='casa_viuvas1' x='55' y='65' />
 		<colisao x='55' y='65' colisao='0, 0, 11, 10' />
 		<colisao x='55' y='65' colisao='18, 0, 11, 10' />
 		<colisao x='55' y='65' colisao='0, 10, 29, 8' />
-		<colisao x='55' y='60' colisao='4, 1, 1, 4' />
-		<colisao x='55' y='60' colisao='24, 1, 1, 4' />
-<!--		<objeto id='casa_viuvas2' x='10' y='75' />
-		<objeto id='casa_viuvas3' x='10' y='75' />
-		<objeto id='casa_viuvas4' x='10' y='75' />
-		<objeto id='casa_viuvas5' x='10' y='75' /> -->
+		
+		<objeto id='casa_viuvas3' x='-22' y='65' /> <!-- teste de casa em duas telas -->
+		<colisao x='-22' y='65' colisao='0, 0, 11, 10' />
+		<colisao x='-22' y='65' colisao='18, 0, 11, 10' />
+		<colisao x='-22' y='65' colisao='0, 10, 29, 8' />
+		<colisao x='-22' y='60' colisao='3, 1, 3, 4' />
+		<colisao x='-22' y='60' colisao='23, 1, 3, 4' />
+		
+	</tela>
+	<tela x='-3' y='-1'> <!-- vila das viuvas centro -->
+		<fundo tipo='ladrilhado' imagem='deserto'>
+			<tile id='grama' x='0' y='0' w='16' />
+			<tile id='grama' x='0' y='10' h='2' w='14' />
+			<tile id='grama' x='0' y='30' w='11' />
+			<tile id='grama' x='0' y='40' h='2' w='5' />
+			<tile id='grama' x='0' y='60' w='10' />
+			<tile id='grama' x='0' y='70' w='16' h='5' />
+			<tile id='grama_inf' x='110' y='60' w='5' />
+			<tile id='grama_infdirc' x='100' y='60' />
+			<tile id='grama_infdir' x='100' y='50' />
+			<tile id='grama_inf' x='60' y='50' w='4' />
+			<tile id='grama_infdirc' x='50' y='50' />
+			<tile id='grama_supdirc' x='50' y='40' />
+			<tile id='grama_sup' x='60' y='40' w='5' />
+			<tile id='grama_supdir' x='110' y='40' />
+			<tile id='grama_supdirc' x='110' y='30' />
+			<tile id='grama_sup' x='120' y='30' w='2' />
+			<tile id='grama_supdir' x='140' y='30' />
+			<tile id='grama_dir' x='140' y='20' />
+			<tile id='grama_supdirc' x='140' y='10' />
+			<tile id='grama_sup' x='150' y='10' />
+			<objeto id='casa_viuvas_deg34' x='70' y='65' />
+			<objeto id='casa_viuvas_deg34' x='138' y='60' /> <!-- teste de casa em duas telas -->
+		</fundo>
+		
+		<objeto id='casa_viuvas4' x='70' y='70' />
+		<colisao x='70' y='70' colisao='0, 0, 11, 10' />
+		<colisao x='70' y='70' colisao='18, 0, 11, 10' />
+		<colisao x='70' y='70' colisao='0, 10, 29, 8' />
+		<colisao x='70' y='65' colisao='3, 1, 3, 4' />
+		<colisao x='70' y='65' colisao='23, 1, 3, 4' />
+		
+		<objeto id='casa_viuvas2' x='20' y='30' />
+		<colisao x='20' y='30' colisao='0, 0, 11, 10' />
+		<colisao x='20' y='30' colisao='18, 0, 11, 10' />
+		<colisao x='20' y='30' colisao='0, 10, 29, 8' />
+		
+		<objeto id='casa_viuvas3' x='138' y='65' /> <!-- teste de casa em duas telas -->
+		<colisao x='138' y='65' colisao='0, 0, 11, 10' />
+		<colisao x='138' y='65' colisao='18, 0, 11, 10' />
+		<colisao x='138' y='65' colisao='0, 10, 29, 8' />
+		<colisao x='138' y='60' colisao='3, 1, 3, 4' />
+		<colisao x='138' y='60' colisao='23, 1, 3, 4' />
+		
+		<objeto id='casa_viuvas5' x='95' y='15' />
+		<colisao x='95' y='15' colisao='0, 0, 11, 10' />
+		<colisao x='95' y='15' colisao='18, 0, 11, 10' />
+		<colisao x='95' y='15' colisao='0, 10, 29, 8' />
+		
 		<pessoa id='viuva1' frames='2,2,4,4' w='7' h='8' x='10' y='50' />
 		<pessoa id='viuva2' frames='2,2,4,4' w='7' h='8' x='20' y='50' />
 		<pessoa id='viuva3' frames='2,2,4,4' w='7' h='8' x='30' y='50' />
 		<pessoa id='viuva4' frames='2,2,4,4' w='7' h='9' x='40' y='50' />
 		<pessoa id='viuva5' frames='2,2,4,4' w='7' h='8' x='50' y='50' />
 	</tela>
+	
 	<tela x='0' y='-1'> <!-- arredores do inicio -->
 		<fundo tipo='ladrilhado' imagem='deserto'>
 			<tile id='grama' x='0' y='0' w='12' />
