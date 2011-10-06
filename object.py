@@ -1,6 +1,6 @@
 # coding: utf-8
 
-import os, pygame, geral, xml
+import os, pygame, geral, xml, collision
 
 class Object:
 	def __init__(self, id, pos, colisao, frames, size):
@@ -40,7 +40,6 @@ class Object:
 			if elemento.nodeType != xml.dom.Node.ELEMENT_NODE:
 				continue
 			elif elemento.tagName == 'colisao':
-				c = collision.Collision.XML(elemento)
 				colisao.append([int(i) for i in node.getAttribute('colisao').split(',')])
 			else:
 				raise Exception
