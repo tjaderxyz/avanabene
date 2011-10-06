@@ -11,7 +11,7 @@ class Collision:
 	def XML(node):
 		x = int(node.getAttribute('x'))
 		y = int(node.getAttribute('y'))
-		colisao = [int(i) for i in node.getAttribute('colisao').split(',')]
+		colisao = [[int(i) for i in node.getAttribute('colisao').split(',')]]
 		collision = Collision((x, y), colisao)
 		return collision
 

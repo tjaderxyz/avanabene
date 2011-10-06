@@ -31,9 +31,9 @@ class Pessoa(object.Object):
 		h = int(node.getAttribute('h'))
 		frames = [int(i) for i in node.getAttribute('frames').split(',')]
 		try:
-			colisao = [int(i) for i in node.getAttribute('colisao').split(',')]
+			colisao = [[int(i) for i in node.getAttribute('colisao').split(',')]]
 		except:
-			colisao = None
+			colisao = []
 		pessoa = Pessoa(id, (x, y), colisao, frames, (w, h))
 		return pessoa
 

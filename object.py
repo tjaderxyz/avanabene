@@ -33,9 +33,17 @@ class Object:
 			w = int(node.getAttribute('w'))
 			h = int(node.getAttribute('h'))
 		try:
-			colisao = [int(i) for i in node.getAttribute('colisao').split(',')]
+			colisao = [[int(i) for i in node.getAttribute('colisao').split(',')]]
 		except:
-			colisao = None
+			colisao = []
+		for elemento in node.childNodes:
+			if elemento.nodeType != xml.dom.Node.ELEMENT_NODE:
+				continue
+			elif elemento.tagName == 'colisao':
+				c = collision.Collision.XML(elemento)
+				colisao.append([int(i) for i in node.getAttribute('colisao').split(',')])
+			else:
+				raise Exception
 		object = Object(id, (x, y), colisao, frames, (w, h))
 		return object
 
