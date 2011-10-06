@@ -1,6 +1,6 @@
 # coding: utf-8
 
-import os, pygame, geral
+import os, pygame, geral, xml
 
 class Object:
 	def __init__(self, id, pos, colisao, frames, size):
