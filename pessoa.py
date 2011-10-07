@@ -101,6 +101,6 @@ class Pessoa(object.Object):
 	def update(self, tela):
 		self.eventtime = not self.eventtime
 		speed = self.speed
-		if (self.colisao is not None):
+		if self.colisao:
 		    speed = tela.podemover(speed, self)
 		self.pos = [sum(i) for i in zip(self.pos, speed)]
