@@ -1,6 +1,8 @@
 # coding: utf-8
 
-import os, pygame, object, random, geral
+import os, pygame, random
+
+import object, geral
 
 class Pessoa(object.Object):
 	def __init__(self, id, pos, colisao, frames, size):

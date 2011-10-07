@@ -1,6 +1,8 @@
 # coding: utf-8
 
-import os, pygame, geral
+import os, pygame
+
+import geral
 
 class Collision:
 	def __init__(self, pos, colisao):

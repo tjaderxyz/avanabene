@@ -1,6 +1,8 @@
 # coding: utf-8
 
-import random, geral, pygame, os, xml.dom, object, tile
+import random, pygame, os, xml.dom
+
+import geral, object, tile
 
 class Fundo:
 	def __init__(self):

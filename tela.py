@@ -1,6 +1,8 @@
 # coding: utf-8
 
-import xml.dom.minidom, random, object, geral, pygame, pessoa, os, fundo, animatedactor, collision
+import xml.dom.minidom, random, pygame, os
+
+import object, geral, pessoa, fundo, animatedactor, collision
 
 class Telas:
 	def __init__(self, arq, atores):
