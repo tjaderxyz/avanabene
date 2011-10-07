@@ -129,7 +129,7 @@ while True:
 
 	#desenha caixas de colisão
 	if args.colisao:
-		for coisa in t.coisasadesenhar + t[tuple(tela)].coisasacolidir:
+		for coisa in t.coisasadesenhar + t[tuple(tela)].fundo.coisasacolidir + t[tuple(tela)].coisasacolidir:
 			for colisao in coisa.colisao:
 				caixa = [coisa.pos[0] + colisao[0],
 					 geral.lheight - (coisa.pos[1] + colisao[1]),
