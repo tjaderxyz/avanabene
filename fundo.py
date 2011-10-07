@@ -7,6 +7,7 @@ import geral, object, tile
 class Fundo:
 	def __init__(self):
 		self.coisasadesenhar = []
+		self.coisasacolidir = []
 
 	@staticmethod
 	def XML(node):
@@ -30,6 +31,8 @@ class Fundo:
 			elif elemento.tagName == 'objeto':
 				o = object.Object.XML(elemento)
 				fundo.coisasadesenhar.append(o)
+				if o.colisao is not None:
+					fundo.coisasacolidir.append(o)
 			elif elemento.tagName == 'tile':
 				t = tile.Tile.XML(elemento)
 				fundo.coisasadesenhar.append(t)

@@ -95,7 +95,7 @@ class Tela:
 				 pos[0] + objeto.colisao[0][0] + objeto.colisao[0][2],
 				 pos[1] + objeto.colisao[0][1] + objeto.colisao[0][3]]
 			colidiu = False
-			for coisa in self.telas.coisasacolidir + self.coisasacolidir:
+			for coisa in self.telas.coisasacolidir + self.fundo.coisasacolidir + self.coisasacolidir:
 				if coisa == objeto:
 					continue
 				for colisao in coisa.colisao:
