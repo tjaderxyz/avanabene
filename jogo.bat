@@ -1,1 +1,1 @@
-jogo.py -m
+jogo.py -mc

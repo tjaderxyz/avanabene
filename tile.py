@@ -1,6 +1,8 @@
 # coding: utf-8
 
-import os, pygame, geral
+import os, pygame
+
+import geral
 
 class Tile:
 	def __init__(self, id, pos, size):

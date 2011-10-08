@@ -1,6 +1,8 @@
 # coding: utf-8
 
-import os, pygame, geral
+import os, pygame
+
+import geral
 
 class Collision:
 	def __init__(self, pos, colisao):
@@ -11,7 +13,7 @@ class Collision:
 	def XML(node):
 		x = int(node.getAttribute('x'))
 		y = int(node.getAttribute('y'))
-		colisao = [int(i) for i in node.getAttribute('colisao').split(',')]
+		colisao = [[int(i) for i in node.getAttribute('colisao').split(',')]]
 		collision = Collision((x, y), colisao)
 		return collision
 

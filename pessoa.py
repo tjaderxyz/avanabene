@@ -1,6 +1,8 @@
 # coding: utf-8
 
-import os, pygame, object, random, geral
+import os, pygame, random
+
+import object, geral
 
 class Pessoa(object.Object):
 	def __init__(self, id, pos, colisao, frames, size):
@@ -31,9 +33,9 @@ class Pessoa(object.Object):
 		h = int(node.getAttribute('h'))
 		frames = [int(i) for i in node.getAttribute('frames').split(',')]
 		try:
-			colisao = [int(i) for i in node.getAttribute('colisao').split(',')]
+			colisao = [[int(i) for i in node.getAttribute('colisao').split(',')]]
 		except:
-			colisao = None
+			colisao = []
 		pessoa = Pessoa(id, (x, y), colisao, frames, (w, h))
 		return pessoa
 
@@ -101,6 +103,6 @@ class Pessoa(object.Object):
 	def update(self, tela):
 		self.eventtime = not self.eventtime
 		speed = self.speed
-		if (self.colisao is not None):
+		if self.colisao:
 		    speed = tela.podemover(speed, self)
 		self.pos = [sum(i) for i in zip(self.pos, speed)]

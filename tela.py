@@ -1,6 +1,8 @@
 # coding: utf-8
 
-import xml.dom.minidom, random, object, geral, pygame, pessoa, os, fundo, animatedactor, collision
+import xml.dom.minidom, random, pygame, os
+
+import object, geral, pessoa, fundo, animatedactor, collision
 
 class Telas:
 	def __init__(self, arq, atores):
@@ -88,21 +90,24 @@ class Tela:
 	def podemover(self, sp, objeto):
 		for speed in sp, [0, sp[1]], [sp[0], 0]:
 			pos = [sum(i) for i in zip(objeto.pos, speed)]
-			caixa = [pos[0] + objeto.colisao[0],
-					 pos[1] + objeto.colisao[1],
-					 pos[0] + objeto.colisao[0] + objeto.colisao[2],
-					 pos[1] + objeto.colisao[1] + objeto.colisao[3]]
+			caixa = [pos[0] + objeto.colisao[0][0],
+				 pos[1] + objeto.colisao[0][1],
+				 pos[0] + objeto.colisao[0][0] + objeto.colisao[0][2],
+				 pos[1] + objeto.colisao[0][1] + objeto.colisao[0][3]]
 			colidiu = False
-			for coisa in self.telas.coisasacolidir + self.coisasacolidir:
+			for coisa in self.telas.coisasacolidir + self.fundo.coisasacolidir + self.coisasacolidir:
 				if coisa == objeto:
 					continue
-				caixac = [coisa.pos[0] + coisa.colisao[0],
-						  coisa.pos[1] + coisa.colisao[1],
-						  coisa.pos[0] + coisa.colisao[0] + coisa.colisao[2],
-						  coisa.pos[1] + coisa.colisao[1] + coisa.colisao[3]]
-				if (caixa[0] < caixac[2] and caixa[2] > caixac[0]
-					and caixa[1] < caixac[3] and caixa[3] > caixac[1]):
-					colidiu = True
+				for colisao in coisa.colisao:
+					caixac = [coisa.pos[0] + colisao[0],
+						  coisa.pos[1] + colisao[1],
+						  coisa.pos[0] + colisao[0] + colisao[2],
+						  coisa.pos[1] + colisao[1] + colisao[3]]
+					if (caixa[0] < caixac[2] and caixa[2] > caixac[0]
+						and caixa[1] < caixac[3] and caixa[3] > caixac[1]):
+						colidiu = True
+						break
+				if colidiu:
 					break
 			if colidiu:
 				continue

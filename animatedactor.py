@@ -1,6 +1,8 @@
 # coding: utf-8
 
-import os, pygame, geral, pessoa
+import os, pygame
+
+import geral, pessoa
 
 class AnimatedActor(pessoa.Pessoa):
 	def __init__(self, id, pos, colisao, controls, frames, size):
@@ -17,9 +19,9 @@ class AnimatedActor(pessoa.Pessoa):
 		controles = tuple(getattr(pygame, tecla) for tecla in node.getAttribute('controles').split(','))
 		frames = [int(i) for i in node.getAttribute('frames').split(',')]
 		try:
-			colisao = [int(i) for i in node.getAttribute('colisao').split(',')]
+			colisao = [[int(i) for i in node.getAttribute('colisao').split(',')]]
 		except:
-			colisao = None
+			colisao = []
 		ator = AnimatedActor(id, (x, y), colisao, controles, frames, (w, h))
 		return ator
 
