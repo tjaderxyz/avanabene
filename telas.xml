@@ -145,11 +145,11 @@
 				<colisao x='70' y='65' colisao='3, 1, 3, 4' />
 				<colisao colisao='23, 1, 3, 4' />
 			</objeto>
-			<!-- teste de casa em duas telas -->
-			<objeto id='casa_viuvas_deg34' x='138' y='60' >
+			<objeto id='casa_viuvas_deg34' x='138' y='60' > <!-- teste de casa em duas telas -->
 				<colisao colisao='3, 1, 3, 4' />
 				<colisao colisao='23, 1, 3, 4' />
 			</objeto>
+			<objeto id='quiosque_viuvas2' x='30' y='75' />
 		</fundo>
 		<objeto id='casa_viuvas4' x='70' y='70'>
 			<colisao colisao='0, 0, 11, 10' />
@@ -170,6 +170,14 @@
 			<colisao colisao='0, 0, 11, 10' />
 			<colisao colisao='18, 0, 11, 10' />
 			<colisao colisao='0, 10, 29, 8' />
+		</objeto>
+		<objeto id='quiosque_viuvas1' x='30' y='80' >
+			<colisao colisao='2, 0, 2, 2' />
+			<colisao colisao='23, 0, 2, 2' />
+		</objeto>
+		<objeto id='quiosque_viuvas3' x='30' y='75' >
+			<colisao colisao='7, 2, 2, 2' />
+			<colisao colisao='18, 2, 2, 2' />
 		</objeto>
 		<pessoa id='viuva1' frames='2,2,4,4' w='7' h='8' x='10' y='50' />
 		<pessoa id='viuva2' frames='2,2,4,4' w='7' h='8' x='20' y='50' />
