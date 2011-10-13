@@ -179,6 +179,11 @@
 			<colisao colisao='7, 2, 2, 2' />
 			<colisao colisao='18, 2, 2, 2' />
 		</objeto>
+		<objeto id='forninho' x='40' y='79' colisao='0, 0, 7, 3' />
+		<objeto id='madeira_machado' x='50' y='32' colisao='0, 0, 4, 3' />
+		<objeto id='madeira_pilha1' x='60' y='31' colisao='0, 0, 3, 4' />
+		<objeto id='madeira_pilha2' x='66' y='17' colisao='0, 0, 7, 4' />
+		<objeto id='madeira_pilha3' x='55' y='18' colisao='0, 0, 7, 7' />
 		<pessoa id='viuva1' frames='2,2,4,4' w='7' h='8' x='10' y='50' />
 		<pessoa id='viuva2' frames='2,2,4,4' w='7' h='8' x='20' y='50' />
 		<pessoa id='viuva3' frames='2,2,4,4' w='7' h='8' x='30' y='50' />
