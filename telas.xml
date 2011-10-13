@@ -103,18 +103,18 @@
 			</objeto>
 		</fundo>
 		<objeto id='casa_viuvas6' x='10' y='75' >
-			<colisao colisao='0, 0, 11, 10' />
-			<colisao colisao='18, 0, 11, 10' />
+			<colisao colisao='0, 0, 12, 10' />
+			<colisao colisao='17, 0, 12, 10' />
 			<colisao colisao='0, 10, 29, 8' />
 		</objeto>
 		<objeto id='casa_viuvas1' x='55' y='65' >
-			<colisao colisao='0, 0, 11, 10' />
-			<colisao colisao='18, 0, 11, 10' />
+			<colisao colisao='0, 0, 12, 10' />
+			<colisao colisao='17, 0, 12, 10' />
 			<colisao colisao='0, 10, 29, 8' />
 		</objeto>
 		<objeto id='casa_viuvas3' x='-22' y='65' > <!-- teste de casa em duas telas -->
-			<colisao colisao='0, 0, 11, 10' />
-			<colisao colisao='18, 0, 11, 10' />
+			<colisao colisao='0, 0, 12, 10' />
+			<colisao colisao='17, 0, 12, 10' />
 			<colisao colisao='0, 10, 29, 8' />
 		</objeto>
 		
@@ -152,23 +152,23 @@
 			<objeto id='quiosque_viuvas2' x='30' y='75' />
 		</fundo>
 		<objeto id='casa_viuvas4' x='70' y='70'>
-			<colisao colisao='0, 0, 11, 10' />
-			<colisao colisao='18, 0, 11, 10' />
+			<colisao colisao='0, 0, 12, 10' />
+			<colisao colisao='17, 0, 12, 10' />
 			<colisao colisao='0, 10, 29, 8' />
 		</objeto>
 		<objeto id='casa_viuvas2' x='20' y='30'>
-			<colisao colisao='0, 0, 11, 10' />
-			<colisao colisao='18, 0, 11, 10' />
+			<colisao colisao='0, 0, 12, 10' />
+			<colisao colisao='17, 0, 12, 10' />
 			<colisao colisao='0, 10, 29, 8' />
 		</objeto>
 		<objeto id='casa_viuvas3' x='138' y='65' > <!-- teste de casa em duas telas -->
-			<colisao colisao='0, 0, 11, 10' />
-			<colisao colisao='18, 0, 11, 10' />
+			<colisao colisao='0, 0, 12, 10' />
+			<colisao colisao='17, 0, 12, 10' />
 			<colisao colisao='0, 10, 29, 8' />
 		</objeto>
 		<objeto id='casa_viuvas5' x='95' y='15' >
-			<colisao colisao='0, 0, 11, 10' />
-			<colisao colisao='18, 0, 11, 10' />
+			<colisao colisao='0, 0, 12, 10' />
+			<colisao colisao='17, 0, 12, 10' />
 			<colisao colisao='0, 10, 29, 8' />
 		</objeto>
 		<objeto id='quiosque_viuvas1' x='30' y='80' >
