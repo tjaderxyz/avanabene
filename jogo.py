@@ -22,7 +22,7 @@ screen = pygame.display.set_mode(geral.size)
 pygame.display.set_caption(geral.titulo) 
 
 ananias = animatedactor.AnimatedActor('ananias', (geral.lwidth / 2 - 7, geral.lheight / 2 - 4), [(2, 0, 3, 3)], (pygame.K_LEFT, pygame.K_RIGHT, pygame.K_DOWN, pygame.K_UP), (2, 2, 4, 4), (7, 8))
-benevides = animatedactor.AnimatedActor('benevides', (geral.lwidth / 2 + 7, geral.lheight / 2 - 4), [(2, 0, 3, 3)], (pygame.K_a, pygame.K_d, pygame.K_s, pygame.K_w), (2, 2, 4, 4), (7, 8))
+benevides = animatedactor.AnimatedActor('benevides_guri', (geral.lwidth / 2 + 7, geral.lheight / 2 - 4), [(1, 0, 3, 2)], (pygame.K_a, pygame.K_d, pygame.K_s, pygame.K_w), (2, 2, 4, 4), (5, 7))
 
 try:
 	if args.mudo:
