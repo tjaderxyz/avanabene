@@ -172,14 +172,14 @@
 			<colisao colisao='0, 10, 29, 8' />
 		</objeto>
 		<objeto id='quiosque_viuvas1' x='30' y='80' >
-			<colisao colisao='2, 0, 2, 2' />
-			<colisao colisao='23, 0, 2, 2' />
+			<colisao colisao='2, 0, 2, 1' />
+			<colisao colisao='23, 0, 2, 1' />
 		</objeto>
 		<objeto id='quiosque_viuvas3' x='30' y='75' >
-			<colisao colisao='7, 2, 2, 2' />
-			<colisao colisao='18, 2, 2, 2' />
+			<colisao colisao='7, 2, 2, 1' />
+			<colisao colisao='18, 2, 2, 1' />
 		</objeto>
-		<objeto id='forninho' x='40' y='79' colisao='0, 0, 7, 3' />
+		<objeto id='forninho' x='40' y='80' colisao='0, 1, 7, 2' />
 		<objeto id='madeira_machado' x='50' y='32' colisao='0, 0, 4, 3' />
 		<objeto id='madeira_pilha1' x='60' y='31' colisao='0, 0, 3, 4' />
 		<objeto id='madeira_pilha2' x='66' y='17' colisao='0, 0, 7, 4' />
