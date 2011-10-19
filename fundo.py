@@ -53,8 +53,8 @@ def gerafundoflores(tela):
 		seed = (1000003 * seed) ^ item
 	seed = seed ^ 3
 	RandomFundo.seed(seed)
-	pasto = pygame.image.load("images/tiles/t_grama.png")
-	flor = pygame.image.load("images/tiles/t_gramaflor.png")
+	pasto = pygame.image.load(os.path.join('imagens', 'tiles', 'grama.png'))
+	flor = pygame.image.load(os.path.join('imagens', 'tiles', 'gramaflor.png'))
 	pasto = pygame.transform.scale(pasto, [geral.px * i for i in pasto.get_rect()][2:]).convert_alpha()
 	pastorect = pasto.get_rect()
 	flor = pygame.transform.scale(flor, [geral.px * i for i in flor.get_rect()][2:]).convert_alpha()
@@ -71,7 +71,7 @@ def gerafundoflores(tela):
 
 def gerafundoladrilhado(imagem, tela):
 	RandomFundo.seed((geral.seed, tela[0], tela[1]))
-	ladrilho = pygame.image.load(os.path.join('images', 'tiles', 't_' + imagem + '.png'))
+	ladrilho = pygame.image.load(os.path.join('imagens', 'tiles', imagem + '.png'))
 	ladrilho = pygame.transform.scale(ladrilho, [geral.px * i for i in ladrilho.get_rect()][2:]).convert_alpha()
 	ladrilhorect = ladrilho.get_rect()
 	fundo = pygame.Surface(geral.size)
