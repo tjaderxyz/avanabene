@@ -6,7 +6,7 @@ import geral
 
 class Tile:
 	def __init__(self, id, pos, size):
-		self.sprite = pygame.image.load(os.path.join('images', 'tiles', 't_' + id + '.png'))
+		self.sprite = pygame.image.load(os.path.join('imagens', 'tiles', id + '.png'))
 		self.sprite = pygame.transform.scale(self.sprite, [geral.px * i for i in self.sprite.get_rect()][2:]).convert_alpha()
 		self.pos = pos
 		self.size = size
