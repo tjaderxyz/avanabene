@@ -2,7 +2,10 @@
 	<!--ator id='ananias' frames='2,2,4,4' w='7' h='8' x='73' y='56' controles='K_LEFT,K_RIGHT,K_UP,K_DOWN' /-->
 	<!--ator id='benevides' frames='2,2,4,4' w='7' h='8' x='87' y='56' controles='K_a,K_d,K_w,K_s' /-->
 	<tela x='0' y='0'> <!-- inicio -->
-		<fundo tipo='ladrilhado' imagem='deserto' />
+		<fundo tipo='ladrilhado' imagem='deserto'>
+			<objeto id='estatuarodrigo' x='30' y='65' />
+			<objeto id='estatuarodrigo2' x='60' y='65' />
+		</fundo>
 		<objeto id='casaT_tabuasvert' x='95' y='65' >
 			<colisao colisao='0, 2, 11, 16' />
 			<colisao colisao='11, 0, 4, 18' />
@@ -498,7 +501,6 @@
 		<pessoa id='faquir' frames='2,2,4,4' w='7' h='10' x='30' y='60' />
 		<pessoa id='hare' frames='3,3,12,4' w='7' h='7' x='40' y='60' />
 		<pessoa id='patinador' frames='3,3,3,3' w='7' h='10' x='50' y='60' />
-		<pessoa id='pirata' frames='2,2,4,4' w='7' h='8' x='70' y='60' />
 		<pessoa id='duende' frames='2,2,4,4' w='7' h='9' x='80' y='60' />
 	</tela>
 	<tela x='-1' y='10'> <!-- deserto -->
@@ -506,7 +508,6 @@
 		<objeto id='arvoreseca' x='65' y='45' />
 		<objeto id='arvoreseca2' x='100' y='60' />
 		<objeto id='casa_pedras' x='25' y='20' />
-		<pessoa id='pirata' frames='2,2,4,4' w='7' h='8' x='80' y='60' />
 	</tela>
 	<tela x='0' y='-13'> <!-- rio -->
 		<fundo tipo='flores'>
