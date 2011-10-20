@@ -8,7 +8,7 @@ class Pessoa(object.Object):
 	def __init__(self, id, pos, colisao, frames, size):
 		self.sprites = []
 		spritesheet = pygame.image.load(os.path.join('imagens', 'spritesheets', id + '.png'))
-		spritesheet = pygame.transform.scale(spritesheet, [geral.px * i for i in spritesheet.get_rect()][2:]).convert_alpha()
+		spritesheet = pygame.transform.scale(spritesheet, [int(geral.px * i) for i in spritesheet.get_rect()][2:]).convert_alpha()
 		for y, nframes in zip(range(4), frames):
 			spritesdir = []
 			for x in range(nframes):

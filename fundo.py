@@ -55,9 +55,9 @@ def gerafundoflores(tela):
 	RandomFundo.seed(seed)
 	pasto = pygame.image.load(os.path.join('imagens', 'tiles', 'grama.png'))
 	flor = pygame.image.load(os.path.join('imagens', 'tiles', 'gramaflor.png'))
-	pasto = pygame.transform.scale(pasto, [geral.px * i for i in pasto.get_rect()][2:]).convert_alpha()
+	pasto = pygame.transform.scale(pasto, [int(geral.px * i) for i in pasto.get_rect()][2:]).convert_alpha()
 	pastorect = pasto.get_rect()
-	flor = pygame.transform.scale(flor, [geral.px * i for i in flor.get_rect()][2:]).convert_alpha()
+	flor = pygame.transform.scale(flor, [int(geral.px * i) for i in flor.get_rect()][2:]).convert_alpha()
 	fundo = pygame.Surface(geral.size)
 
 	for i in range(0, geral.size[0], pastorect[2]):
@@ -72,7 +72,7 @@ def gerafundoflores(tela):
 def gerafundoladrilhado(imagem, tela):
 	RandomFundo.seed((geral.seed, tela[0], tela[1]))
 	ladrilho = pygame.image.load(os.path.join('imagens', 'tiles', imagem + '.png'))
-	ladrilho = pygame.transform.scale(ladrilho, [geral.px * i for i in ladrilho.get_rect()][2:]).convert_alpha()
+	ladrilho = pygame.transform.scale(ladrilho, [int(geral.px * i) for i in ladrilho.get_rect()][2:]).convert_alpha()
 	ladrilhorect = ladrilho.get_rect()
 	fundo = pygame.Surface(geral.size)
 

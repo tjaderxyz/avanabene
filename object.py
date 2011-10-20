@@ -10,7 +10,7 @@ class Object:
 		self.colisao = colisao
 		self.frames = 0
 		spritesheet = pygame.image.load(os.path.join('imagens', 'objetos', id + '.png'))
-		spritesheet = pygame.transform.scale(spritesheet, [geral.px * i for i in spritesheet.get_rect()][2:]).convert_alpha()
+		spritesheet = pygame.transform.scale(spritesheet, [int(geral.px * i) for i in spritesheet.get_rect()][2:]).convert_alpha()
 		if frames == 1:
 			self.sprites = [spritesheet]
 			return

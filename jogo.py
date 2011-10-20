@@ -40,7 +40,7 @@ tela = [0, 0]
 t = telaa.Telas('telas.xml', [ananias, benevides])
 
 titulo = fonte.render(geral.titulo, False, (255, 255, 255))
-titulo = pygame.transform.scale(titulo, [(geral.px / 2) * i for i in titulo.get_rect()][2:])
+titulo = pygame.transform.scale(titulo, [int(geral.px / 2. * i) for i in titulo.get_rect()][2:])
 splash = pygame.Surface(geral.size)
 splash.blit(titulo, [geral.px * i for i in (geral.lwidth / 2 - titulo.get_rect()[2] / geral.px / 2, geral.lheight / 2 - titulo.get_rect()[3] / geral.px / 2)])
 splash.set_alpha(255)
